@@ -17,15 +17,20 @@ publication described above.
 
 ## Installation
 
-Installation is easier with [Anaconda](https://www.anaconda.com/products/individual)
-
 ```bash
-$ conda env create -f environment.yml
-$ conda activate fandas
-$ python fandas.py -h
+$ git clone https://github.com/haddocking/fandas.git
+$ cd fandas
+$ python setup.py install
+$ fandas -h
+```
+
+## Example
+```bash
+$ cd example
+$ fandas -seq 1ubq-seq.txt -bt 1ubq-bmrb-tables.txt -exp_2d NH HN
 ```
 
 * * *
 
-Notes: `distance_calculator.py`
+Notes: `tools/distance_calculator.py`
 This script is used to calculate distances between homonuclear pairs of atoms from a PDB file. It currently does not support mmCIF format. Please convert the files accordingly using [pdb-tools](https://wenmr.science.uu.nl/pdbtools/)
