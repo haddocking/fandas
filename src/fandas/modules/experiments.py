@@ -27,6 +27,10 @@ from fandas.modules.utils import (
     # check_user_input,
 )
 
+import logging
+
+log = logging.getLogger("fandaslog")
+
 
 def hh(sequence, chem_shifts):
     # this function produces peak list for intra-residue HH experiment

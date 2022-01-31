@@ -1,5 +1,7 @@
 from pathlib import Path
+import logging
 
+log = logging.getLogger("fandaslog")
 STANDARD_DATA = Path(Path(__file__).parents[3], "data/standard.dat")
 
 amino_acids = [
