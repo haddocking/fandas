@@ -56,7 +56,14 @@ from fandas.modules.utils import (
 )
 from fandas.version import VERSION
 
-logging.basicConfig(format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p")
+# Setup logging
+log = logging.getLogger("fandaslog")
+ch = logging.StreamHandler()
+formatter = logging.Formatter(
+    " [%(asctime)s %(module)s:%(lineno)d %(levelname)s] %(message)s"
+)
+ch.setFormatter(formatter)
+log.addHandler(ch)
 
 __author__ = ["Siddarth Narasimhan"]
 
@@ -223,13 +230,18 @@ def main(
     seq,
     sl,
     ss,
+    log_level="INFO",
 ):
-
+    log.setLevel(log_level)
+    log.info("########################################")
+    log.info(f"     Welcome to FANDAS {VERSION}")
+    log.info("########################################")
     # ##(1) give sensible names to form inputs and parse inputs
     global project_name
     # global sequence
     # ##STEP 1: READ INPUT SEQUENCE AND CHECK THE
     #  SEQUENCE USING check_user_input FUNCTION# ##
+    log.info(f"Reading sequence from {seq}")
     project_name = o
     sequence = Path(seq).resolve()
     if not sequence.exists():
@@ -248,6 +260,7 @@ def main(
     # ##STEP 2: ASSIGN SINGLE LETTER SECONDARY STRUCTURE FOR THE RESIDUES
     # #If the secondary structure is not given, BMRB average shifts
     #   (as on 21/07/16) will be assigned##
+    log.info(f"Assigning secondary structure {ss}")
     if ss == "":
         sec_struc = ["n"] * len(sequence)
     else:
@@ -271,16 +284,20 @@ def main(
         check_user_input(sec_struc, secondary_structures, "Secondary Structure")
 
     # ##(4) assign chemical shifts
-    # #assign average shifts ased on the above single letter assignments##
+    log.info("Assign average shifts ased on the above single letter assignments")
     chem_shifts = assign_chemical_shifts(sequence, sec_struc)
 
     # ##(5) replace the average shifts with provided shifts in the form of BMRB table
-    # #Replace the average shifts with provided shifts in the form of BMRB table##
     if bt != "":
+        log.info(
+            "Replacing the average shifts with provided "
+            "shifts in the form of BMRB table"
+        )
         chem_shifts = replace_bmrb(chem_shifts, bt, btc)
 
     # ##(6) incorporate forward, reverse & glycerol labelling schemes
     # configure labelled amino acids list if fwd or rv labelling schemes are used
+    log.info(f"Incorporating labelling scheme: {ls}")
     labelling_scheme = ls
     dl = dl
     cl = cl
@@ -350,11 +367,13 @@ def main(
 
     # ##7 TAKE FRACTIONAL DEUTERATION INTO ACCOUNT# ##
     if fd is True:
+        log.info("Using fractional deuteration")
         chem_shifts = fractional_deuteration(sequence, chem_shifts)
     chem_shifts = np.around(chem_shifts, decimals=4)
 
     # ##(8) Read distance lists
     if dlist != "":
+        log.info("Reading distance lists")
         dlim = dlim
         distances = []
         dist_list = []
@@ -371,15 +390,24 @@ def main(
 
     # ##(9) Round off the final chemical shifts to 2 decimal places and include
     # options for sparky labels
+    log.info("Round off the final chemical shifts to 2 decimal places")
     chem_shifts = np.around(chem_shifts, decimals=2)
     # global sl
     # sl = sl
 
     # ##(10) Make Predictions
-    exp_2d = exp_2d
-    exp_2dd = exp_2dd
-    exp_3d = exp_3d
-    exp_3dd = exp_3dd
+    log.info("Making predictions...")
+    if exp_2d:
+        log.info(f"2D: {', '.join(exp_2d)}")
+    if exp_2dd:
+        log.info(f"2DD: {', '.join(exp_2dd)}")
+    if exp_3d:
+        log.info(f"3D: {', '.join(exp_3d)}")
+    if exp_3dd:
+        log.info(f"3DD: {', '.join(exp_3dd)}")
+    if not any([exp_2d, exp_2dd, exp_3d, exp_3dd]):
+        log.error("> No experiment was selected.")
+        sys.exit()
     if exp_2d != []:
         for experiment in exp_2d:
             experiment = experiment.upper()

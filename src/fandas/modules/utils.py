@@ -11,6 +11,10 @@ from fandas.modules.chemical import (
     secondary_structures,
 )
 
+import logging
+
+log = logging.getLogger("fandaslog")
+
 
 def write_2d(shift_a, shift_b, extension, sl=True):
     peak = []
