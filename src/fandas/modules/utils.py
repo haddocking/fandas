@@ -34,8 +34,8 @@ def write_2d(shift_a, shift_b, extension, sl=True):
         else:
             column_1 = "?-?"
         peak.append([column_1, column_2, column_3, column_4])
+    log.info(f'Writing {extension}_exp.txt')
     with open(f"{extension}_exp.txt", "w") as output:
-        # with open("%s/%s-%s.txt" % (w_dir, project_name, extension), "w") as output:
         for pk in peak:
             output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
 
@@ -59,7 +59,7 @@ def write_2dd(shift_a, shift_b, extension, distance_label, sl=True):
         else:
             column_1 = "?-?"
         peak.append([column_1, column_2, column_3, column_4])
-    # with open("%s/%s-%s.txt" % (w_dir, project_name, extension), "w") as output:
+    log.info(f'Writing {extension}_exp.txt')
     with open(f"{extension}_exp.txt", "w") as output:
         for pk in peak:
             output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
@@ -88,9 +88,8 @@ def write_3dd(shift_a, shift_b, shift_c, extension, distance_label, sl=True):
         else:
             column_1 = "?-?-?"
         peak.append([column_1, column_2, column_3, column_4, column_5])
+    log.info(f'Writing {extension}_exp.txt')
     with open(f"{extension}_exp.txt", "w") as output:
-        # with open("%s/%s-%s.txt" % (w_dir, project_name, extension.lower()), "w")
-        #  as output:
         for pk in peak:
             output.write("%s\t%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3], pk[4]))
 
@@ -117,9 +116,8 @@ def write_3d(shift_a, shift_b, shift_c, extension, sl=True):
         else:
             column_1 = "?-?-?"
         peak.append([column_1, column_2, column_3, column_4, column_5])
+    log.info(f'Writing {extension}_exp.txt')
     with open(f"{extension}_exp.txt", "w") as output:
-        # with open("%s/%s-%s.txt" % (w_dir, project_name, extension.lower()), "w")
-        # as output:
         for pk in peak:
             output.write("%s\t%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3], pk[4]))
 
@@ -647,7 +645,7 @@ def glycerol_label(sequence, chem_shifts, label_type):
                     if atom == element:
                         chem_shifts[i][j] = 0.00
     else:
-        print("ERROR: %s is an invalid glycerol labelling scheme" % label_type)
+        log.error("ERROR: %s is an invalid glycerol labelling scheme" % label_type)
         sys.exit()
     return chem_shifts
 
@@ -692,7 +690,7 @@ def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns):
                     res_ind = int(c_shift[res_num]) - 1
                     chem_shifts[res_ind][i] = float(c_shift[c_s])
                 except Exception as e:
-                    print(e)
+                    logging.warning(e)
                     continue
     return chem_shifts
 
@@ -719,5 +717,5 @@ def check_user_input(user_input, input_type, error_type):
             if component == reference_component:
                 matches += 1
     if matches != len(user_input):
-        print("%s Error: Please check!" % error_type)
+        log.error("%s Error: Please check!" % error_type)
         sys.exit()

@@ -245,6 +245,7 @@ def main(
     project_name = o
     sequence = Path(seq).resolve()
     if not sequence.exists():
+        log.error(f"{seq} not found.")
         sys.exit()
     with open(sequence, "r") as input_fh:
         sequence = "".join(input_fh.readlines())
@@ -260,10 +261,15 @@ def main(
     # ##STEP 2: ASSIGN SINGLE LETTER SECONDARY STRUCTURE FOR THE RESIDUES
     # #If the secondary structure is not given, BMRB average shifts
     #   (as on 21/07/16) will be assigned##
-    log.info(f"Assigning secondary structure {ss}")
     if ss == "":
+        log.warning("No secondary structure input given, assuming \"n\"")
         sec_struc = ["n"] * len(sequence)
     else:
+        log.info(f"Assigning secondary structure {ss}")
+        ss = Path(ss).resolve()
+        if not ss.exists():
+            log.error(f"Secondary structure file {ss} does not exist")
+            sys.exit()
         with open(ss, "r") as ss_file:
             sec_struc = list(ss_file.readline())
         for ss in sec_struc:
@@ -284,7 +290,7 @@ def main(
         check_user_input(sec_struc, secondary_structures, "Secondary Structure")
 
     # ##(4) assign chemical shifts
-    log.info("Assign average shifts ased on the above single letter assignments")
+    log.info("Assigning average shifts")
     chem_shifts = assign_chemical_shifts(sequence, sec_struc)
 
     # ##(5) replace the average shifts with provided shifts in the form of BMRB table
@@ -373,7 +379,8 @@ def main(
 
     # ##(8) Read distance lists
     if dlist != "":
-        log.info("Reading distance lists")
+        dlist = Path(dlist).resolve()
+        log.info(f"Reading distance lists from {dlist}")
         dlim = dlim
         distances = []
         dist_list = []

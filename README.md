@@ -25,9 +25,23 @@ $ fandas -h
 ```
 
 ## Example
-```bash
+```text
 $ cd example
 $ fandas -seq 1ubq-seq.txt -bt 1ubq-bmrb-tables.txt -exp_2d NH HN
+
+ [2022-01-31 14:31:17,320 cli:236 INFO] ########################################
+ [2022-01-31 14:31:17,321 cli:237 INFO]      Welcome to FANDAS 2.0.0
+ [2022-01-31 14:31:17,321 cli:238 INFO] ########################################
+ [2022-01-31 14:31:17,321 cli:244 INFO] Reading sequence from 1ubq-seq.txt
+ [2022-01-31 14:31:17,322 cli:265 WARNING] No secondary structure input given, assuming "n"
+ [2022-01-31 14:31:17,322 cli:293 INFO] Assigning average shifts
+ [2022-01-31 14:31:17,327 cli:298 INFO] Replacing the average shifts with provided shifts in the form of BMRB table
+ [2022-01-31 14:31:17,333 cli:306 INFO] Incorporating labelling scheme: None
+ [2022-01-31 14:31:17,334 cli:400 INFO] Round off the final chemical shifts to 2 decimal places
+ [2022-01-31 14:31:17,334 cli:406 INFO] Making predictions...
+ [2022-01-31 14:31:17,334 cli:408 INFO] 2D: NH, HN
+ [2022-01-31 14:31:17,337 utils:37 INFO] Writing hn_exp.txt
+ [2022-01-31 14:31:17,346 utils:37 INFO] Writing nh_exp.txt
 ```
 
 * * *
