@@ -7,6 +7,7 @@ setup(
     author="Siddarth Narasimhan",
     description="Fast Analysis of multidimensional NMR DAta Sets",
     author_email="",
+    include_package_data=True,
     packages=find_packages("src"),
     package_dir={"": "src"},
     classifiers=[],
