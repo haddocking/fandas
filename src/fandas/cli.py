@@ -262,7 +262,7 @@ def main(
     # #If the secondary structure is not given, BMRB average shifts
     #   (as on 21/07/16) will be assigned##
     if ss == "":
-        log.warning("No secondary structure input given, assuming \"n\"")
+        log.warning('No secondary structure input given, assuming "n"')
         sec_struc = ["n"] * len(sequence)
     else:
         log.info(f"Assigning secondary structure {ss}")
@@ -342,30 +342,30 @@ def main(
         # remove all the 15N labelled amino acids from the aa_rm list
         if fnl != []:
             for aa in fnl:
-                chem_shifts = rev_label(chem_shifts, "rev_c", aa.upper())
+                chem_shifts = rev_label(sequence, chem_shifts, "rev_c", aa.upper())
                 aa_rm.remove(aa.upper())
         # remove all the 15N shifts for fwd_c labelled
         # remove all the 13C labelled amino acids from the aa_rm list
         if fcl != []:
             for aa in fcl:
-                chem_shifts = rev_label(chem_shifts, "rev_n", aa.upper())
+                chem_shifts = rev_label(sequence, chem_shifts, "rev_n", aa.upper())
                 aa_rm.remove(aa.upper())
         # remove all the 13C & 15N shifts for rev_cn labelled
         if rdl != []:
             for aa in rdl:
-                chem_shifts = rev_label(chem_shifts, "rev_cn", aa.upper())
+                chem_shifts = rev_label(sequence, chem_shifts, "rev_cn", aa.upper())
         # remove all the 15N shifts for rv_n laabelled
         if rnl != []:
             for aa in rnl:
-                chem_shifts = rev_label(chem_shifts, "rev_n", aa.upper())
+                chem_shifts = rev_label(sequence, chem_shifts, "rev_n", aa.upper())
         # remove all the 13C shifts for fwd_c labelled
         if rcl != []:
             for aa in rcl:
-                chem_shifts = rev_label(chem_shifts, "rev_c", aa.upper())
+                chem_shifts = rev_label(sequence, chem_shifts, "rev_c", aa.upper())
         # remove all the 13C & 15N shifts for everything in the aa_rm list
         if (fdl != []) or (fcl != []) or (fnl != []):
             for aa in aa_rm:
-                chem_shifts = rev_label(chem_shifts, "rev_cn", aa.upper())
+                chem_shifts = rev_label(sequence, chem_shifts, "rev_cn", aa.upper())
     elif labelling_scheme == "gl13":
         chem_shifts = glycerol_label(sequence, chem_shifts, 13)
     elif labelling_scheme == "gl2":
