@@ -60,12 +60,12 @@ from fandas.version import VERSION
 log = logging.getLogger("fandaslog")
 ch = logging.StreamHandler()
 formatter = logging.Formatter(
-    " [%(asctime)s %(module)s:%(lineno)d %(levelname)s] %(message)s"
+    " [%(asctime)s %(funcName)s:L%(lineno)d %(levelname)s] %(message)s"
 )
 ch.setFormatter(formatter)
 log.addHandler(ch)
 
-__author__ = ["Siddarth Narasimhan"]
+__author__ = ["Siddarth Narasimhan", "Rodrigo Honorato"]
 
 # ===========================================================================================================
 # Define arguments
