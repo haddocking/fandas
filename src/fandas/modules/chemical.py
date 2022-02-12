@@ -35,7 +35,7 @@ secondary_structures = [
     "n",
 ]  # a=alpha helix, b=beta sheet, c=random coil, n=bmrb collected average
 
-atoms = [
+ATOM_LIST = [
     "H",
     "HA",
     "HA2",

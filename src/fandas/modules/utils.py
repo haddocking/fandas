@@ -5,7 +5,7 @@ import numpy as np
 from fandas.modules.chemical import (
     STANDARD_DATA,
     amino_acids,
-    atoms,
+    ATOM_LIST,
     c_atm_ind,
     n_atm_ind,
     secondary_structures,
@@ -164,7 +164,7 @@ def fractional_deuteration(sequence, chem_shifts):
             rem_atm = ["HA"]
         elif residue == "V":
             rem_atm = ["HA", "HB"]
-        for j, atom in enumerate(atoms):
+        for j, atom in enumerate(ATOM_LIST):
             for element in rem_atm:
                 if atom == element:
                     chem_shifts[i][j] = 0.00
@@ -379,7 +379,7 @@ def glycerol_label(sequence, chem_shifts, label_type):
                     "CZ3",
                     "CH",
                 ]
-            for j, atom in enumerate(atoms):
+            for j, atom in enumerate(ATOM_LIST):
                 for element in rem_atm:
                     if atom == element:
                         chem_shifts[i][j] = 0.00
@@ -640,7 +640,7 @@ def glycerol_label(sequence, chem_shifts, label_type):
                     "CZ3",
                     "CH",
                 ]
-            for j, atom in enumerate(atoms):
+            for j, atom in enumerate(ATOM_LIST):
                 for element in rem_atm:
                     if atom == element:
                         chem_shifts[i][j] = 0.00
@@ -674,24 +674,50 @@ def rev_label(sequence, chem_shifts, order, amino_acid):
 
 
 def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns):
-    res_num = int(bmrb_columns[0]) - 1  # Column index for residue number
-    atm_nam = int(bmrb_columns[1]) - 1  # Column index for atom name
-    c_s = int(bmrb_columns[2]) - 1  # Column index for chemical shift
-    bmrb_table = []
+    """Replace the average shifts with the shifts provided in the BMRB table.
+    
+    Parameters
+    ----------
+    chem_shifts : numpy.ndarray
+        Numpy array containing the chemichal shifts
+    bmrb_tables_file : string
+        String relates to the PATH where the of the table
+    bmrb_columns : list
+        List with the indexes (starting-1) of resnum, atom and cshift
+
+    Returns
+    -------
+    numpy.ndarray
+        Numpy array with replaced chemichal shifts
+
+    """
+    #  bmrb_columns starts with index 1 so here we need to -1 all positions
+    res_index, atom_name_index, cs_index = map(lambda x:x - 1, map(int, bmrb_columns))
+
+    # Read the provided BMRB file
     with open(bmrb_tables_file, "r") as bmrb_file:
-        # with open("%s/%s" % (w_dir, bmrb_tables_file), "r") as bmrb_file:
-        for line in bmrb_file:
-            bmrb_table.append(line.split())
-        # bmrb_file.close()
-    for c_shift in bmrb_table:
-        for i, atom in enumerate(atoms):
-            if c_shift[atm_nam] == atom:
-                try:
-                    res_ind = int(c_shift[res_num]) - 1
-                    chem_shifts[res_ind][i] = float(c_shift[c_s])
-                except Exception as e:
-                    logging.warning(e)
-                    continue
+        for line in bmrb_file.readlines():
+
+            # Split so that the whitespaces don't matter
+            c_shift = line.split()
+
+            # Use the indexes to get:
+            #  the provided chemichal shift
+            provided_c_shift = float(c_shift[cs_index])
+            #  the resnum
+            resnum = c_shift[res_index]
+            #  the atom
+            atom = c_shift[atom_name_index]
+
+            # Find the position of this atom in the chem_shifts table
+            position_to_be_replaced = ATOM_LIST.index(atom)
+
+            # Replace the appropriate position in the chem_shifts with what we got from the BMRB table
+            chem_shifts[res_index][position_to_be_replaced] = provided_c_shift
+
+            # Write down what we've done
+            log.info(f"+ {resnum}\t{atom}\t{chem_shifts[res_index][position_to_be_replaced]}\t>> {provided_c_shift}")
+
     return chem_shifts
 
 
