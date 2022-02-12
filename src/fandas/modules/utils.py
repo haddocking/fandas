@@ -712,11 +712,11 @@ def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns):
             # Find the position of this atom in the chem_shifts table
             position_to_be_replaced = ATOM_LIST.index(atom)
 
+            # Show in the log
+            log.info(f"+ {resnum}\t{atom}\t{chem_shifts[res_index][position_to_be_replaced]}\t>> {provided_c_shift}")
+
             # Replace the appropriate position in the chem_shifts with what we got from the BMRB table
             chem_shifts[res_index][position_to_be_replaced] = provided_c_shift
-
-            # Write down what we've done
-            log.info(f"+ {resnum}\t{atom}\t{chem_shifts[res_index][position_to_be_replaced]}\t>> {provided_c_shift}")
 
     return chem_shifts
 
