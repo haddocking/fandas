@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="FANDAS",
     license="Apache License 2.0",
-    version="2.0.2",
+    version="2.0.3",
     author="Siddarth Narasimhan",
     description="Fast Analysis of multidimensional NMR DAta Sets",
     author_email="",
