@@ -57,10 +57,13 @@ def write_2d(shift_a, shift_b, extension, sl=True):
         else:
             column_1 = "?-?"
         peak.append([column_1, column_2, column_3, column_4])
-    log.info(f"Writing {extension}_exp.txt")
-    with open(f"{extension}_exp.txt", "w") as output:
-        for pk in peak:
-            output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
+    if not peak:
+        log.warning(f"Nothing to write on {extension}_exp.txt")
+    else:
+        log.info(f"Writing {extension}_exp.txt")
+        with open(f"{extension}_exp.txt", "w") as output:
+            for pk in peak:
+                output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
 
 
 def write_2dd(shift_a, shift_b, extension, distance_label, sl=True):
@@ -82,10 +85,13 @@ def write_2dd(shift_a, shift_b, extension, distance_label, sl=True):
         else:
             column_1 = "?-?"
         peak.append([column_1, column_2, column_3, column_4])
-    log.info(f"Writing {extension}_exp.txt")
-    with open(f"{extension}_exp.txt", "w") as output:
-        for pk in peak:
-            output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
+    if not peak:
+        log.warning(f"Nothing to write on {extension}_exp.txt")
+    else:
+        log.info(f"Writing {extension}_exp.txt")
+        with open(f"{extension}_exp.txt", "w") as output:
+            for pk in peak:
+                output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
 
 
 def write_3dd(shift_a, shift_b, shift_c, extension, distance_label, sl=True):
@@ -111,10 +117,15 @@ def write_3dd(shift_a, shift_b, shift_c, extension, distance_label, sl=True):
         else:
             column_1 = "?-?-?"
         peak.append([column_1, column_2, column_3, column_4, column_5])
-    log.info(f"Writing {extension}_exp.txt")
-    with open(f"{extension}_exp.txt", "w") as output:
-        for pk in peak:
-            output.write("%s\t%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3], pk[4]))
+    if not peak:
+        log.warning(f"Nothing to write on {extension}_exp.txt")
+    else:
+        log.info(f"Writing {extension}_exp.txt")
+        with open(f"{extension}_exp.txt", "w") as output:
+            for pk in peak:
+                output.write(
+                    "%s\t%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3], pk[4])
+                )
 
 
 def write_3d(shift_a, shift_b, shift_c, extension, sl=True):
@@ -139,10 +150,15 @@ def write_3d(shift_a, shift_b, shift_c, extension, sl=True):
         else:
             column_1 = "?-?-?"
         peak.append([column_1, column_2, column_3, column_4, column_5])
-    log.info(f"Writing {extension}_exp.txt")
-    with open(f"{extension}_exp.txt", "w") as output:
-        for pk in peak:
-            output.write("%s\t%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3], pk[4]))
+    if not peak:
+        log.warning(f"Nothing to write on {extension}_exp.txt")
+    else:
+        log.info(f"Writing {extension}_exp.txt")
+        with open(f"{extension}_exp.txt", "w") as output:
+            for pk in peak:
+                output.write(
+                    "%s\t%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3], pk[4])
+                )
 
 
 def fractional_deuteration(sequence, chem_shifts):
