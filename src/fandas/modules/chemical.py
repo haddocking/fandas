@@ -3,7 +3,7 @@ import logging
 
 log = logging.getLogger("fandaslog")
 
-STANDARD_DATA = Path(Path(__file__).parents[1], "data/standard.dat")
+STANDARD_DATA = Path(Path(__file__).parents[1], "data/standard.csv")
 
 amino_acids = [
     "A",

@@ -1,19 +1,42 @@
 import sys
-
+import copy
 import numpy as np
-
+import pandas as pd
 from fandas.modules.chemical import (
     STANDARD_DATA,
-    amino_acids,
     ATOM_LIST,
     c_atm_ind,
     n_atm_ind,
-    secondary_structures,
 )
 
 import logging
 
 log = logging.getLogger("fandaslog")
+
+SS_REF = {"n": "AVG", "a": "ALPHA", "b": "BETA", "c": "COIL"}
+
+AA_REF = {
+    "A": "ALA",
+    "R": "ARG",
+    "D": "ASP",
+    "N": "ASN",
+    "C": "CYS",
+    "E": "GLU",
+    "Q": "GLN",
+    "G": "GLY",
+    "H": "HIS",
+    "I": "ILE",
+    "L": "LEU",
+    "K": "LYS",
+    "M": "MET",
+    "F": "PHE",
+    "P": "PRO",
+    "S": "SER",
+    "T": "THR",
+    "W": "TRP",
+    "Y": "TYR",
+    "V": "VAL",
+}
 
 
 def write_2d(shift_a, shift_b, extension, sl=True):
@@ -673,26 +696,31 @@ def rev_label(sequence, chem_shifts, order, amino_acid):
     return chem_shifts
 
 
-def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns):
+def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_start):
     """Replace the average shifts with the shifts provided in the BMRB table.
-    
+
     Parameters
     ----------
-    chem_shifts : numpy.ndarray
-        Numpy array containing the chemichal shifts
+    chem_shifts : dict
+       Dictionary containing chemichal shifts: {1: {'ATOM': value,}, ...}
     bmrb_tables_file : string
-        String relates to the PATH where the of the table
+        String related to the PATH where the table file is
     bmrb_columns : list
         List with the indexes (starting-1) of resnum, atom and cshift
+    bt_seq_start : int
+        Offset to match the BMRB table with sequence
 
     Returns
     -------
-    numpy.ndarray
-        Numpy array with replaced chemichal shifts
+    dict
+        Dictionary containing the modficied chemichal shifts: {1: {'ATOM': value,}, ...}
 
     """
+    new_chem_shifts = copy.deepcopy(chem_shifts)
     #  bmrb_columns starts with index 1 so here we need to -1 all positions
-    res_index, atom_name_index, cs_index = map(lambda x:x - 1, map(int, bmrb_columns))
+    res_index, atom_name_index, cs_index = map(lambda x: x - 1, map(int, bmrb_columns))
+    log.info(f"Offset={bt_seq_start}")
+    log.info("BMRB_num\tid\tatom\told\t\tnew")
 
     # Read the provided BMRB file
     with open(bmrb_tables_file, "r") as bmrb_file:
@@ -704,36 +732,71 @@ def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns):
             # Use the indexes to get:
             #  the provided chemichal shift
             provided_c_shift = float(c_shift[cs_index])
-            #  the resnum
-            resnum = c_shift[res_index]
+            #  which position in the chem_shifts, take into account the sequence
+            table_index = int(c_shift[res_index]) - bt_seq_start + 1
+            # resnum = int(c_shift[res_index]) - 1
             #  the atom
             atom = c_shift[atom_name_index]
 
-            # Find the position of this atom in the chem_shifts table
-            position_to_be_replaced = ATOM_LIST.index(atom)
+            ident = chem_shifts[table_index]["id"]
+            # provided_ident = f"{c_shift[res_index]}"
+            try:
+                default_value = chem_shifts[table_index][atom]
+                log.info(
+                    f"# ({c_shift[res_index]})\t{ident}\t{atom}\t{default_value}\t>>"
+                    f" {provided_c_shift}"
+                )
+                new_chem_shifts[table_index][atom] = provided_c_shift
+            except KeyError:
+                log.warning(
+                    f"# ({c_shift[res_index]})\t{ident}\t{atom} not found in "
+                    "standard table, skipping..."
+                )
 
-            # Show in the log
-            log.info(f"+ {resnum}\t{atom}\t{chem_shifts[res_index][position_to_be_replaced]}\t>> {provided_c_shift}")
-
-            # Replace the appropriate position in the chem_shifts with what we got from the BMRB table
-            chem_shifts[res_index][position_to_be_replaced] = provided_c_shift
-
-    return chem_shifts
+    return new_chem_shifts
 
 
-def assign_chemical_shifts(sequence, sec_struc):
-    # reference = np.fromfile("%s/standard.dat" % w_dir, dtype=float, sep=" ").reshape(
-    #     ((4, 20, 59))
-    # )
-    reference = np.fromfile(STANDARD_DATA, dtype=float, sep=" ").reshape(((4, 20, 59)))
-    shifts = np.zeros((len(sequence), 59))
-    for i, residue in enumerate(sequence):
-        for j, amino_acid in enumerate(amino_acids):
-            if residue == amino_acid:
-                for k, secondary_structure in enumerate(secondary_structures):
-                    if sec_struc[i] == secondary_structure:
-                        shifts[i] = reference[k, j]
+def assign_chemical_shifts(sequence, secondary_structure, data=STANDARD_DATA):
+    """Load the standard chemichal shift data and filter by sequence and ss.
+
+    Parameters
+    ----------
+    sequence : str
+        String containing the sequence in one-letter format
+    secondary_structure : list
+        List containing the secondary structure code
+    data : pathlib.Path
+        Location of the standard data
+
+    Returns
+    -------
+    dict
+       Dictionary containing chemichal shifts: {1: {'ATOM': value,}, ...}
+
+    """
+    log.info(f"Loading standard chemichal shifts from {data}")
+    df = pd.read_csv(data)
+    shifts = {}
+    for i, (res, ss) in enumerate(zip(sequence, secondary_structure), start=1):
+        sub_values = df[
+            (df["RESNAME"] == AA_REF[res]) & (df["SECONDARY_STRUCTURE"] == SS_REF[ss])
+        ]
+        shifts[i] = dict(
+            (e, v) for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
+        )
+        shifts[i]["id"] = f"{i}.{res}.{ss}"
+
     return shifts
+
+
+def dict2array(chemichal_shifts):
+    """Convert the chemichal shift dictionary to numpy.array."""
+    shifts = []
+    for i in chemichal_shifts:
+        shifts.append(
+            np.array([chemichal_shifts[i][e] for e in chemichal_shifts[i] if e != "id"])
+        )
+    return np.array(shifts)
 
 
 def check_user_input(user_input, input_type, error_type):
