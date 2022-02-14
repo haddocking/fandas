@@ -1,2 +1,2 @@
 include README.md
-include src/fandas/data/standard.dat
+include src/fandas/data/standard.csv
