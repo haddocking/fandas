@@ -729,17 +729,11 @@ def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_start):
             # Split so that the whitespaces don't matter
             c_shift = line.split()
 
-            # Use the indexes to get:
-            #  the provided chemichal shift
             provided_c_shift = float(c_shift[cs_index])
-            #  which position in the chem_shifts, take into account the sequence
             table_index = int(c_shift[res_index]) - bt_seq_start + 1
-            # resnum = int(c_shift[res_index]) - 1
-            #  the atom
             atom = c_shift[atom_name_index]
-
             ident = chem_shifts[table_index]["id"]
-            # provided_ident = f"{c_shift[res_index]}"
+
             try:
                 default_value = chem_shifts[table_index][atom]
                 log.info(
