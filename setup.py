@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="FANDAS",
     license="Apache License 2.0",
-    version="2.0.3",
-    author="Siddarth Narasimhan",
+    version="2.1.0",
+    author="Siddarth Narasimhan, Rodrigo Honorato",
     description="Fast Analysis of multidimensional NMR DAta Sets",
     author_email="",
     include_package_data=True,
@@ -12,7 +12,7 @@ setup(
     package_dir={"": "src"},
     classifiers=[],
     python_requires=">=3.6, <4",
-    install_requires=["numpy"],
+    install_requires=["numpy", "pandas"],
     entry_points={
         "console_scripts": [
             "fandas=fandas.cli:maincli",
