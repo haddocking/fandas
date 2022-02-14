@@ -307,7 +307,7 @@ def main(
             "Replacing the average shifts with provided "
             "shifts in the form of BMRB table"
         )
-        chem_shifts = replace_bmrb(chem_shifts, bt, btc, bt_seq_start)
+        chem_shifts = replace_bmrb(sequence, chem_shifts, bt, btc, bt_seq_start)
 
     # convert chemical shift to a numpy array
     chem_shifts = dict2array(chem_shifts)

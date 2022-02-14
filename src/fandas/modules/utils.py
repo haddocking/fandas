@@ -696,11 +696,13 @@ def rev_label(sequence, chem_shifts, order, amino_acid):
     return chem_shifts
 
 
-def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_start):
+def replace_bmrb(sequence, chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_start):
     """Replace the average shifts with the shifts provided in the BMRB table.
 
     Parameters
     ----------
+    sequence : string
+        One-letter code aminoacid sequence
     chem_shifts : dict
        Dictionary containing chemichal shifts: {1: {'ATOM': value,}, ...}
     bmrb_tables_file : string
@@ -719,8 +721,10 @@ def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_start):
     new_chem_shifts = copy.deepcopy(chem_shifts)
     #  bmrb_columns starts with index 1 so here we need to -1 all positions
     res_index, atom_name_index, cs_index = map(lambda x: x - 1, map(int, bmrb_columns))
-    log.info(f"Offset={bt_seq_start}")
+    log.info(f"Sequence starts at number {bt_seq_start}")
     log.info("BMRB_num\tid\tatom\told\t\tnew")
+
+    sequence_number_range = range(bt_seq_start, len(sequence) + 1)
 
     # Read the provided BMRB file
     with open(bmrb_tables_file, "r") as bmrb_file:
@@ -729,21 +733,35 @@ def replace_bmrb(chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_start):
             # Split so that the whitespaces don't matter
             c_shift = line.split()
 
+            if not c_shift:
+                # line is empty
+                continue
+
+            bmrb_resnum = int(c_shift[res_index])
+
             provided_c_shift = float(c_shift[cs_index])
-            table_index = int(c_shift[res_index]) - bt_seq_start + 1
             atom = c_shift[atom_name_index]
+
+            if bmrb_resnum not in sequence_number_range:
+                log.warning(
+                    f"## bmrb.{bmrb_resnum}.{atom} does not match sequence numbering"
+                )
+                continue
+
+            # identifier of what will be changed
+            table_index = bmrb_resnum - 1
             ident = chem_shifts[table_index]["id"]
 
             try:
                 default_value = chem_shifts[table_index][atom]
                 log.info(
-                    f"# ({c_shift[res_index]})\t{ident}\t{atom}\t{default_value}\t>>"
+                    f"# (bmrb.{bmrb_resnum}) {ident}\t{atom}\t{default_value}\t>>"
                     f" {provided_c_shift}"
                 )
                 new_chem_shifts[table_index][atom] = provided_c_shift
             except KeyError:
                 log.warning(
-                    f"# ({c_shift[res_index]})\t{ident}\t{atom} not found in "
+                    f"# (bmrb.{bmrb_resnum}) {ident}\t{atom} not found in "
                     "standard table, skipping..."
                 )
 
