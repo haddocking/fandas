@@ -720,7 +720,7 @@ def replace_bmrb(sequence, chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_s
     sequence : string
         One-letter code aminoacid sequence
     chem_shifts : dict
-       Dictionary containing chemichal shifts: {1: {'ATOM': value,}, ...}
+       Dictionary containing chemical shifts: {1: {'ATOM': value,}, ...}
     bmrb_tables_file : string
         String related to the PATH where the table file is
     bmrb_columns : list
@@ -731,7 +731,7 @@ def replace_bmrb(sequence, chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_s
     Returns
     -------
     dict
-        Dictionary containing the modficied chemichal shifts: {1: {'ATOM': value,}, ...}
+        Dictionary containing the modficied chemical shifts: {1: {'ATOM': value,}, ...}
 
     """
     new_chem_shifts = copy.deepcopy(chem_shifts)
@@ -776,7 +776,7 @@ def replace_bmrb(sequence, chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_s
                 new_chem_shifts[table_index][atom] = provided_c_shift
             except KeyError:
                 log.warning(
-                    f"# (bmrb.{bmrb_resnum}) {ident}\t{atom} not found in "
+                    f"# (bmrb.{bmrb_resnum}) {ident}\t atom: {atom} not found in "
                     "standard table, skipping..."
                 )
 
@@ -784,7 +784,7 @@ def replace_bmrb(sequence, chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_s
 
 
 def assign_chemical_shifts(sequence, secondary_structure, data=STANDARD_DATA):
-    """Load the standard chemichal shift data and filter by sequence and ss.
+    """Load the standard chemical shift data and filter by sequence and ss.
 
     Parameters
     ----------
@@ -798,10 +798,10 @@ def assign_chemical_shifts(sequence, secondary_structure, data=STANDARD_DATA):
     Returns
     -------
     dict
-       Dictionary containing chemichal shifts: {1: {'ATOM': value,}, ...}
+       Dictionary containing chemical shifts: {1: {'ATOM': value,}, ...}
 
     """
-    log.info(f"Loading standard chemichal shifts from {data}")
+    log.info(f"Loading standard chemical shifts from {data}")
     df = pd.read_csv(data)
     shifts = {}
     for i, (res, ss) in enumerate(zip(sequence, secondary_structure), start=1):
@@ -816,12 +816,12 @@ def assign_chemical_shifts(sequence, secondary_structure, data=STANDARD_DATA):
     return shifts
 
 
-def dict2array(chemichal_shifts):
-    """Convert the chemichal shift dictionary to numpy.array."""
+def dict2array(chemical_shifts):
+    """Convert the chemical shift dictionary to numpy.array."""
     shifts = []
-    for i in chemichal_shifts:
+    for i in chemical_shifts:
         shifts.append(
-            np.array([chemichal_shifts[i][e] for e in chemichal_shifts[i] if e != "id"])
+            np.array([chemical_shifts[i][e] for e in chemical_shifts[i] if e != "id"])
         )
     return np.array(shifts)
 
