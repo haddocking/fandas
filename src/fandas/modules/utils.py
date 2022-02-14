@@ -748,8 +748,7 @@ def replace_bmrb(sequence, chem_shifts, bmrb_tables_file, bmrb_columns, bt_seq_s
                 )
                 continue
 
-            # identifier of what will be changed
-            table_index = bmrb_resnum - 1
+            table_index = bmrb_resnum
             ident = chem_shifts[table_index]["id"]
 
             try:
