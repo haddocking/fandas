@@ -32,7 +32,12 @@ def hh(sequence, chem_shifts):
                                 [residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]]
                             )
                             shift_2.append(
-                                [residue, i + 1, chem_shifts[i][h_ind], ATOM_LIST[h_ind]]
+                                [
+                                    residue,
+                                    i + 1,
+                                    chem_shifts[i][h_ind],
+                                    ATOM_LIST[h_ind],
+                                ]
                             )
     write_2d(shift_1, shift_2, "hh")
 
@@ -520,7 +525,9 @@ def cc_spindiff_intra(sequence, chem_shifts):
                         and (chem_shifts[i][c_ind] != 0)
                         and (chem_shifts[i][j]) != 0
                     ):
-                        shift_1.append([residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]])
+                        shift_1.append(
+                            [residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]]
+                        )
                         shift_2.append(
                             [residue, i + 1, chem_shifts[i][c_ind], ATOM_LIST[c_ind]]
                         )
@@ -539,7 +546,9 @@ def cc_spindiff_inter(sequence, chem_shifts):
                         and (chem_shifts[i][c_ind] != 0)
                         and (chem_shifts[i][j] != 0)
                     ):
-                        shift_1.append([residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]])
+                        shift_1.append(
+                            [residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]]
+                        )
                         shift_2.append(
                             [residue, i + 1, chem_shifts[i][c_ind], ATOM_LIST[c_ind]]
                         )
@@ -639,7 +648,9 @@ def nca(sequence, chem_shifts):
             chem_shifts[i][ATOM_LIST.index("CA")] != 0
         ):  # check if the chemical shifts of the two are not zero
             shift_1.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"])
-            shift_2.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"])
+            shift_2.append(
+                [residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"]
+            )
     write_2d(shift_1, shift_2, "nca")
 
 
@@ -691,7 +702,12 @@ def ncocx_dist(sequence, chem_shifts, dimensionality, dlist, distances):
                 [sequence[resi_1], resi_1 + 1, chem_shifts[resi_1][pos_1], "CA"]
             )
             shift_3.append(
-                [sequence[resi_2], resi_2 + 1, chem_shifts[resi_2][pos_2], ATOM_LIST[pos_2]]
+                [
+                    sequence[resi_2],
+                    resi_2 + 1,
+                    chem_shifts[resi_2][pos_2],
+                    ATOM_LIST[pos_2],
+                ]
             )
             distance_label.append(distances[dlist.index(dist_line)])
         elif (
@@ -713,7 +729,12 @@ def ncocx_dist(sequence, chem_shifts, dimensionality, dlist, distances):
                 [sequence[resi_2], resi_2 + 1, chem_shifts[resi_2][pos_2], "CA"]
             )
             shift_3.append(
-                [sequence[resi_1], resi_1 + 1, chem_shifts[resi_1][pos_1], ATOM_LIST[pos_1]]
+                [
+                    sequence[resi_1],
+                    resi_1 + 1,
+                    chem_shifts[resi_1][pos_1],
+                    ATOM_LIST[pos_1],
+                ]
             )
             distance_label.append(distances[dlist.index(dist_line)])
     if dimensionality == 2:
@@ -752,7 +773,12 @@ def ncacx_dist(sequence, chem_shifts, dimensionality, dlist, distances):
                 [sequence[resi_1], resi_1 + 1, chem_shifts[resi_1][pos_1], "CA"]
             )
             shift_3.append(
-                [sequence[resi_2], resi_2 + 1, chem_shifts[resi_2][pos_2], ATOM_LIST[pos_2]]
+                [
+                    sequence[resi_2],
+                    resi_2 + 1,
+                    chem_shifts[resi_2][pos_2],
+                    ATOM_LIST[pos_2],
+                ]
             )
             distance_label.append(distances[dlist.index(dist_line)])
         elif (
@@ -773,7 +799,12 @@ def ncacx_dist(sequence, chem_shifts, dimensionality, dlist, distances):
                 [sequence[resi_2], resi_2 + 1, chem_shifts[resi_2][pos_2], "CA"]
             )
             shift_3.append(
-                [sequence[resi_1], resi_1 + 1, chem_shifts[resi_1][pos_1], ATOM_LIST[pos_1]]
+                [
+                    sequence[resi_1],
+                    resi_1 + 1,
+                    chem_shifts[resi_1][pos_1],
+                    ATOM_LIST[pos_1],
+                ]
             )
             distance_label.append(distances[dlist.index(dist_line)])
     if dimensionality == 2:
@@ -809,7 +840,12 @@ def ncacx_inter(sequence, chem_shifts, dimensionality):
                             [residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"]
                         )
                         shift_2.append(
-                            [residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"]
+                            [
+                                residue,
+                                i + 1,
+                                chem_shifts[i][ATOM_LIST.index("CA")],
+                                "CA",
+                            ]
                         )
                         shift_3.append(
                             [
@@ -826,7 +862,12 @@ def ncacx_inter(sequence, chem_shifts, dimensionality):
                             [residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"]
                         )
                         shift_2.append(
-                            [residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"]
+                            [
+                                residue,
+                                i + 1,
+                                chem_shifts[i][ATOM_LIST.index("CA")],
+                                "CA",
+                            ]
                         )
                         shift_3.append(
                             [
@@ -887,10 +928,20 @@ def ncocx(sequence, chem_shifts, dimensionality):
                         [residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"]
                     )
                     shift_2.append(
-                        [sequence[i - 1], i, chem_shifts[i - 1][ATOM_LIST.index("C")], "C"]
+                        [
+                            sequence[i - 1],
+                            i,
+                            chem_shifts[i - 1][ATOM_LIST.index("C")],
+                            "C",
+                        ]
                     )
                     shift_3.append(
-                        [sequence[i - 1], i, chem_shifts[i - 1][c_ind], ATOM_LIST[c_ind]]
+                        [
+                            sequence[i - 1],
+                            i,
+                            chem_shifts[i - 1][c_ind],
+                            ATOM_LIST[c_ind],
+                        ]
                     )
     if dimensionality == 2:
         write_2d(shift_1, shift_3, "ncocx_2d")
@@ -917,10 +968,20 @@ def ncoca_cb(sequence, chem_shifts, dimensionality):
                         [residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"]
                     )
                     shift_2.append(
-                        [sequence[i - 1], i, chem_shifts[i - 1][ATOM_LIST.index("C")], "C"]
+                        [
+                            sequence[i - 1],
+                            i,
+                            chem_shifts[i - 1][ATOM_LIST.index("C")],
+                            "C",
+                        ]
                     )
                     shift_3.append(
-                        [sequence[i - 1], i, chem_shifts[i - 1][c_ind], ATOM_LIST[c_ind]]
+                        [
+                            sequence[i - 1],
+                            i,
+                            chem_shifts[i - 1][c_ind],
+                            ATOM_LIST[c_ind],
+                        ]
                     )
     if dimensionality == 2:
         write_2d(shift_1, shift_3, "ncocacb_2d")
@@ -953,7 +1014,10 @@ def dqsqsq_inter(sequence, chem_shifts):
                     if (
                         (chem_shifts[i][j] != 0)
                         and (chem_shifts[i][j + 1 + k] != 0)
-                        and (dq_exceptions(residue, ATOM_LIST[j], ATOM_LIST[j + 1 + k]) == 1)
+                        and (
+                            dq_exceptions(residue, ATOM_LIST[j], ATOM_LIST[j + 1 + k])
+                            == 1
+                        )
                     ):
                         shift_1.append(
                             [
@@ -1097,7 +1161,8 @@ def dqsqsq_inter(sequence, chem_shifts):
                                             i + 1,
                                             chem_shifts[i][j]
                                             + chem_shifts[i][j + 1 + k],
-                                            "%s+%s" % (ATOM_LIST[j], ATOM_LIST[j + 1 + k]),
+                                            "%s+%s"
+                                            % (ATOM_LIST[j], ATOM_LIST[j + 1 + k]),
                                         ]
                                     )
                                     shift_2.append(
@@ -1122,7 +1187,8 @@ def dqsqsq_inter(sequence, chem_shifts):
                                             i + 1,
                                             chem_shifts[i][j + 1 + k]
                                             + chem_shifts[i][j],
-                                            "%s+%s" % (ATOM_LIST[j + 1 + k], ATOM_LIST[j]),
+                                            "%s+%s"
+                                            % (ATOM_LIST[j + 1 + k], ATOM_LIST[j]),
                                         ]
                                     )
                                     shift_2.append(
@@ -1152,7 +1218,8 @@ def dqsqsq_inter(sequence, chem_shifts):
                                             i + 1,
                                             chem_shifts[i][j]
                                             + chem_shifts[i][j + 1 + k],
-                                            "%s+%s" % (ATOM_LIST[j], ATOM_LIST[j + 1 + k]),
+                                            "%s+%s"
+                                            % (ATOM_LIST[j], ATOM_LIST[j + 1 + k]),
                                         ]
                                     )
                                     shift_2.append(
@@ -1177,7 +1244,8 @@ def dqsqsq_inter(sequence, chem_shifts):
                                             i + 1,
                                             chem_shifts[i][j + 1 + k]
                                             + chem_shifts[i][j],
-                                            "%s+%s" % (ATOM_LIST[j + 1 + k], ATOM_LIST[j]),
+                                            "%s+%s"
+                                            % (ATOM_LIST[j + 1 + k], ATOM_LIST[j]),
                                         ]
                                     )
                                     shift_2.append(
@@ -1326,7 +1394,9 @@ def canh(sequence, chem_shifts, dimensionality):
             and (chem_shifts[i][ATOM_LIST.index("N")] != 0)
             and (chem_shifts[i][ATOM_LIST.index("CA")] != 0)
         ):  # check if the chemical shifts of the CA, HA and N are not zero
-            shift_1.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"])
+            shift_1.append(
+                [residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"]
+            )
             shift_2.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"])
             shift_3.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("H")], "H"])
     if dimensionality == 2:
@@ -1348,7 +1418,9 @@ def conh(sequence, chem_shifts, dimensionality):
                 and (chem_shifts[i - 1][ATOM_LIST.index("N")] != 0)
                 and (chem_shifts[i][ATOM_LIST.index("C")] != 0)
             ):  # check if the chemical shifts of the Co, H and N are not zero
-                shift_1.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("C")], "C"])
+                shift_1.append(
+                    [residue, i + 1, chem_shifts[i][ATOM_LIST.index("C")], "C"]
+                )
                 shift_2.append(
                     [sequence[i - 1], i, chem_shifts[i - 1][ATOM_LIST.index("N")], "N"]
                 )
@@ -1375,10 +1447,19 @@ def caconh(sequence, chem_shifts, dimensionality):
                 and (chem_shifts[i - 1][ATOM_LIST.index("C")] != 0)
             ):
                 shift_1.append(
-                    [sequence[i - 1], i, chem_shifts[i - 1][ATOM_LIST.index("CA")], "CA"]
+                    [
+                        sequence[i - 1],
+                        i,
+                        chem_shifts[i - 1][ATOM_LIST.index("CA")],
+                        "CA",
+                    ]
                 )
-                shift_2.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"])
-                shift_3.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("H")], "H"])
+                shift_2.append(
+                    [residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"]
+                )
+                shift_3.append(
+                    [residue, i + 1, chem_shifts[i][ATOM_LIST.index("H")], "H"]
+                )
     if dimensionality == 2:
         write_2d(shift_1, shift_3, "caconh")
     elif dimensionality == 3:
@@ -1419,7 +1500,9 @@ def ncah(sequence, chem_shifts, dimensionality):
                 and (chem_shifts[i][ATOM_LIST.index("N")] != 0)
                 and (chem_shifts[i][ATOM_LIST.index("HA")] != 0)
             ):
-                shift_1.append([residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"])
+                shift_1.append(
+                    [residue, i + 1, chem_shifts[i][ATOM_LIST.index("N")], "N"]
+                )
                 shift_2.append(
                     [residue, i + 1, chem_shifts[i][ATOM_LIST.index("CA")], "CA"]
                 )
@@ -1456,7 +1539,12 @@ def sqsqsq_inter(sequence, chem_shifts):
                                 ):  # check if the chemical shifts of the three are
                                     #  not zero
                                     shift_1.append(
-                                        [residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]]
+                                        [
+                                            residue,
+                                            i + 1,
+                                            chem_shifts[i][j],
+                                            ATOM_LIST[j],
+                                        ]
                                     )
                                     shift_2.append(
                                         [
@@ -1484,7 +1572,12 @@ def sqsqsq_inter(sequence, chem_shifts):
                                     and chem_shifts[i][j] != 0
                                 ):  # check if the CS are not zero
                                     shift_1.append(
-                                        [residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]]
+                                        [
+                                            residue,
+                                            i + 1,
+                                            chem_shifts[i][j],
+                                            ATOM_LIST[j],
+                                        ]
                                     )
                                     shift_2.append(
                                         [
@@ -1523,7 +1616,9 @@ def peaks_proton_heavy(sequence, chem_shifts, atm_1, atm_2, direct):
                         shift_1.append(
                             [residue, i + 1, chem_shifts[i][h_ind], ATOM_LIST[h_ind]]
                         )
-                        shift_2.append([residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]])
+                        shift_2.append(
+                            [residue, i + 1, chem_shifts[i][j], ATOM_LIST[j]]
+                        )
     if atm_1 == direct:
         extension = "%s%s" % (atm_1, atm_2)
         write_2d(shift_1, shift_2, extension.lower())
