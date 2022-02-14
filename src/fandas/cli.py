@@ -47,6 +47,7 @@ from fandas.modules.experiments import (
     sqsqsq_inter,
 )
 from fandas.modules.utils import (
+    dict2array,
     assign_chemical_shifts,
     check_user_input,
     fractional_deuteration,
@@ -81,6 +82,12 @@ ap.add_argument(
     default="",
 )
 ap.add_argument("-bt", help="BMRB tables as a text file in NMR Star format", default="")
+ap.add_argument(
+    "-bt_seq_start",
+    help="Which should be the first residue number of your sequence.",
+    type=int,
+    default=1,
+)
 ap.add_argument(
     "-btc",
     help=(
@@ -214,6 +221,7 @@ def maincli():
 
 def main(
     bt,
+    bt_seq_start,
     btc,
     cl,
     dl,
@@ -299,7 +307,10 @@ def main(
             "Replacing the average shifts with provided "
             "shifts in the form of BMRB table"
         )
-        chem_shifts = replace_bmrb(chem_shifts, bt, btc)
+        chem_shifts = replace_bmrb(chem_shifts, bt, btc, bt_seq_start)
+
+    # convert chemical shift to a numpy array
+    chem_shifts = dict2array(chem_shifts)
 
     # ##(6) incorporate forward, reverse & glycerol labelling schemes
     # configure labelled amino acids list if fwd or rv labelling schemes are used
