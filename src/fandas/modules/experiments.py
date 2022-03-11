@@ -1609,6 +1609,7 @@ def peaks_proton_heavy(sequence, chem_shifts, atm_1, atm_2, direct):
             if atom == atm_2:  # check if it is a heavy atom
                 for h_ind in h_atm_ind:  # loop on proton indices
                     if (
+                        # N - H
                         atom_positions[h_ind] == atom_positions[j]
                         and chem_shifts[i][h_ind] != 0
                         and chem_shifts[i][j] != 0

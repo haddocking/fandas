@@ -1,0 +1,98 @@
+#------------------------------------------------------------------------------------------------
+[general]
+sequence = "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
+secondary_structure = ""
+fractionally_deuterated = true
+
+#------------------------------------------------------------------------------------------------
+[BMRB]
+# BMRB tables as a text file in NMR Star format
+bmrb_table_fname = "/Users/rodrigo/repos/fandas/example/1ubq-bmrb-tables.txt"
+# Which should be the first residue number of your sequence.
+sequence_start = 1
+# column numbers
+resnum_column = 1
+atom_column = 3
+chemical_shift_column = 4
+
+#------------------------------------------------------------------------------------------------
+[labeling]
+# Which labeling scheme to be used
+#  "fully", "forward", "reverse", "gl13", "gl2"
+scheme = "gl13"
+
+[labeling.forward]
+fw_13c_15n = []
+fw_13c = []
+fw_15n = []
+
+[labeling.reverse]
+rev_12c_14n = ["A", "G"]
+rev_12c = ["L"]
+rev_14n = ["I"]
+#------------------------------------------------------------------------------------------------
+[experiments]
+[experiments.2d]
+exp = []
+
+[experiments.2dd]
+exp = []
+
+[experiments.3d]
+exp = []
+
+[experiments.3dd]
+exp = []
+#------------------------------------------------------------------------------------------------
+# ap.add_argument(
+#     "-exp_2d", help=f"List of 2D experiments: {list_2d}", nargs="+", default=[]
+# )
+# ap.add_argument(
+#     "-exp_2dd",
+#     help=(
+#         "List of distance encoded (distance list, -dl and limit -dlm  must be"
+#         f" provided) 2D experiments: {list_2dd}"
+#     ),
+#     nargs="+",
+#     default=[],
+# )
+# ap.add_argument(
+#     "-exp_3d", help=f"List of 3D experiments: {list_3d}", nargs="+", default=[]
+# )
+
+# ap.add_argument(
+#     "-exp_3dd",
+#     help=(
+#         "List of distance encoded (distance list, -dl and limit -dlm must be"
+#         f" provided) 3D experiments: {list_3dd}"
+#     ),
+#     nargs="+",
+#     default=[],
+# )
+# ap.add_argument(
+#     "-sl",
+#     help="automatically assign peak labels in the sparky file",
+#     action="store_true",
+# )
+
+# ap.add_argument(
+#     "-dlist",
+#     help=(
+#         "Distance list file in angstorms containing "
+#         "resi_num,atm_nam,resi_num_2,atm_nam_2,dist - EXAMPLE: 2,CA,4,CB,4.5"
+#     ),
+#     default="",
+#     dest="distance_list_fname",
+# )
+# ap.add_argument(
+#     "-dlim",
+#     help="Distance limit in angstorms",
+#     default=5,
+#     dest="distance_limit",
+# )
+# ap.add_argument(
+#     "-o",
+#     help="names for output",
+#     default="fandas_output",
+#     dest="output_fname",
+# )

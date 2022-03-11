@@ -1,4 +1,5 @@
 import sys
+import os
 import copy
 import numpy as np
 import pandas as pd
@@ -7,6 +8,8 @@ from fandas.modules.chemical import (
     ATOM_LIST,
     c_atm_ind,
     n_atm_ind,
+    GL_13,
+    ATOM_INDEX_DIC,
 )
 
 import logging
@@ -210,219 +213,234 @@ def fractional_deuteration(sequence, chem_shifts):
     return chem_shifts
 
 
+# def remove_atom_from_shift(residue, atom_list):
+#     """Set the shift of some atoms to 0."""
+
+
+def glycerol_label_13(sequence, chem_shifts):
+    for i, residue in enumerate(sequence):
+        atoms_to_be_removed = GL_13[residue]
+        for j, atom in enumerate(ATOM_LIST):
+            for element in rem_atm:
+                if atom == element:
+                    chem_shifts[i][j] = 0.00
+    # pass
+
+
 def glycerol_label(sequence, chem_shifts, label_type):
-    if label_type == 13:
-        for i, residue in enumerate(sequence):
-            if residue == "A":
-                rem_atm = [
-                    "CA",
-                    "CG1",
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "R":
-                rem_atm = [
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "D":
-                rem_atm = [
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "N":
-                rem_atm = [
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "C":
-                rem_atm = [
-                    "CA",
-                    "CG1",
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "E":
-                rem_atm = [
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "Q":
-                rem_atm = [
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "G":
-                rem_atm = [
-                    "CA",
-                    "CB",
-                    "CG1",
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "H":
-                rem_atm = [
-                    "CA",
-                    "CG2",
-                    "CD1",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "I":
-                rem_atm = ["CB", "CD2", "CE1", "CE2", "CE3", "CZ1", "CZ2", "CZ3", "CH"]
-            elif residue == "L":
-                rem_atm = [
-                    "C",
-                    "CB",
-                    "CG1",
-                    "CG2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "K":
-                rem_atm = ["CG2", "CD2", "CE2", "CE3", "CZ1", "CZ2", "CZ3", "CH"]
-            elif residue == "M":
-                rem_atm = ["CG2", "CD1", "CD2", "CE2", "CE3", "CZ1", "CZ2", "CZ3", "CH"]
-            elif residue == "F":
-                rem_atm = ["CA", "CG1", "CG2", "CE2", "CE3", "CZ2", "CZ3", "CH"]
-            elif residue == "P":
-                rem_atm = [
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "S":
-                rem_atm = [
-                    "CA",
-                    "CG1",
-                    "CG2",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "T":
-                rem_atm = [
-                    "CG1",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            elif residue == "W":
-                rem_atm = ["CA", "CG2", "CD2", "CE1", "CZ1", "CZ3"]
-            elif residue == "Y":
-                rem_atm = ["CA", "CG1", "CG2", "CE2", "CE3", "CZ2", "CZ3", "CH"]
-            elif residue == "V":
-                rem_atm = [
-                    "CA",
-                    "CB",
-                    "CD1",
-                    "CD2",
-                    "CE1",
-                    "CE2",
-                    "CE3",
-                    "CZ1",
-                    "CZ2",
-                    "CZ3",
-                    "CH",
-                ]
-            for j, atom in enumerate(ATOM_LIST):
-                for element in rem_atm:
-                    if atom == element:
-                        chem_shifts[i][j] = 0.00
-    elif label_type == 2:
+    # if label_type == 13:
+    #     for i, residue in enumerate(sequence):
+    #         if residue == "A":
+    #             # these atoms are here because they are in the table
+    #             rem_atm = [
+    #                 "CA",
+    #                 "CG1",
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "R":
+    #             rem_atm = [
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "D":
+    #             rem_atm = [
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "N":
+    #             rem_atm = [
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "C":
+    #             rem_atm = [
+    #                 "CA",
+    #                 "CG1",
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "E":
+    #             rem_atm = [
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "Q":
+    #             rem_atm = [
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "G":
+    #             rem_atm = [
+    #                 "CA",
+    #                 "CB",
+    #                 "CG1",
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "H":
+    #             rem_atm = [
+    #                 "CA",
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "I":
+    #             rem_atm = ["CB", "CD2", "CE1", "CE2", "CE3", "CZ1", "CZ2", "CZ3", "CH"]
+    #         elif residue == "L":
+    #             rem_atm = [
+    #                 "C",
+    #                 "CB",
+    #                 "CG1",
+    #                 "CG2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "K":
+    #             rem_atm = ["CG2", "CD2", "CE2", "CE3", "CZ1", "CZ2", "CZ3", "CH"]
+    #         elif residue == "M":
+    #             rem_atm = ["CG2", "CD1", "CD2", "CE2", "CE3", "CZ1", "CZ2", "CZ3", "CH"]
+    #         elif residue == "F":
+    #             rem_atm = ["CA", "CG1", "CG2", "CE2", "CE3", "CZ2", "CZ3", "CH"]
+    #         elif residue == "P":
+    #             rem_atm = [
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "S":
+    #             rem_atm = [
+    #                 "CA",
+    #                 "CG1",
+    #                 "CG2",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "T":
+    #             rem_atm = [
+    #                 "CG1",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         elif residue == "W":
+    #             rem_atm = ["CA", "CG2", "CD2", "CE1", "CZ1", "CZ3"]
+    #         elif residue == "Y":
+    #             rem_atm = ["CA", "CG1", "CG2", "CE2", "CE3", "CZ2", "CZ3", "CH"]
+    #         elif residue == "V":
+    #             rem_atm = [
+    #                 "CA",
+    #                 "CB",
+    #                 "CD1",
+    #                 "CD2",
+    #                 "CE1",
+    #                 "CE2",
+    #                 "CE3",
+    #                 "CZ1",
+    #                 "CZ2",
+    #                 "CZ3",
+    #                 "CH",
+    #             ]
+    #         for j, atom in enumerate(ATOM_LIST):
+    #             for element in rem_atm:
+    #                 if atom == element:
+    #                     chem_shifts[i][j] = 0.00
+    if label_type == 2:
         for i, residue in enumerate(sequence):
             if residue == "A":
                 rem_atm = [
@@ -699,11 +717,13 @@ def rev_label(sequence, chem_shifts, order, amino_acid):
             if sequence[i] == amino_acid:
                 for c_ind in c_atm_ind:
                     chem_shift[c_ind] = 0.00
+
     if order == "rev_n":
         for i, chem_shift in enumerate(chem_shifts):
             if sequence[i] == amino_acid:
                 for n_ind in n_atm_ind:
                     chem_shift[n_ind] = 0.00
+
     if order == "rev_c":
         for i, chem_shift in enumerate(chem_shifts):
             if sequence[i] == amino_acid:
@@ -835,3 +855,61 @@ def check_user_input(user_input, input_type, error_type):
     if matches != len(user_input):
         log.error("%s Error: Please check!" % error_type)
         sys.exit()
+
+
+def load_sequence(sequence_file):
+    """Load a sequence from the sequence file."""
+    with open(sequence_file, "r") as input_fh:
+        sequence = "".join(input_fh.readlines())
+
+    sequence = _format_str(sequence)
+
+    return sequence
+
+
+def load_secondary_structure(secondary_structure_file):
+    """Load the secondary structure definition from a file."""
+    with open(secondary_structure_file, "r") as fh:
+        secondary_structure = "".join(list(fh.readline()))
+
+    secondary_structure = _format_str(secondary_structure, uppercase=False)
+
+    return secondary_structure
+
+
+def _format_str(_str, uppercase=True):
+    """Remove newlines and whitespaces from string."""
+    _str = _str.split(os.linesep)[0]
+    _str = "".join(_str.split())
+    if uppercase:
+        _str = _str.upper()
+    else:
+        _str = _str.lower()
+
+    return _str
+
+
+def load_bmrbm(table_fname, resname_col, atom_col, shift_col):
+    """Load a BMRBM table and return a dictionary."""
+    bmrb_dic = {}
+    with open(table_fname, "r") as bmrb_file:
+        for line in bmrb_file.readlines():
+
+            # Split so that the whitespaces don't matter
+            c_shift = line.split()
+
+            if not c_shift:
+                # line is empty
+                continue
+
+            #  bmrb_columns starts with index 1 so here we need to -1 all positions
+            bmrb_resnum = int(c_shift[resname_col - 1])
+            bmrb_atom = c_shift[atom_col - 1]
+            bmrb_shift = float(c_shift[shift_col - 1])
+
+            if bmrb_resnum not in bmrb_dic:
+                bmrb_dic[bmrb_resnum] = {}
+
+            bmrb_dic[bmrb_resnum][bmrb_atom] = bmrb_shift
+
+    return bmrb_dic
