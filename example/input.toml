@@ -19,7 +19,7 @@ chemical_shift_column = 4
 [labeling]
 # Which labeling scheme to be used
 #  "fully", "forward", "reverse", "gl13", "gl2"
-scheme = "gl13"
+scheme = "fully"
 
 [labeling.forward]
 fw_13c_15n = []
@@ -32,17 +32,90 @@ rev_12c = ["L"]
 rev_14n = ["I"]
 #------------------------------------------------------------------------------------------------
 [experiments]
-[experiments.2d]
-exp = []
+#         if experiment == "NH":
+#             peaks_proton_heavy(sequence, chem_shifts, "H", "N", "H")
+exp_1 = ["N", "H"]
 
-[experiments.2dd]
-exp = []
+#         elif experiment == "HN":
+#             peaks_proton_heavy(sequence, chem_shifts, "H", "N", "N")
+exp_2 = ["H", "N"]
 
-[experiments.3d]
-exp = []
+#         elif experiment == "CH":
+#             peaks_proton_heavy(sequence, chem_shifts, "H", "C", "C")
+exp_3 = ["C", "H"]
 
-[experiments.3dd]
-exp = []
+#         elif experiment == "HC":
+#             peaks_proton_heavy(sequence, chem_shifts, "H", "C", "H")
+exp_4 = ["H", "C"]
+
+#         elif experiment == "HH":
+#             hh(sequence, chem_shifts)
+exp_5 = ["H", "H"]
+
+#         elif experiment == "DQSQ":
+#             dqsq(sequence, chem_shifts)
+exp_6 = "???"
+
+#         elif experiment == "CC_SPINDIFF_INTRA":
+#             cc_spindiff_intra(sequence, chem_shifts)
+exp_7 = "???"
+
+#         elif experiment == "CC_SPINDIFF_INTER":
+#             cc_spindiff_inter(sequence, chem_shifts)
+exp_8 = "???"
+
+#         elif experiment == "NCA":
+#             nca(sequence, chem_shifts)
+exp_9 = ["N", "CA"]
+
+#         elif experiment == "NCO":
+#             nco(sequence, chem_shifts)
+exp_10 = ["N", "C0"]
+
+#         elif experiment == "NCACX":
+#             ncacx(sequence, chem_shifts, 2)
+exp_11 = ["N", "CACX"]
+
+#         elif experiment == "NCACX_INTER":
+#             ncacx_inter(sequence, chem_shifts, 2)
+exp_12 = "???"
+
+#         elif experiment == "NCOCX":
+#             ncocx(sequence, chem_shifts, 2)
+exp_13 = ["N", "CACX"]
+
+#         elif experiment == "NCOCA_CB":
+#             ncoca_cb(sequence, chem_shifts, 2)
+exp_14 = ["N", "CA+CB"]
+
+#         elif experiment == "CANH":
+#             canh(sequence, chem_shifts, 2)
+exp_15 = ["CA", "NH"]
+
+#         elif experiment == "CONH":
+#             conh(sequence, chem_shifts, 2)
+exp_17 = ["CO", "NH"]
+
+#         elif experiment == "CACONH":
+#             caconh(sequence, chem_shifts, 2)
+exp_18 = ["CA", "CO+NH"]
+
+#         elif experiment == "COCANH":
+#             cocanh(sequence, chem_shifts, 2)
+exp_19 = ["CO", "CA+NH"]
+
+#         elif experiment == "NCAH":
+#             ncah(sequence, chem_shifts, 2)
+exp_20 = ["N", "HA"]
+
+# [experiments.2dd]
+# exp = []
+
+# [experiments.3d]
+# exp = []
+
+# [experiments.3dd]
+# exp = []
 #------------------------------------------------------------------------------------------------
 # ap.add_argument(
 #     "-exp_2d", help=f"List of 2D experiments: {list_2d}", nargs="+", default=[]

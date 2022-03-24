@@ -46,7 +46,7 @@ class ChemShift:
                 (e, v) for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
             )
 
-            self.residues[resnum] = Residue(resnum, resname, atom_shift_dic)
+            self.residues[resnum] = Residue(resnum, resname, ss, atom_shift_dic)
 
     def replace_with_bmrb(
         self, table_fname, resnum_col, atom_col, shift_col, seq_offset

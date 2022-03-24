@@ -377,66 +377,8 @@ def main(
     # sl = sl
 
     # Make predictions #==============================================================#
-    experiment = Experiment(chem_shifts)
-
-    experiment.run("NH")
-
-    # # ##(10) Make Predictions
-    # log.info("Making predictions...")
-    # if exp_2d:
-    #     log.info(f"2D: {', '.join(exp_2d)}")
-    # if exp_2dd:
-    #     log.info(f"2DD: {', '.join(exp_2dd)}")
-    # if exp_3d:
-    #     log.info(f"3D: {', '.join(exp_3d)}")
-    # if exp_3dd:
-    #     log.info(f"3DD: {', '.join(exp_3dd)}")
-    # if not any([exp_2d, exp_2dd, exp_3d, exp_3dd]):
-    #     log.error("> No experiment was selected.")
-    #     sys.exit()
-    # if exp_2d != []:
-    #     for experiment in exp_2d:
-    #         experiment = experiment.upper()
-    #         if experiment == "NH":
-    #             peaks_proton_heavy(sequence, chem_shifts, "H", "N", "H")
-    #         elif experiment == "HN":
-    #             peaks_proton_heavy(sequence, chem_shifts, "H", "N", "N")
-    #         elif experiment == "CH":
-    #             peaks_proton_heavy(sequence, chem_shifts, "H", "C", "C")
-    #         elif experiment == "HC":
-    #             peaks_proton_heavy(sequence, chem_shifts, "H", "C", "H")
-    #         elif experiment == "HH":
-    #             hh(sequence, chem_shifts)
-    #         elif experiment == "DQSQ":
-    #             dqsq(sequence, chem_shifts)
-    #         elif experiment == "CC_SPINDIFF_INTRA":
-    #             cc_spindiff_intra(sequence, chem_shifts)
-    #         elif experiment == "CC_SPINDIFF_INTER":
-    #             cc_spindiff_inter(sequence, chem_shifts)
-    #         elif experiment == "NCA":
-    #             nca(sequence, chem_shifts)
-    #         elif experiment == "NCO":
-    #             nco(sequence, chem_shifts)
-    #         elif experiment == "NCACX":
-    #             ncacx(sequence, chem_shifts, 2)
-    #         elif experiment == "NCACX_INTER":
-    #             ncacx_inter(sequence, chem_shifts, 2)
-    #         elif experiment == "NCOCX":
-    #             ncocx(sequence, chem_shifts, 2)
-    #         elif experiment == "NCOCA_CB":
-    #             ncoca_cb(sequence, chem_shifts, 2)
-    #         elif experiment == "CANH":
-    #             canh(sequence, chem_shifts, 2)
-    #         elif experiment == "CONH":
-    #             conh(sequence, chem_shifts, 2)
-    #         elif experiment == "CACONH":
-    #             caconh(sequence, chem_shifts, 2)
-    #         elif experiment == "COCANH":
-    #             cocanh(sequence, chem_shifts, 2)
-    #         elif experiment == "NCAH":
-    #             ncah(sequence, chem_shifts, 2)
-    #         else:
-    #             logging.warning("%s is not a valid experiment" % experiment)
+    experiment = Experiment(chem_shifts, inp.data["experiments"])
+    experiment.run()
 
     # if exp_3d != []:
     #     for experiment in exp_3d:

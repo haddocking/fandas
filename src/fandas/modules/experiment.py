@@ -1,95 +1,86 @@
-from fandas.modules.chemical import (
-    atom_type,
-    h_atm_ind,
-    atom_positions,
-    H_ATOMS,
-    ATOM_LIST,
-)
+import itertools
+import logging
+import os
+import sys
+
+from fandas.modules.chemical import ATOM_LIST, ATOM_REF
+
+log = logging.getLogger("fandaslog")
 
 
 class Experiment:
     """Represent the experiments."""
 
-    def __init__(self, chemical_shift):
+    def __init__(self, chemical_shift, experiment_dic):
         self.chemical_shift = chemical_shift
-        self.sequence = chemical_shift.sequence
+        self.experiment_dic = experiment_dic
 
-    def run(self, name):
-        """Run a given experiment."""
-        if name == "NH":
-            self.nh_exp("H", "N", "H")
+    def run(self):
+        """Run all the experiments."""
+        for i, exp in enumerate(self.experiment_dic, start=1):
 
-    def peaks_proton_heavy(self, target_atom):
-        shift_1 = []
-        shift_2 = []
-        # ALMOST RIGHT, THERE IS AN EXTRA LOOP SOMEWHERE
-        #  COMPARE WITH NH_EXP
+            atoms = self.experiment_dic[exp]
+            exp_id = "_".join(atoms)
+
+            log.info(f"Running experiment {i} {exp_id}")
+
+            atoms = self.translate_atoms(atoms)
+
+            self.execute(atoms, exp_id=exp_id)
+
+    def execute(self, atom_list, exp_id):
+        """Execute the experiment based on an atom list."""
+        results = []
         for resnum in self.chemical_shift.residues:
-            resname = self.chemical_shift.residues[resnum].resname
-            for i, atom in enumerate(atom_type):
-                if atom == target_atom:
-                    for j, h_atom in enumerate(H_ATOMS):
-                        # shift of h_atom
-                        v1 = self.chemical_shift.residues[resnum].shifts[atom]
-                        v2 = self.chemical_shift.residues[resnum].shifts[h_atom]
+            residue = self.chemical_shift.residues[resnum]
+            try:
+                value_list = [residue.shifts[atom] for atom in atom_list]
+                if all(value_list):
+                    result_line = self._make_line(residue, atom_list, value_list)
+                    results.append(result_line)
+            except TypeError:
+                # this is a one-to-many experiment
+                # N-C, N-CB, N-CG, etc
+                for comb in itertools.product(*atom_list):
+                    value_list = [residue.shifts[atom] for atom in comb]
+                    if all(value_list):
+                        result_line = self._make_line(residue, comb, value_list)
+                        results.append(result_line)
 
-                        if (
-                            # atom == h_atom
-                            atom_positions[i] == atom_positions[j]
-                            and v1 != 0
-                            and v2 != 0
-                        ):
+        if not results:
+            log.warning("Nothing to write for this experiment...")
+        else:
+            self._write_output(results, exp_id)
 
-                            a = (resname, resnum, v1, ATOM_LIST[j])
-                            b = (resname, resnum, v2, ATOM_LIST[i])
-                            shift_1.append(a)
-                            shift_2.append(b)
-        return shift_1, shift_2
-
-    def write_2d(self, shift_a, shift_b, extension, sl=True):
-        peak = []
-        for i in range(len(shift_a)):
-            column_2 = round(shift_a[i][2], 4)
-            column_3 = round(shift_b[i][2], 4)
-            column_4 = "%s%s%s-%s%s%s" % (
-                shift_a[i][0],
-                shift_a[i][1],
-                shift_a[i][3],
-                shift_b[i][0],
-                shift_b[i][1],
-                shift_b[i][3],
-            )
-            if sl is True:
-                column_1 = column_4
+    def translate_atoms(self, atoms):
+        """Translate the NMR terminology to Python-friendly."""
+        translated_atom_l = []
+        for raw_atom in atoms:
+            if raw_atom in ATOM_REF:
+                trans_atom = ATOM_REF[raw_atom]
+                translated_atom_l.append(trans_atom)
+            elif raw_atom in ATOM_LIST:
+                translated_atom_l.append(raw_atom)
             else:
-                column_1 = "?-?"
-            peak.append([column_1, column_2, column_3, column_4])
-        if not peak:
-            # log.warning(f"Nothing to write on {extension}_exp.txt")
-            pass
-        else:
-            # log.info(f"Writing {extension}_exp.txt")
-            with open(f"{extension}_exp.txt", "w") as output:
-                for pk in peak:
-                    output.write("%s\t%s\t%s\t%s\n" % (pk[0], pk[1], pk[2], pk[3]))
+                log.error(f"{raw_atom} is unknown.")
+                sys.exit()
 
-    def nh_exp(self, atm_1, atm_2, direct):
-        shift_1, shift_2 = self.peaks_proton_heavy(atm_2)
-        if atm_1 == direct:
-            extension = "%s%s" % (atm_1, atm_2)
-            self.write_2d(shift_1, shift_2, extension.lower())
-        else:
-            extension = "%s%s" % (atm_2, atm_1)
-            self.write_2d(shift_2, shift_1, extension.lower())
-        # ==
-        # shift of atom 1
+        return translated_atom_l
 
-        # pass
+    @staticmethod
+    def _write_output(results, exp_id):
+        """."""
+        output_fname = f"{exp_id}_exp_.txt"
+        log.info(f"Saving output to {output_fname}")
+        with open(output_fname, "w") as fh:
+            for line in results:
+                fh.write(line)
 
-        # for i, residue in enumerate(self.sequence):
-        #     for j, atom in enumerate(atom_type):
-        #         if atom == atm_2:
-        #             for h_ind in h_atm_ind:
-        #                 atom_positions[h_ind] == atom_positions[j]
-
-        #                 pass
+    @staticmethod
+    def _make_line(residue, atom_list, value_list):
+        """."""
+        identifier = "-".join(
+            [f"{residue.resname}{residue.resnum}{atom}" for atom in atom_list]
+        )
+        values_str = "\t".join(map(str, value_list))
+        return f"{identifier}\t{values_str}" + os.linesep

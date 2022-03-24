@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import logging
 
 log = logging.getLogger("fandaslog")
@@ -35,7 +36,16 @@ secondary_structures = [
     "n",
 ]  # a=alpha helix, b=beta sheet, c=random coil, n=bmrb collected average
 
-ATOM_LIST = open(STANDARD_DATA).readlines()[0].split(",")[2:]
+ATOM_LIST = open(STANDARD_DATA).readlines()[0].split(os.linesep)[0].split(",")[2:]
+
+ATOM_REF = {
+    "C0": "C",
+    "CO": "C",
+    "CACX": [atom for atom in ATOM_LIST if "C" in atom and "CA" not in atom],
+    "COCX": [atom for atom in ATOM_LIST if "C" in atom and "C" not in atom],
+    "CA+CB": [atom for atom in ATOM_LIST if atom in ["CA", "CB"]],
+    "NH": "H",
+}
 
 # This tells the position of each atom in the chemical shift:
 #  ex:
@@ -580,7 +590,7 @@ AA_REF = {
     "V": "VAL",
 }
 
-SS_REF = {"n": "AVG", "a": "ALPHA", "b": "BETA", "c": "COIL"}
+SS_REF = {"n": "COIL", "a": "ALPHA", "b": "BETA", "c": "COIL"}
 
 GL_2 = {
     "A": [
