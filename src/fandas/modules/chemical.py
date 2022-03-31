@@ -39,13 +39,39 @@ secondary_structures = [
 ATOM_LIST = open(STANDARD_DATA).readlines()[0].split(os.linesep)[0].split(",")[2:]
 
 ATOM_REF = {
-    "C0": "C",
     "CO": "C",
-    "CACX": [atom for atom in ATOM_LIST if "C" in atom and "CA" not in atom],
-    "COCX": [atom for atom in ATOM_LIST if "C" in atom and "C" not in atom],
-    "CA+CB": [atom for atom in ATOM_LIST if atom in ["CA", "CB"]],
     "NH": "H",
+    "-CA,CX": [atom for atom in ATOM_LIST if "C" in atom and "CA" not in atom],
+    "CA,CB": [atom for atom in ATOM_LIST if atom in ["CA", "CB"]],
+    "CX": [atom for atom in ATOM_LIST if "C" in atom],
+    "HX": [atom for atom in ATOM_LIST if "H" in atom],
 }
+
+QUANTUM_RELATIONSHIP = [
+    ("C+CA", "C"),
+    ("CA+C", "CA"),
+    ("CA+CB", "CA"),
+    ("CB+CA", "CB"),
+    ("CB+CG", "CB"),
+    # FIXME: should be CG*, CE*, CD*, etc.
+    ("CG+CB", "CG"),
+    ("CG+CD1", "CG"),
+    ("CG+CD2", "CG"),
+    ("CD1+CG", "CD1"),
+    ("CD1+CE1", "CD1"),
+    ("CD1+CE2", "CD1"),
+    ("CD2+CG", "CD2"),
+    ("CD2+CE1", "CD2"),
+    ("CD2+CE2", "CD2"),
+    ("CE1+CD1", "CE1"),
+    ("CE1+CD2", "CE1"),
+    ("CE1+CZ", "CE1"),
+    ("CE2+CD1", "CE2"),
+    ("CE2+CD2", "CE2"),
+    ("CE2+CZ", "CE2"),
+    ("CZ+CE1", "CZ"),
+    ("CZ+CE2", "CZ"),
+]
 
 # This tells the position of each atom in the chemical shift:
 #  ex:
@@ -376,7 +402,7 @@ list_2dd = ["CC_SPINDIFF", "HH", "CHHC", "NHHC", "CHH", "NHH", "HHC", "NCACX", "
 
 list_3dd = ["CHH", "NHH", "NCACX", "NCOCX"]
 
-# Atoms to be removed from each aminoacid based on 1,3-13C-glycerol labeling
+# Atoms to be removed from each aminoacid based on 1,3,13C,glycerol labeling
 #  all atoms present on standard.csv are represented here, even if non existent
 #  such as CG1 for ALA
 GL_13 = {

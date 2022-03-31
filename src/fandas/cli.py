@@ -377,8 +377,8 @@ def main(
     # sl = sl
 
     # Make predictions #==============================================================#
-    experiment = Experiment(chem_shifts, inp.data["experiments"])
-    experiment.run()
+    experiment = Experiment(chem_shifts, inp.data)
+    experiment.run_experiments()
 
     # if exp_3d != []:
     #     for experiment in exp_3d:
