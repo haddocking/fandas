@@ -1,4 +1,12 @@
-# [experiments]
+#============================
+# Glossary #
+# all carbons = "CX"
+# all hydrogens = "HX"
+# all carbons except CA = "CX|CA"
+# All carbons except CA and CB = "CX|CA|CB"
+# Ca and Cb = "CA_CB"
+# sum the peaks of CA and CB = "CA+CB"
+#============================
 
 [exp_2d_nh]
 nmr_notation = "N-H"
@@ -602,7 +610,7 @@ I3N-Q2CB	116.08	30.8
 
 [exp_2d_ncocx]
 nmr_notation = "N-(Co)-Cx"
-ref = ""
+ref = "https://www.protein-nmr.org.uk/solid-state-mas-nmr/spectrum-descriptions/ncocx/"
 atoms = ["N", "CX"]
 direction = [[0], [-1]]
 example = """
@@ -670,14 +678,22 @@ I3N-I3HA	116.08	4.21
 [exp_2d_cbcanh]
 nmr_notation = "Cb-(Ca)-(N)-H"
 ref = ""
-atoms = []
-example = ""
+atoms = ["CB", "H"]
+direction = [[0], [0]]
+example = """
+X1CB-X1HA	-1.0	5.27
+X2CB-X2HA	-1.0	5.27
+"""
 
 [exp_2d_cbcaconh]
 nmr_notation = "Cb-(Ca)-(Co)-(N)-H"
 ref = ""
-atoms = []
-example = ""
+atoms = ["CB", "H"]
+direction = [[0], [+1]]
+example = """
+X1CB-X2HA	-1.0	5.27
+X2CB-X3HA	-1.0	5.27
+"""
 
 [exp_3d_ncacx]
 nmr_notation = "N-Ca-Cx"
