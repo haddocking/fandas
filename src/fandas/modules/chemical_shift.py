@@ -1,17 +1,18 @@
+import logging
 from functools import partial
+
+import pandas as pd
 from fandas.modules.chemical import (
     AA_REF,
-    SS_REF,
-    GL_13,
-    GL_2,
-    N_ATOMS,
     C_ATOMS,
     DEUTERATION,
+    GL_2,
+    GL_13,
+    N_ATOMS,
+    SS_REF,
 )
-from fandas.modules.utils import load_bmrbm
 from fandas.modules.residue import Residue
-import pandas as pd
-import logging
+from fandas.modules.utils import load_bmrbm
 
 log = logging.getLogger("fandaslog")
 
