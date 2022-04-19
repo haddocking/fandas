@@ -58,7 +58,8 @@ I3HD1-I3CD1	0.61	14.3
 [exp_2d_hh_noesy]
 nmr_notation = "H-H Sping diffusion"
 ref = ""
-atoms = []
+atoms = ["HX", "HX"]
+direction = [[0], [-1, 0, +1]]
 example = ""
 
 [exp_2d_dqsq]
@@ -649,8 +650,8 @@ F4C-I3H	175.22	8.33
 [exp_2d_caconh]
 nmr_notation = "Ca-(Co)-(N)-H"
 ref = ""
-atoms = []
-direction = []
+atoms = ["CA", "H"]
+direction = [[0], [1]]
 example = """
 """
 
@@ -1492,25 +1493,29 @@ I3CA-F4N-F4H	59.5	118.58	8.57
 [exp_3d_cocanh]
 nmr_notation = "Co-(Ca)-N-H"
 ref = ""
-atoms = []
+atoms = ["C", "N", "H"]
+direction = [[-1, 0], [0], [0]]
 example = ""
 
 [exp_3d_ncah]
 nmr_notation = "N-Ca-Ha"
 ref = ""
-atoms = []
+atoms = ["N", "CA", "Ha"]
+direction = [[0], [0], [0]]
 example = ""
 
 [exp_3d_cbcanh]
-nmr_notation = "Cb-(Ca)-N-H"
+nmr_notation = "Cb-Ca-N-H"
 ref = ""
-atoms = []
+atoms = ["Cb_Ca", "N", "H"]
+direction = [[-1, 0], [0], [0]]
 example = ""
 
 [exp_3d_cbcaconh]
-nmr_notation = "Cb-(Ca)-(Co)-N-H"
+nmr_notation = "Cb-Ca-(Co)-N-H"
 ref = ""
-atoms = []
+atoms = ["Cb_Ca", "N", "H"]
+direction = [[-1], [0], [0]]
 example = ""
 
 # 2D NMR Experiments (Distance Encoded)
@@ -1865,3 +1870,9 @@ nmr_notation = "C-H-H"
 ref = ""
 atoms = []
 example = ""
+
+[exp_2d_cch]
+nmr_notation = "C-C-H"
+ref = ""
+atoms = ["CX_CX+1", "HX"]
+direction = [[0], [0]]
