@@ -8,13 +8,11 @@
 
 ## ATTENTION
 
-```
-    The publication of [FANDAS](https://doi.org/10.1007/978-1-4939-7386-6_6) refers to its **original release** available at https://github.com/siddarthnarasimhan/FANDAS_2.0.
+The publication of [FANDAS](https://doi.org/10.1007/978-1-4939-7386-6_6) refers to its **original release** available at https://github.com/siddarthnarasimhan/FANDAS_2.0.
 
-    The present code contains changes made to the original code base and might not reflect the description given in its original publication.**
+The present code contains changes made to the original code base and might not reflect the description given in its original publication.
 
-    We are currently working on extending this live version with examples, detailed user documentation and explaination of each term used in the input file.**
-```
+**We are currently working on extending this live version with examples, detailed user documentation and explaination of each term used in the input file.**
 
 ## Introduction
 
