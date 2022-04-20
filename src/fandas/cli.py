@@ -2,7 +2,6 @@ import argparse
 import logging
 import sys
 
-from fandas.modules.chemical import STANDARD_DATA
 from fandas.modules.chemical_shift import ChemShift
 from fandas.modules.experiment import Experiment
 from fandas.modules.input import InputFile
@@ -93,7 +92,7 @@ def main(
     log.info("Assigning average shifts")
 
     chem_shifts = ChemShift(sequence, secondary_structure)
-    chem_shifts.assign(STANDARD_DATA)
+    chem_shifts.assign()
 
     # Replace the average shifts with provided shifts in the form of BMRB table ======#
     bmrb_table_fname = inp.data["BMRB"]["bmrb_table_fname"]

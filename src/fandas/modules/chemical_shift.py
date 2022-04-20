@@ -10,6 +10,7 @@ from fandas.modules.chemical import (
     GL_13,
     N_ATOMS,
     SS_REF,
+    STANDARD_DATA,
 )
 from fandas.modules.residue import Residue
 from fandas.modules.utils import load_bmrbm
@@ -22,8 +23,9 @@ class ChemShift:
         self.residues = {}
         self.sequence = sequence
         self.secondary_structure = secondary_structure
+        self.assign()
 
-    def assign(self, data):
+    def assign(self, data=STANDARD_DATA):
         """Assign the chemical shifts."""
         log.info(f"Loading standard chemical shifts from {data}")
         df = pd.read_csv(data)
@@ -135,11 +137,7 @@ class ChemShift:
         self.zero_shift(GL_2)
 
     def apply_fw_labelling(self, fw_13c_15n, fw_13c, fw_15n):
-        """Apply the foward labeling scheme.
-
-        ...
-
-        """
+        """Apply the foward labeling scheme."""
         if fw_13c_15n:
             # remove N and C atoms
             self.zero_shift(
@@ -154,11 +152,8 @@ class ChemShift:
             self.zero_shift(N_ATOMS, fw_15n)
 
     def apply_rev_labelling(self, rev_12c_14n, rev_12c, rev_14n):
-        """Apply the reverse labeling scheme.
-
-        ...
-
-        """
+        """Apply the reverse labeling scheme."""
+        # TODO: Is this the same as FW scheme??
         if rev_12c_14n:
             # remove N and C atoms
             self.zero_shift(C_ATOMS + N_ATOMS, rev_12c_14n)
@@ -167,7 +162,7 @@ class ChemShift:
             self.zero_shift(C_ATOMS, rev_12c)
 
         if rev_14n:
-            self.zero_shift(N_ATOMS, rev_12c)
+            self.zero_shift(N_ATOMS, rev_14n)
 
     def apply_fully_labelling(self):
         """Apply the full labeling."""
@@ -180,24 +175,31 @@ class ChemShift:
         """Consider the deuteration."""
         self.zero_shift(DEUTERATION)
 
-    def zero_shift(self, atoms_to_be_deleted, residue_list=None):
+    def zero_shift(self, atoms_to_be_set_to_zero, resnum_list=None):
         """Zero the shift of a residue list based on an atom iterable."""
         for resnum in self.residues:
             resname = self.residues[resnum].resname
 
-            if residue_list:
-                if resname in residue_list:
+            if resnum_list:
+                if resnum in resnum_list:
                     res_check = True
                 else:
                     res_check = False
             else:
                 res_check = True
 
-            if isinstance(atoms_to_be_deleted, dict):
-                atom_del_list = atoms_to_be_deleted[resname]
+            if isinstance(atoms_to_be_set_to_zero, dict):
+                try:
+                    atom_del_list = atoms_to_be_set_to_zero[resname]
+                except KeyError:
+                    # no atoms to be deleted in this residue
+                    continue
 
-            elif isinstance(atoms_to_be_deleted, list):
-                atom_del_list = atoms_to_be_deleted
+            elif isinstance(atoms_to_be_set_to_zero, list):
+                atom_del_list = atoms_to_be_set_to_zero
+
+            elif isinstance(atoms_to_be_set_to_zero, str):
+                atom_del_list = [atoms_to_be_set_to_zero]
 
             if res_check:
                 for atom in self.residues[resnum].shifts:
