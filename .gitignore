@@ -156,3 +156,4 @@ cython_debug/
 
 # Project-specific
 example/*_exp.txt
+debug/*

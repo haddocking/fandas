@@ -1,0 +1,52 @@
+#------------------------------------------------------------------------------------------------
+[general]
+sequence = "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
+secondary_structure = ""
+fractionally_deuterated = true
+
+#------------------------------------------------------------------------------------------------
+[BMRB]
+# BMRB tables as a text file in NMR Star format
+# bmrb_table_fname = "/Users/rodrigo/repos/fandas/example/1ubq-bmrb-tables.txt"
+bmrb_table_fname = ""
+# Which should be the first residue number of your sequence.
+sequence_start = 1
+# column numbers
+resnum_column = 1
+atom_column = 3
+chemical_shift_column = 4
+
+#------------------------------------------------------------------------------------------------
+[distance]
+# distance_fname = "/Users/rodrigo/repos/fandas/example/1ubq-cc-dist.txt"
+distance_fname = ""
+distance_cutoff = 3.9
+
+#------------------------------------------------------------------------------------------------
+[labeling]
+# Which labeling scheme to be used
+#  "fully", "forward", "reverse", "gl13", "gl2"
+scheme = "fully"
+
+[labeling.forward]
+fw_13c_15n = []
+fw_13c = []
+fw_15n = []
+
+[labeling.reverse]
+rev_12c_14n = ["A", "G"]
+rev_12c = ["L"]
+rev_14n = ["I"]
+#------------------------------------------------------------------------------------------------
+[preset_experiments]
+selected = [
+    "N-H",
+    "N-(Calpha)-Cx (residues i, i+1 & i-1)",
+    "N-(Co)-Cx",
+    "C-C DQ-SQ Correlation",
+]
+
+#------------------------------------------------------------------------------------------------
+[custom_experiments]
+
+#------------------------------------------------------------------------------------------------
