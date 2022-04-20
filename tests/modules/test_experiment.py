@@ -1,5 +1,4 @@
 """Test the experiment module."""
-from cgitb import reset
 import pytest
 import tempfile
 import os
