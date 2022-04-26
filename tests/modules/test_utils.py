@@ -48,7 +48,7 @@ def test_load_bmrb():
             "HZ": 7.5356,
             "N": 128.38,
         },
-        999: {"N": 128.38}
+        999: {"N": 128.38},
     }
 
     assert expected_dic == observed_dic
