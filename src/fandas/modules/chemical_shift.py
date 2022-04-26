@@ -57,15 +57,13 @@ class ChemShift:
         """Use a BMRB table to replace the default shift values."""
         bmrb_data = load_bmrbm(table_fname, resnum_col, atom_col, shift_col)
 
-        sequence_number_range = range(seq_offset, len(self.sequence) + 1)
         for bmrb_resnum in bmrb_data:
-            # for bmrb_atom in bmrb_data[bmrb_resnum]:
-            # atom =
-            seq_resnum = (bmrb_resnum + seq_offset) - 1
-            seq_resname = self.residues[seq_resnum].resname
-            if bmrb_resnum not in sequence_number_range:
+            seq_resnum = (bmrb_resnum - seq_offset) + 1
+            try:
+                seq_resname = self.residues[seq_resnum].resname
+            except KeyError:
                 log.warning(
-                    f"## bmrb.{bmrb_resnum} does not match sequence numbering, skipping"
+                    f"Could not find residue {bmrb_resnum} in sequence. Skipping."
                 )
                 continue
 

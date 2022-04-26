@@ -1,6 +1,11 @@
 # CHANGELOG
 
-## v2.2.0 (20/04/2022) - Complete code redesign
+## v2.2.1 (26/04/2022) - Bugfix when matching numbering from sequence and chemical shift table
+
+- The matching between the chemical shift data and the sequence numbering was not being done correctly, should not be fixed.
+
+* * *
+v2.2.0 (20/04/2022) - Complete code redesign
 
 - Most of the code has been completely redesigned, to make the code more clear, testable and extensible
 - Changed the input to a TOML file
