@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## v2.2.1 (26/04/2022) - Bugfix when matching numbering from sequence and chemical shift table
+## v2.2.2 (28/04/2022) - Added missing catalog to the build
+
+* * *
+v2.2.1 (26/04/2022) - Bugfix when matching numbering from sequence and chemical shift table
 
 - The matching between the chemical shift data and the sequence numbering was not being done correctly, should not be fixed.
 
