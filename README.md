@@ -3,8 +3,10 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![unittests](https://github.com/haddocking/fandas/actions/workflows/unittests.yml/badge.svg)](https://github.com/haddocking/fandas/actions/workflows/unittests.yml)
 [![codecov](https://codecov.io/gh/haddocking/fandas/branch/main/graph/badge.svg?token=RKLO54L6RY)](https://codecov.io/gh/haddocking/fandas)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/20d8aa34d5fa4922be588b5800d2e097)](https://www.codacy.com/gh/haddocking/fandas/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=haddocking/fandas&amp;utm_campaign=Badge_Grade)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![python lint](https://github.com/haddocking/fandas/actions/workflows/lint.yml/badge.svg)](https://github.com/haddocking/fandas/actions/workflows/lint.yml)
+
 
 ## ATTENTION
 
