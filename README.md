@@ -7,6 +7,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![python lint](https://github.com/haddocking/fandas/actions/workflows/lint.yml/badge.svg)](https://github.com/haddocking/fandas/actions/workflows/lint.yml)
 
+<img src="imgs/logo.png" width="800">
 
 ## ATTENTION
 
