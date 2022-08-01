@@ -1,6 +1,12 @@
 # CHANGELOG
 
-## v2.2.2 (28/04/2022) - Added missing catalog to the build
+## v2.3.0 (01/08/2022) - Add support to BMRB files in NMR-STAR v3 format
+
+- Only BMRB files in NMR-STAR v3 format are supported.
+- If BMRB file is being used, added a feature to automatically align and match the numbering between the input sequence with the sequence observed in the BMRB file.
+
+* * *
+v2.2.2 (28/04/2022) - Added missing catalog to the build
 
 * * *
 v2.2.1 (26/04/2022) - Bugfix when matching numbering from sequence and chemical shift table
