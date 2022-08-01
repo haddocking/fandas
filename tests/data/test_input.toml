@@ -6,19 +6,11 @@ fractionally_deuterated = true
 
 #------------------------------------------------------------------------------------------------
 [BMRB]
-# BMRB tables as a text file in NMR Star format
-# bmrb_table_fname = "/Users/rodrigo/repos/fandas/example/1ubq-bmrb-tables.txt"
 bmrb_table_fname = ""
-# Which should be the first residue number of your sequence.
-sequence_start = 1
-# column numbers
-resnum_column = 1
-atom_column = 3
-chemical_shift_column = 4
+target_entity = ""
 
 #------------------------------------------------------------------------------------------------
 [distance]
-# distance_fname = "/Users/rodrigo/repos/fandas/example/1ubq-cc-dist.txt"
 distance_fname = ""
 distance_cutoff = 3.9
 
@@ -40,10 +32,10 @@ rev_14n = ["I"]
 #------------------------------------------------------------------------------------------------
 [preset_experiments]
 selected = [
-    "N-H",
-    "N-(Calpha)-Cx (residues i, i+1 & i-1)",
-    "N-(Co)-Cx",
-    "C-C DQ-SQ Correlation",
+  "N-H",
+  "N-(Calpha)-Cx (residues i, i+1 & i-1)",
+  "N-(Co)-Cx",
+  "C-C DQ-SQ Correlation",
 ]
 
 #------------------------------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 import pytest
+
 from fandas.modules.input import InputFile
 
 from .. import TEST_INPUT_FILE
@@ -24,10 +25,7 @@ def test__load(inputfile_class):
         },
         "BMRB": {
             "bmrb_table_fname": (""),
-            "sequence_start": 1,
-            "resnum_column": 1,
-            "atom_column": 3,
-            "chemical_shift_column": 4,
+            "target_entity": (""),
         },
         "distance": {
             "distance_fname": "",

@@ -1,7 +1,10 @@
 import logging
+import sys
 from functools import partial
 
 import pandas as pd
+
+from fandas.modules.bmrb import BMRB
 from fandas.modules.chemical import (
     AA_REF,
     C_ATOMS,
@@ -13,16 +16,17 @@ from fandas.modules.chemical import (
     STANDARD_DATA,
 )
 from fandas.modules.residue import Residue
-from fandas.modules.utils import load_bmrbm
 
 log = logging.getLogger("fandaslog")
 
 
 class ChemShift:
-    def __init__(self, sequence, secondary_structure):
+    def __init__(self, sequence, secondary_structure, bmrb_table, bmrb_entity_id):
         self.residues = {}
         self.sequence = sequence
         self.secondary_structure = secondary_structure
+        self.bmrb_table = bmrb_table
+        self.bmrb_entity_id = bmrb_entity_id
         self.assign()
 
     def assign(self, data=STANDARD_DATA):
@@ -51,39 +55,40 @@ class ChemShift:
 
             self.residues[resnum] = Residue(resnum, resname, ss, atom_shift_dic)
 
-    def replace_with_bmrb(
-        self, table_fname, resnum_col, atom_col, shift_col, seq_offset
-    ):
-        """Use a BMRB table to replace the default shift values."""
-        bmrb_data = load_bmrbm(table_fname, resnum_col, atom_col, shift_col)
-
-        for bmrb_resnum in bmrb_data:
-            seq_resnum = (bmrb_resnum - seq_offset) + 1
+        if self.bmrb_table:
             try:
-                seq_resname = self.residues[seq_resnum].resname
-            except KeyError:
-                log.warning(
-                    f"Could not find residue {bmrb_resnum} in sequence. Skipping."
-                )
-                continue
+                self.use_bmrb()
+            except Exception as e:
+                log.exception(e)
+                sys.exit()
 
-            for bmrb_atom in bmrb_data[bmrb_resnum]:
-                new_shift = bmrb_data[bmrb_resnum][bmrb_atom]
+    def use_bmrb(self):
+        """Use the BMRB table."""
+        entry = BMRB(self.bmrb_table, self.bmrb_entity_id)
+        log.info(f"Aligning input sequence with BMRB entity {self.bmrb_entity_id}")
+        alignment_dict = entry.align_to(self.sequence)
+        log.info("Updating shifts based on BMRB table")
+        self._update_shifts(entry, alignment_dict)
 
-                # replace
-                try:
-                    old_shift = self.residues[seq_resnum].shifts[bmrb_atom]
+    def _update_shifts(self, bmrb_entry, alignment_dict):
+        """Update the chemical shifts based on the BMRB table."""
+        for element in enumerate(self.residues.items()):
+            position, _ = element
+            _, standard_residue = list(self.residues.items())[position]
+            matching_pos = alignment_dict[position + 1]
+            _, bmrb_residue = list(bmrb_entry.residues.items())[matching_pos - 1]
+
+            assert bmrb_residue.resname == standard_residue.resname
+
+            for atom in standard_residue.shifts:
+                if atom in bmrb_residue.shifts:
                     log.info(
-                        f"# (bmrb.{bmrb_resnum}) {bmrb_resnum}\t{seq_resname}"
-                        f"\t{bmrb_atom}\t{old_shift}\t>> {new_shift}"
+                        f"# (bmrb.{bmrb_residue.resnum}) {bmrb_residue.resnum}\t"
+                        f"{bmrb_residue.resname}\t{atom}\t"
+                        f"{standard_residue.shifts[atom]}\t"
+                        f">> {bmrb_residue.shifts[atom]}"
                     )
-
-                    self.residues[seq_resnum].shifts[bmrb_atom] = new_shift
-                except KeyError:
-                    log.warning(
-                        f"# (bmrb.{bmrb_resnum}) {bmrb_resnum}\t atom: "
-                        f"{bmrb_atom} not found in standard table, skipping..."
-                    )
+                    standard_residue.shifts[atom] = bmrb_residue.shifts[atom]
 
     def label(self, params):
         """Apply a labeling scheme."""
