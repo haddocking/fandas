@@ -16,6 +16,7 @@ formatter = logging.Formatter(
 )
 ch.setFormatter(formatter)
 log.addHandler(ch)
+log.propagate = False
 
 __author__ = ["Siddarth Narasimhan", "Rodrigo Honorato"]
 
@@ -58,7 +59,7 @@ def maincli():
 # Main code
 def main(
     input_file,
-    log_level="DEBUG",
+    log_level="INFO",
 ):
 
     # Start #=========================================================================#
