@@ -155,5 +155,5 @@ cython_debug/
 .vscode/
 
 # Project-specific
-example/*_exp.txt
+example/*_exp*.txt
 debug/*

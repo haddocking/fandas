@@ -1,0 +1,1945 @@
+data_18583
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Entry.Sf_category                    entry_information
+   _Entry.Sf_framecode                   entry_information
+   _Entry.ID                             18583
+   _Entry.Title
+;
+Solution structure of the gp78CUE/K48-Ub2 complex
+;
+   _Entry.Type                           macromolecule
+   _Entry.Version_type                   original
+   _Entry.Submission_date                2012-07-09
+   _Entry.Accession_date                 2012-07-09
+   _Entry.Last_release_date              .
+   _Entry.Original_release_date          .
+   _Entry.Origination                    author
+   _Entry.NMR_STAR_version               3.1.1.61
+   _Entry.Original_NMR_STAR_version      3.1
+   _Entry.Experimental_method            NMR
+   _Entry.Experimental_method_subtype    SOLUTION
+   _Entry.Details                       'Amide shifts of gp78CUE and distal Ubiquitin in the gp78CUE/K48-Ub2 complex'
+   _Entry.BMRB_internal_directory_name   .
+
+   loop_
+      _Entry_author.Ordinal
+      _Entry_author.Given_name
+      _Entry_author.Family_name
+      _Entry_author.First_initial
+      _Entry_author.Middle_initials
+      _Entry_author.Family_title
+      _Entry_author.Entry_ID
+
+      1 Shan    Liu      . .  . 18583
+      2 Yinghua Chen     . .  . 18583
+      3 Tao     Huang    . .  . 18583
+      4 Sergey  Tarasov  . G. . 18583
+      5 Aaren   King     . .  . 18583
+      6 Jess    Li       . .  . 18583
+      7 Allan   Weissman . M. . 18583
+      8 Robert  Byrd     . A. . 18583
+      9 Ranabir Das      . .  . 18583
+
+   stop_
+
+   loop_
+      _SG_project.SG_project_ID
+      _SG_project.Project_name
+      _SG_project.Full_name_of_center
+      _SG_project.Initial_of_center
+      _SG_project.Entry_ID
+
+      1 'not applicable' 'not applicable' . 18583
+
+   stop_
+
+   loop_
+      _Struct_keywords.Keywords
+      _Struct_keywords.Text
+      _Struct_keywords.Entry_ID
+
+      CUE     . 18583
+      gp78    . 18583
+      NMR     . 18583
+      Protein . 18583
+
+   stop_
+
+   loop_
+      _Data_set.Type
+      _Data_set.Count
+      _Data_set.Entry_ID
+
+      assigned_chemical_shifts 1 18583
+
+   stop_
+
+   loop_
+      _Datum.Type
+      _Datum.Count
+      _Datum.Entry_ID
+
+      '15N chemical shifts' 111 18583
+      '1H chemical shifts'  111 18583
+
+   stop_
+
+   loop_
+      _Release.Release_number
+      _Release.Format_type
+      _Release.Format_version
+      _Release.Date
+      _Release.Submission_date
+      _Release.Type
+      _Release.Author
+      _Release.Detail
+      _Release.Entry_ID
+
+      2 . . 2013-02-19 2012-07-09 update   BMRB   'update entry citation' 18583
+      1 . . 2012-11-19 2012-07-09 original author 'original release'      18583
+
+   stop_
+
+   loop_
+      _Related_entries.Database_name
+      _Related_entries.Database_accession_code
+      _Related_entries.Relationship
+      _Related_entries.Entry_ID
+
+      BMRB 18581 'gp78 CUE domain'            18583
+      BMRB 18582 'gp78CUE bound to ubiquitin' 18583
+      BMRB 18584 'gp78CUE/K48-Ub2 complex'    18583
+      PDB  2LVP   'BMRB Entry Tracking System' 18583
+
+   stop_
+
+save_
+
+
+###############
+#  Citations  #
+###############
+
+save_entry_citation
+   _Citation.Sf_category                  citations
+   _Citation.Sf_framecode                 entry_citation
+   _Citation.Entry_ID                     18583
+   _Citation.ID                           1
+   _Citation.Class                       'entry citation'
+   _Citation.CAS_abstract_code            .
+   _Citation.MEDLINE_UI_code              .
+   _Citation.DOI                          .
+   _Citation.PubMed_ID                    23123110
+   _Citation.Full_citation                .
+   _Citation.Title                       'Promiscuous interactions of gp78 E3 ligase CUE domain with polyubiquitin chains.'
+   _Citation.Status                       published
+   _Citation.Type                         journal
+   _Citation.Journal_abbrev               Structure
+   _Citation.Journal_name_full           'Structure (London, England : 1993)'
+   _Citation.Journal_volume               20
+   _Citation.Journal_issue                12
+   _Citation.Journal_ASTM                 .
+   _Citation.Journal_ISSN                 .
+   _Citation.Journal_CSD                  .
+   _Citation.Book_title                   .
+   _Citation.Book_chapter_title           .
+   _Citation.Book_volume                  .
+   _Citation.Book_series                  .
+   _Citation.Book_publisher               .
+   _Citation.Book_publisher_city          .
+   _Citation.Book_ISBN                    .
+   _Citation.Conference_title             .
+   _Citation.Conference_site              .
+   _Citation.Conference_state_province    .
+   _Citation.Conference_country           .
+   _Citation.Conference_start_date        .
+   _Citation.Conference_end_date          .
+   _Citation.Conference_abstract_number   .
+   _Citation.Thesis_institution           .
+   _Citation.Thesis_institution_city      .
+   _Citation.Thesis_institution_country   .
+   _Citation.WWW_URL                      .
+   _Citation.Page_first                   2138
+   _Citation.Page_last                    2150
+   _Citation.Year                         2012
+   _Citation.Details                      .
+
+   loop_
+      _Citation_author.Ordinal
+      _Citation_author.Given_name
+      _Citation_author.Family_name
+      _Citation_author.First_initial
+      _Citation_author.Middle_initials
+      _Citation_author.Family_title
+      _Citation_author.Entry_ID
+      _Citation_author.Citation_ID
+
+      1  Shan       Liu      . .  . 18583 1
+      2  Yinghua    Chen     . .  . 18583 1
+      3  Jess       Li       . .  . 18583 1
+      4  Tao        Huang    . .  . 18583 1
+      5  Sergey     Tarasov  . .  . 18583 1
+      6  Aaren      King     . .  . 18583 1
+      7  Allan      Weissman . M. . 18583 1
+      8 'R. Andrew' Byrd     . .  . 18583 1
+      9  Ranabir    Das      . .  . 18583 1
+
+   stop_
+
+save_
+
+
+#############################################
+#  Molecular system (assembly) description  #
+#############################################
+
+save_assembly
+   _Assembly.Sf_category                       assembly
+   _Assembly.Sf_framecode                      assembly
+   _Assembly.Entry_ID                          18583
+   _Assembly.ID                                1
+   _Assembly.Name                             'gp78CUE/K48-Ub2 complex'
+   _Assembly.BMRB_code                         .
+   _Assembly.Number_of_components              3
+   _Assembly.Organic_ligands                   .
+   _Assembly.Metal_ions                        .
+   _Assembly.Non_standard_bonds                .
+   _Assembly.Ambiguous_conformational_states   .
+   _Assembly.Ambiguous_chem_comp_sites         .
+   _Assembly.Molecules_in_chemical_exchange    .
+   _Assembly.Paramagnetic                      no
+   _Assembly.Thiol_state                       .
+   _Assembly.Molecular_mass                    .
+   _Assembly.Enzyme_commission_number          .
+   _Assembly.Details                           .
+   _Assembly.DB_query_date                     .
+   _Assembly.DB_query_revised_last_date        .
+
+   loop_
+      _Entity_assembly.ID
+      _Entity_assembly.Entity_assembly_name
+      _Entity_assembly.Entity_ID
+      _Entity_assembly.Entity_label
+      _Entity_assembly.Asym_ID
+      _Entity_assembly.PDB_chain_ID
+      _Entity_assembly.Experimental_data_reported
+      _Entity_assembly.Physical_state
+      _Entity_assembly.Conformational_isomer
+      _Entity_assembly.Chemical_exchange_state
+      _Entity_assembly.Magnetic_equivalence_group_code
+      _Entity_assembly.Role
+      _Entity_assembly.Details
+      _Entity_assembly.Entry_ID
+      _Entity_assembly.Assembly_ID
+
+      1 ubiquitin_1 1 $entity_1 A . yes native no no . . . 18583 1
+      2 gp78CUE     2 $entity_2 C . yes native no no . . . 18583 1
+
+   stop_
+
+save_
+
+
+    ####################################
+    #  Biological polymers and ligands #
+    ####################################
+
+save_entity_1
+   _Entity.Sf_category                       entity
+   _Entity.Sf_framecode                      entity_1
+   _Entity.Entry_ID                          18583
+   _Entity.ID                                1
+   _Entity.BMRB_code                         .
+   _Entity.Name                              ubiquitin
+   _Entity.Type                              polymer
+   _Entity.Polymer_common_type               .
+   _Entity.Polymer_type                      polypeptide(L)
+   _Entity.Polymer_type_details              .
+   _Entity.Polymer_strand_ID                 A,B
+   _Entity.Polymer_seq_one_letter_code_can   .
+   _Entity.Polymer_seq_one_letter_code
+;
+MQIFVKTLTGKTITLEVEPS
+DTIENVKAKIQDKEGIPPDQ
+QRLIFAGKQLEDGRTLSDYN
+IQKESTLHLVLRLRGG
+;
+   _Entity.Target_identifier                 .
+   _Entity.Polymer_author_defined_seq        .
+   _Entity.Polymer_author_seq_details        .
+   _Entity.Ambiguous_conformational_states   no
+   _Entity.Ambiguous_chem_comp_sites         no
+   _Entity.Nstd_monomer                      no
+   _Entity.Nstd_chirality                    no
+   _Entity.Nstd_linkage                      no
+   _Entity.Nonpolymer_comp_ID                .
+   _Entity.Nonpolymer_comp_label             .
+   _Entity.Number_of_monomers                76
+   _Entity.Number_of_nonpolymer_components   .
+   _Entity.Paramagnetic                      no
+   _Entity.Thiol_state                      'not present'
+   _Entity.Src_method                        man
+   _Entity.Parent_entity_ID                  .
+   _Entity.Fragment                          .
+   _Entity.Mutation                          .
+   _Entity.EC_number                         .
+   _Entity.Calc_isoelectric_point            .
+   _Entity.Formula_weight                    8576.914
+   _Entity.Formula_weight_exptl              .
+   _Entity.Formula_weight_exptl_meth         .
+   _Entity.Details                           .
+   _Entity.DB_query_date                     .
+   _Entity.DB_query_revised_last_date        2015-11-25
+
+   loop_
+      _Entity_db_link.Ordinal
+      _Entity_db_link.Author_supplied
+      _Entity_db_link.Database_code
+      _Entity_db_link.Accession_code
+      _Entity_db_link.Entry_mol_code
+      _Entity_db_link.Entry_mol_name
+      _Entity_db_link.Entry_experimental_method
+      _Entity_db_link.Entry_structure_resolution
+      _Entity_db_link.Entry_relation_type
+      _Entity_db_link.Entry_details
+      _Entity_db_link.Chimera_segment_ID
+      _Entity_db_link.Seq_query_to_submitted_percent
+      _Entity_db_link.Seq_subject_length
+      _Entity_db_link.Seq_identity
+      _Entity_db_link.Seq_positive
+      _Entity_db_link.Seq_homology_expectation_val
+      _Entity_db_link.Seq_align_begin
+      _Entity_db_link.Seq_align_end
+      _Entity_db_link.Seq_difference_details
+      _Entity_db_link.Seq_alignment_details
+      _Entity_db_link.Entry_ID
+      _Entity_db_link.Entity_ID
+
+        1 no BMRB        11505 .  entity                                                                                                                           . . . . . 100.00   76  98.68  98.68 3.54e-45 . . . . 18583 1
+        2 no BMRB        11547 .  ubiquitin                                                                                                                        . . . . . 100.00   76  98.68  98.68 3.54e-45 . . . . 18583 1
+        3 no BMRB        15047 .  denatured_ubiquitin                                                                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+        4 no BMRB        15410 .  Ubi                                                                                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+        5 no BMRB        15689 .  UBB                                                                                                                              . . . . .  98.68  103  98.67 100.00 6.21e-44 . . . . 18583 1
+        6 no BMRB        15907 .  Ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+        7 no BMRB        16228 .  ubiquitin                                                                                                                        . . . . . 100.00   76  97.37  98.68 1.73e-44 . . . . 18583 1
+        8 no BMRB        16582 .  Ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+        9 no BMRB        16626 .  Ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       10 no BMRB        16895 .  UBB+1                                                                                                                            . . . . .  98.68  103  98.67 100.00 6.21e-44 . . . . 18583 1
+       11 no BMRB        17181 .  ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       12 no BMRB        17439 .  ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       13 no BMRB        17769 .  Ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       14 no BMRB        17919 .  entity                                                                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       15 no BMRB        18582 .  ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       16 no BMRB        18584 .  ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       17 no BMRB        18610 .  Ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       18 no BMRB        18611 .  Ubiquitin_A_state                                                                                                                . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       19 no BMRB        18737 .  UBIQUITIN                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       20 no BMRB        19406 .  entity                                                                                                                           . . . . . 100.00  152 100.00 100.00 6.43e-45 . . . . 18583 1
+       21 no BMRB        19412 .  entity                                                                                                                           . . . . . 100.00  152 100.00 100.00 6.43e-45 . . . . 18583 1
+       22 no BMRB        25070 .  Ubiquitin                                                                                                                        . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+       23 no BMRB        25123 .  Ubiquitin                                                                                                                        . . . . .  94.74   72 100.00 100.00 8.52e-43 . . . . 18583 1
+       24 no BMRB        25601 .  entity_1                                                                                                                         . . . . . 100.00   76  97.37  97.37 5.31e-44 . . . . 18583 1
+       25 no BMRB        26604 .  Ubiquitin_(microcrystalline)                                                                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       26 no BMRB         4245 .  ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       27 no BMRB         4375 .  Ubiquitin                                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       28 no PDB  1AAR          . "Structure Of A Diubiquitin Conjugate And A Model For Interaction With Ubiquitin Conjugating Enzyme (E2)"                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       29 no PDB  1CMX          . "Structural Basis For The Specificity Of Ubiquitin C- Terminal Hydrolases"                                                        . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+       30 no PDB  1D3Z          . "Ubiquitin Nmr Structure"                                                                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       31 no PDB  1F9J          . "Structure Of A New Crystal Form Of Tetraubiquitin"                                                                               . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       32 no PDB  1FXT          . "Structure Of A Conjugating Enzyme-Ubiquitin Thiolester Complex"                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       33 no PDB  1G6J          . "Structure Of Recombinant Human Ubiquitin In Aot Reverse Micelles"                                                                . . . . .  98.68   76 100.00 100.00 7.58e-45 . . . . 18583 1
+       34 no PDB  1GJZ          . "Solution Structure Of A Dimeric N-Terminal Fragment Of Human Ubiquitin"                                                          . . . . .  67.11   53 100.00 100.00 3.14e-26 . . . . 18583 1
+       35 no PDB  1NBF          . "Crystal Structure Of A Ubp-Family Deubiquitinating Enzyme In Isolation And In Complex With Ubiquitin Aldehyde"                   . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+       36 no PDB  1OGW          . "Synthetic Ubiquitin With Fluoro-Leu At 50 And 67"                                                                                . . . . . 100.00   76  97.37  97.37 2.65e-44 . . . . 18583 1
+       37 no PDB  1P3Q          . "Mechanism Of Ubiquitin Recognition By The Cue Domain Of Vps9"                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       38 no PDB  1Q5W          . "Ubiquitin Recognition By Npl4 Zinc-Fingers"                                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       39 no PDB  1S1Q          . "Tsg101(Uev) Domain In Complex With Ubiquitin"                                                                                    . . . . .  98.68   76 100.00 100.00 7.58e-45 . . . . 18583 1
+       40 no PDB  1TBE          . "Structure Of Tetraubiquitin Shows How Multiubiquitin Chains Can Be Formed"                                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       41 no PDB  1UBI          . "Synthetic Structural And Biological Studies Of The Ubiquitin System. Part 1"                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       42 no PDB  1UBQ          . "Structure Of Ubiquitin Refined At 1.8 Angstroms Resolution"                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       43 no PDB  1UZX          . "A Complex Of The Vps23 Uev With Ubiquitin"                                                                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       44 no PDB  1V80          . "Solution Structures Of Ubiquitin At 30 Bar And 3 Kbar"                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       45 no PDB  1V81          . "Solution Structures Of Ubiquitin At 30 Bar And 3 Kbar"                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       46 no PDB  1VX7          . "Cryo-em Structure Of The Plasmodium Falciparum 80s Ribosome Bound To The Anti-protozoan Drug Emetine, Large Subunit (protein On" . . . . . 100.00  128  98.68 100.00 1.38e-45 . . . . 18583 1
+       47 no PDB  1WR6          . "Crystal Structure Of Gga3 Gat Domain In Complex With Ubiquitin"                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       48 no PDB  1WRD          . "Crystal Structure Of Tom1 Gat Domain In Complex With Ubiquitin"                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       49 no PDB  1XD3          . "Crystal Structure Of Uchl3-Ubvme Complex"                                                                                        . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+       50 no PDB  1XQQ          . "Simultaneous Determination Of Protein Structure And Dynamics"                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       51 no PDB  1YD8          . "Complex Of Human Gga3 Gat Domain And Ubiquitin"                                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       52 no PDB  1YIW          . "X-Ray Crystal Structure Of A Chemically Synthesized Ubiquitin"                                                                   . . . . . 100.00   76  98.68 100.00 2.84e-45 . . . . 18583 1
+       53 no PDB  1YJ1          . "X-Ray Crystal Structure Of A Chemically Synthesized [d-Gln35]ubiquitin"                                                          . . . . . 100.00   76  97.37  98.68 3.36e-44 . . . . 18583 1
+       54 no PDB  1YX5          . "Solution Structure Of S5a Uim-1UBIQUITIN COMPLEX"                                                                                . . . . . 100.00   98 100.00 100.00 2.31e-46 . . . . 18583 1
+       55 no PDB  1YX6          . "Solution Structure Of S5a Uim-2UBIQUITIN COMPLEX"                                                                                . . . . . 100.00   98 100.00 100.00 2.31e-46 . . . . 18583 1
+       56 no PDB  1ZGU          . "Solution Structure Of The Human Mms2-Ubiquitin Complex"                                                                          . . . . . 100.00   76  98.68 100.00 1.56e-45 . . . . 18583 1
+       57 no PDB  2AYO          . "Structure Of Usp14 Bound To Ubquitin Aldehyde"                                                                                   . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+       58 no PDB  2BGF          . "Nmr Structure Of Lys48-Linked Di-Ubiquitin Using Chemical Shift Perturbation Data Together With Rdcs And 15n- Relaxation Data"   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       59 no PDB  2C7M          . "Human Rabex-5 Residues 1-74 In Complex With Ubiquitin"                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       60 no PDB  2C7N          . "Human Rabex-5 Residues 1-74 In Complex With Ubiquitin"                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       61 no PDB  2D3G          . "Double Sided Ubiquitin Binding Of Hrs-Uim"                                                                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       62 no PDB  2DEN          . "Solution Structure Of The Ubiquitin-Associated Domain Of Human Bmsc-Ubp And Its Complex With Ubiquitin"                          . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       63 no PDB  2DX5          . "The Complex Structure Between The Mouse Eap45-Glue Domain And Ubiquitin"                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       64 no PDB  2FCM          . "X-Ray Crystal Structure Of A Chemically Synthesized [d-Gln35]ubiquitin With A Cubic Space Group"                                 . . . . . 100.00   76  97.37  98.68 3.36e-44 . . . . 18583 1
+       65 no PDB  2FCN          . "X-Ray Crystal Structure Of A Chemically Synthesized [d-Val35]ubiquitin With A Cubic Space Group"                                 . . . . . 100.00   76  97.37  98.68 3.36e-44 . . . . 18583 1
+       66 no PDB  2FCQ          . "X-Ray Crystal Structure Of A Chemically Synthesized Ubiquitin With A Cubic Space Group"                                          . . . . . 100.00   76  98.68 100.00 2.84e-45 . . . . 18583 1
+       67 no PDB  2FCS          . "X-Ray Crystal Structure Of A Chemically Synthesized [l-Gln35]ubiquitin With A Cubic Space Group"                                 . . . . . 100.00   76  97.37  98.68 3.83e-44 . . . . 18583 1
+       68 no PDB  2FID          . "Crystal Structure Of A Bovine Rabex-5 Fragment Complexed With Ubiquitin"                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       69 no PDB  2FIF          . "Crystal Structure Of A Bovine Rabex-5 Fragment Complexed With Ubiquitin"                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       70 no PDB  2FUH          . "Solution Structure Of The Ubch5cUB NON-Covalent Complex"                                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       71 no PDB  2G45          . "Co-Crystal Structure Of Znf Ubp Domain From The Deubiquitinating Enzyme Isopeptidase T (Isot) In Complex With Ubiquitin"         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       72 no PDB  2GMI          .  Mms2UBC13~UBIQUITIN                                                                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       73 no PDB  2HD5          . "Usp2 In Complex With Ubiquitin"                                                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       74 no PDB  2HTH          . "Structural Basis For Ubiquitin Recognition By The Human Eap45ESCRT-Ii Glue Domain"                                               . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       75 no PDB  2IBI          . "Covalent Ubiquitin-Usp2 Complex"                                                                                                 . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+       76 no PDB  2J7Q          . "Crystal Structure Of The Ubiquitin-Specific Protease Encoded By Murine Cytomegalovirus Tegument Protein M48 In Complex With A U" . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+       77 no PDB  2JF5          . "Crystal Structure Of Lys63-Linked Di-Ubiquitin"                                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       78 no PDB  2JRI          . "Solution Structure Of The Josephin Domain Of Ataxin-3 In Complex With Ubiquitin Molecule."                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       79 no PDB  2JY6          . "Solution Structure Of The Complex Of Ubiquitin And Ubiquilin 1 Uba Domain"                                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       80 no PDB  2JZZ          . "Solid-State Nmr Structure Of Microcrystalline Ubiquitin"                                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       81 no PDB  2K25          . "Automated Nmr Structure Of The Ubb By Fapsy"                                                                                     . . . . .  98.68  103  98.67 100.00 6.21e-44 . . . . 18583 1
+       82 no PDB  2K39          . "Recognition Dynamics Up To Microseconds Revealed From Rdc Derived Ubiquitin Ensemble In Solution"                                . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       83 no PDB  2K6D          . "Cin85 Sh3-C Domain In Complex With Ubiquitin"                                                                                    . . . . .  98.68   76 100.00 100.00 3.99e-45 . . . . 18583 1
+       84 no PDB  2K8B          . "Solution Structure Of Plaa Family Ubiquitin Binding Domain (Pfuc) Cis Isomer In Complex With Ubiquitin"                          . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       85 no PDB  2K8C          . "Solution Structure Of Plaa Family Ubiquitin Binding Domain (Pfuc) Trans Isomer In Complex With Ubiquitin"                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       86 no PDB  2KDE          . "Nmr Structure Of Major S5a (196-306):k48 Linked Diubiquitin Species"                                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       87 no PDB  2KDF          . "Nmr Structure Of Minor S5a (196-306):k48 Linked Diubiquitin Species"                                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       88 no PDB  2KHW          . "Solution Structure Of The Human Polymerase Iota Ubm2- Ubiquitin Complex"                                                         . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+       89 no PDB  2KJH          . "Nmr Based Structural Model Of The Ubch8-Ubiquitin Complex"                                                                       . . . . .  98.68   76 100.00 100.00 3.99e-45 . . . . 18583 1
+       90 no PDB  2KLG          . "Pere Nmr Structure Of Ubiquitin"                                                                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       91 no PDB  2KN5          . "A Correspondence Between Solution-State Dynamics Of An Individual Protein And The Sequence And Conformational Diversity Of Its " . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       92 no PDB  2KOX          . "Nmr Residual Dipolar Couplings Identify Long Range Correlated Motions In The Backbone Of The Protein Ubiquitin"                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       93 no PDB  2KTF          . "Solution Nmr Structure Of Human Polymerase Iota Ubm2 In Complex With Ubiquitin"                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       94 no PDB  2KWU          . "Solution Structure Of Ubm2 Of Murine Polymerase Iota In Complex With Ubiquitin"                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       95 no PDB  2KWV          . "Solution Structure Of Ubm1 Of Murine Polymerase Iota In Complex With Ubiquitin"                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       96 no PDB  2KX0          . "The Solution Structure Of Ubb+1, Frameshift Mutant Of Ubiquitin B"                                                               . . . . .  98.68  103  98.67 100.00 6.21e-44 . . . . 18583 1
+       97 no PDB  2L0F          . "Solution Nmr Structure Of Human Polymerase Iota Ubm2 (P692a Mutant) In Complex With Ubiquitin"                                   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       98 no PDB  2L0T          . "Solution Structure Of The Complex Of Ubiquitin And The Vhs Domain Of Stam2"                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+       99 no PDB  2L3Z          . "Proton-Detected 4d Dream Solid-State Nmr Structure Of Ubiquitin"                                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      100 no PDB  2LD9          . "Backbone Structure Of Ubiquitin Determined Using Backbone Amide Noes And Backbone N-H And N-C Rdcs"                              . . . . . 100.00   77 100.00 100.00 7.92e-46 . . . . 18583 1
+      101 no PDB  2LJ5          . "Description Of The Structural Fluctuations Of Proteins From Structure- Based Calculations Of Residual Dipolar Couplings"         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      102 no PDB  2LVO          . "Structure Of The Gp78cue Domain Bound To Monubiquitin"                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      103 no PDB  2LVP          . "Gp78cue Domain Bound To The Distal Ubiquitin Of K48-Linked Diubiquitin"                                                          . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      104 no PDB  2LVQ          . "Gp78cue Domain Bound To The Proximal Ubiquitin Of K48-Linked Diubiquitin"                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      105 no PDB  2LZ6          . "Distinct Ubiquitin Binding Modes Exhibited By Sh3 Domains: Molecular Determinants And Functional Implications"                   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      106 no PDB  2MBB          . "Solution Structure Of The Human Polymerase Iota Ubm1-ubiquitin Complex"                                                          . . . . . 100.00   78 100.00 100.00 5.38e-46 . . . . 18583 1
+      107 no PDB  2MBH          . "Nmr Structure Of Eklf(22-40)/ubiquitin Complex"                                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      108 no PDB  2MBO          . "K11-linked Diubiquitin Average Solution Structure At Ph 6.8, 0 Mm Nacl"                                                          . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      109 no PDB  2MBQ          . "K11-linked Diubiquitin Average Solution Structure At Ph 6.8, 150 Mm Nacl"                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      110 no PDB  2MCN          . "Distinct Ubiquitin Binding Modes Exhibited By Sh3 Domains: Molecular Determinants And Functional Implications"                   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      111 no PDB  2MJ5          . "Structure Of The Uba Domain Of Human Nbr1 In Complex With Ubiquitin"                                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      112 no PDB  2MJB          . "Solution Nmr Structure Of Ubiquitin Refined Against Dipolar Couplings In 4 Media"                                                . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      113 no PDB  2MOR          . "A Tensor-free Method For The Structural And Dynamical Refinement Of Proteins Using Residual Dipolar Couplings"                   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      114 no PDB  2MRE          . "Nmr Structure Of The Rad18-ubz/ubiquitin Complex"                                                                                . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+      115 no PDB  2MRO          . "Structure Of The Complex Of Ubiquitin And The Uba Domain From Dna- Damage-inducible 1 Protein (ddi1)"                            . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      116 no PDB  2MSG          . "Solid-state Nmr Structure Of Ubiquitin"                                                                                          . . . . .  94.74   72 100.00 100.00 8.52e-43 . . . . 18583 1
+      117 no PDB  2MUR          . "Solution Structure Of The Human Faap20 Ubz-ubiquitin Complex"                                                                    . . . . . 100.00   78 100.00 100.00 5.38e-46 . . . . 18583 1
+      118 no PDB  2MWS          . "Structure Of The Complex Of Ubiquitin And The Ubiquitin-like (ubl) Domain Of Ddi1"                                               . . . . . 100.00   76  98.68  98.68 4.40e-45 . . . . 18583 1
+      119 no PDB  2N2K          . "Ensemble Structure Of The Closed State Of Lys63-linked Diubiquitin In The Absence Of A Ligand"                                   . . . . .  93.42   71 100.00 100.00 6.21e-42 . . . . 18583 1
+      120 no PDB  2NR2          . "The Mumo (Minimal Under-Restraining Minimal Over- Restraining) Method For The Determination Of Native States Ensembles Of Prote" . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      121 no PDB  2O6V          . "Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph"                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      122 no PDB  2OJR          . "Structure Of Ubiquitin Solved By Sad Using The Lanthanide- Binding Tag"                                                          . . . . . 100.00  111 100.00 100.00 2.29e-45 . . . . 18583 1
+      123 no PDB  2OOB          . "Crystal Structure Of The Uba Domain From Cbl-B Ubiquitin Ligase In Complex With Ubiquitin"                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      124 no PDB  2PE9          . "Nmr Based Structure Of The Open Conformation Of Lys48- Linked Di-Ubiquitin Using Experimental Global Rotational Diffusion Tenso" . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      125 no PDB  2PEA          . "Nmr Based Structure Of The Closed Conformation Of Lys48- Linked Di-Ubiquitin Using Experimental Global Rotational Diffusion Ten" . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      126 no PDB  2QHO          . "Crystal Structure Of The Uba Domain From Edd Ubiquitin Ligase In Complex With Ubiquitin"                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      127 no PDB  2RR9          . "The Solution Structure Of The K63-Ub2:tuims Complex"                                                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      128 no PDB  2RSU          . "Alternative Structure Of Ubiquitin"                                                                                              . . . . . 100.00   76  98.68  98.68 3.54e-45 . . . . 18583 1
+      129 no PDB  2RU6          . "The Pure Alternative State Of Ubiquitin"                                                                                         . . . . . 100.00   76  98.68  98.68 3.54e-45 . . . . 18583 1
+      130 no PDB  2W9N          . "Crystal Structure Of Linear Di-Ubiquitin"                                                                                        . . . . .  98.68  152 100.00 100.00 5.62e-44 . . . . 18583 1
+      131 no PDB  2WDT          . "Crystal Structure Of Plasmodium Falciparum Uchl3 In Complex With The Suicide Inhibitor Ubvme"                                    . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      132 no PDB  2WWZ          . "Tab2 Nzf Domain In Complex With Lys63-Linked Di-Ubiquitin, P212121"                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      133 no PDB  2WX0          . "Tab2 Nzf Domain In Complex With Lys63-Linked Di-Ubiquitin, P21"                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      134 no PDB  2WX1          . "Tab2 Nzf Domain In Complex With Lys63-Linked Tri-Ubiquitin, P212121"                                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      135 no PDB  2XBB          . "Nedd4 Hect:ub Complex"                                                                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      136 no PDB  2XEW          . "Crystal Structure Of K11-Linked Diubiquitin"                                                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      137 no PDB  2XK5          . "Crystal Structure Of K6-Linked Diubiquitin"                                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      138 no PDB  2Y5B          . "Structure Of Usp21 In Complex With Linear Diubiquitin-Aldehyde"                                                                  . . . . .  98.68  152 100.00 100.00 4.15e-44 . . . . 18583 1
+      139 no PDB  2Z59          . "Complex Structures Of Mouse Rpn13 (22-130aa) And Ubiquitin"                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      140 no PDB  2ZCB          . "Crystal Structure Of Ubiquitin P37aP38A"                                                                                         . . . . . 100.00   76  97.37  97.37 3.44e-44 . . . . 18583 1
+      141 no PDB  2ZCC          . "Ubiquitin Crystallized Under High Pressure"                                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      142 no PDB  2ZNV          . "Crystal Structure Of Human Amsh-Lp Dub Domain In Complex With Lys63-Linked Ubiquitin Dimer"                                      . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      143 no PDB  2ZVN          . "Nemo Cozi Domain Incomplex With Diubiquitin In P212121 Space Group"                                                              . . . . . 100.00  154 100.00 100.00 5.98e-45 . . . . 18583 1
+      144 no PDB  2ZVO          . "Nemo Cozi Domain In Complex With Diubiquitin In C2 Space Group"                                                                  . . . . . 100.00  154 100.00 100.00 5.98e-45 . . . . 18583 1
+      145 no PDB  3A1Q          . "Crystal Structure Of The Mouse Rap80 Uims In Complex With Lys63-Linked Di-Ubiquitin"                                             . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      146 no PDB  3A33          . "Ubch5b~ubiquitin Conjugate"                                                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      147 no PDB  3A9J          . "Crystal Structure Of The Mouse Tab2-Nzf In Complex With Lys63-Linked Di-Ubiquitin"                                               . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      148 no PDB  3A9K          . "Crystal Structure Of The Mouse Tab3-Nzf In Complex With Lys63-Linked Di-Ubiquitin"                                               . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      149 no PDB  3AI5          . "Crystal Structure Of Yeast Enhanced Green Fluorescent Protein- Ubiquitin Fusion Protein"                                         . . . . .  97.37  307 100.00 100.00 1.64e-41 . . . . 18583 1
+      150 no PDB  3ALB          . "Cyclic Lys48-Linked Tetraubiquitin"                                                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      151 no PDB  3AUL          . "Crystal Structure Of Wild-Type Lys48-Linked Diubiquitin In An Open Conformation"                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      152 no PDB  3AXC          . "Crystal Structure Of Linear Diubiquitin"                                                                                         . . . . . 100.00  154 100.00 100.00 5.98e-45 . . . . 18583 1
+      153 no PDB  3B08          . "Crystal Structure Of The Mouse Hoil1-l-nzf In Complex With Linear Di- Ubiquitin"                                                 . . . . . 100.00  152 100.00 100.00 6.43e-45 . . . . 18583 1
+      154 no PDB  3B0A          . "Crystal Structure Of The Mouse Hoil1-l-nzf In Complex With Linear Di- Ubiquitin"                                                 . . . . . 100.00  152 100.00 100.00 6.43e-45 . . . . 18583 1
+      155 no PDB  3BY4          . "Structure Of Ovarian Tumor (Otu) Domain In Complex With Ubiquitin"                                                               . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      156 no PDB  3C0R          . "Structure Of Ovarian Tumor (Otu) Domain In Complex With Ubiquitin"                                                               . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      157 no PDB  3DVG          . "Crystal Structure Of K63-Specific Fab Apu.3a8 Bound To K63-Linked Di- Ubiquitin"                                                 . . . . . 100.00   80 100.00 100.00 8.24e-46 . . . . 18583 1
+      158 no PDB  3DVN          . "Crystal Structure Of K63-specific Fab Apu2.16 Bound To K63-linked Di- Ubiquitin"                                                 . . . . . 100.00   80 100.00 100.00 8.24e-46 . . . . 18583 1
+      159 no PDB  3EEC          . "X-Ray Structure Of Human Ubiquitin Cd(Ii) Adduct"                                                                                . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      160 no PDB  3EFU          . "X-Ray Structure Of Human Ubiquitin-Hg(Ii) Adduct"                                                                                . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      161 no PDB  3EHV          . "X-Ray Structure Of Human Ubiquitin Zn(Ii) Adduct"                                                                                . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      162 no PDB  3H1U          . "Structure Of Ubiquitin In Complex With Cd Ions"                                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      163 no PDB  3H7P          . "Crystal Structure Of K63-Linked Di-Ubiquitin"                                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      164 no PDB  3H7S          . "Crystal Structures Of K63-Linked Di- And Tri-Ubiquitin Reveal A Highly Extended Chain Architecture"                              . . . . . 100.00   76  98.68  98.68 2.81e-43 . . . . 18583 1
+      165 no PDB  3HM3          . "The Structure And Conformation Of Lys-63 Linked Tetra-Ubiquitin"                                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      166 no PDB  3I3T          . "Crystal Structure Of Covalent Ubiquitin-usp21 Complex"                                                                           . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      167 no PDB  3IFW          . "Crystal Structure Of The S18y Variant Of Ubiquitin Carboxy T Hydrolase L1 Bound To Ubiquitin Vinylmethylester."                  . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      168 no PDB  3IHP          . "Covalent Ubiquitin-Usp5 Complex"                                                                                                 . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      169 no PDB  3JSV          . "Crystal Structure Of Mouse Nemo Cozi In Complex With Lys63- Linked Di-Ubiquitin"                                                 . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      170 no PDB  3JVZ          .  E2~ubiquitin-Hect                                                                                                                . . . . . 100.00   81 100.00 100.00 7.68e-46 . . . . 18583 1
+      171 no PDB  3JW0          .  E2~ubiquitin-Hect                                                                                                                . . . . . 100.00   81 100.00 100.00 7.68e-46 . . . . 18583 1
+      172 no PDB  3K9O          . "The Crystal Structure Of E2-25k And Ubb+1 Complex"                                                                               . . . . .  98.68   96 100.00 100.00 1.27e-44 . . . . 18583 1
+      173 no PDB  3K9P          . "The Crystal Structure Of E2-25k And Ubiquitin Complex"                                                                           . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+      174 no PDB  3KVF          . "Crystal Structure Of The I93m Mutant Of Ubiquitin Carboxy Te Hydrolase L1 Bound To Ubiquitin Vinylmethylester"                   . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      175 no PDB  3KW5          . "Crystal Structure Of Ubiquitin Carboxy Terminal Hydrolase L1 Ubiquitin Vinylmethylester"                                         . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      176 no PDB  3LDZ          . "Crystal Structure Of Human Stam1 Vhs Domain In Complex With Ubiquitin"                                                           . . . . .  96.05   73 100.00 100.00 1.79e-43 . . . . 18583 1
+      177 no PDB  3M3J          . "A New Crystal Form Of Lys48-Linked Diubiquitin"                                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      178 no PDB  3MHS          . "Structure Of The Saga Ubp8SGF11SUS1SGF73 DUB MODULE BOUND Ubiquitin Aldehyde"                                                    . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      179 no PDB  3MTN          . "Usp21 In Complex With A Ubiquitin-based, Usp21-specific Inhibitor"                                                               . . . . .  88.16   85  98.51  98.51 1.47e-37 . . . . 18583 1
+      180 no PDB  3N30          . "Crystal Structure Of Cubic Zn3-Hub (Human Ubiquitin) Adduct"                                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      181 no PDB  3N32          . "The Crystal Structure Of Human Ubiquitin Adduct With Zeise's Salt"                                                               . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      182 no PDB  3NHE          . "High Resolution Structure (1.26a) Of Usp2a In Complex With Ubiquitin"                                                            . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      183 no PDB  3NOB          . "Structure Of K11-linked Di-ubiquitin"                                                                                            . . . . . 100.00   78 100.00 100.00 5.38e-46 . . . . 18583 1
+      184 no PDB  3NS8          . "Crystal Structure Of An Open Conformation Of Lys48-Linked Diubiquitin At Ph 7.5"                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      185 no PDB  3O65          . "Crystal Structure Of A Josephin-Ubiquitin Complex: Evolutionary Restraints On Ataxin-3 Deubiquitinating Activity"                . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      186 no PDB  3OFI          . "Crystal Structure Of Human Insulin-Degrading Enzyme In Complex With Ubiquitin"                                                   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      187 no PDB  3OJ3          . "Crystal Structure Of The A20 Znf4 And Ubiquitin Complex"                                                                         . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+      188 no PDB  3OJ4          . "Crystal Structure Of The A20 Znf4, Ubiquitin And Ubch5a Complex"                                                                 . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+      189 no PDB  3ONS          . "Crystal Structure Of Human Ubiquitin In A New Crystal Form"                                                                      . . . . .  94.74   72 100.00 100.00 8.52e-43 . . . . 18583 1
+      190 no PDB  3PHD          . "Crystal Structure Of Human Hdac6 In Complex With Ubiquitin"                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      191 no PDB  3PHW          . "Otu Domain Of Crimean Congo Hemorrhagic Fever Virus In Complex With Ubiquitin"                                                   . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      192 no PDB  3PRM          . "Structural Analysis Of A Viral Otu Domain Protease From The Crimean- Congo Hemorrhagic Fever Virus In Complex With Human Ubiqui" . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      193 no PDB  3PRP          . "Structural Analysis Of A Viral Otu Domain Protease From The Crimean- Congo Hemorrhagic Fever Virus In Complex With Human Ubiqui" . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      194 no PDB  3PT2          . "Structure Of A Viral Otu Domain Protease Bound To Ubiquitin"                                                                     . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      195 no PDB  3PTF          . "X-Ray Structure Of The Non-Covalent Complex Between Ubch5a And Ubiquitin"                                                        . . . . . 100.00   79 100.00 100.00 6.66e-46 . . . . 18583 1
+      196 no PDB  3Q3F          . "Engineering Domain-Swapped Binding Interfaces By Mutually Exclusive Folding: Insertion Of Ubiquitin Into Position 103 Of Barnas" . . . . .  98.68  189 100.00 100.00 5.35e-44 . . . . 18583 1
+      197 no PDB  3RUL          . "New Strategy To Analyze Structures Of Glycopeptide-Target Complexes"                                                             . . . . .  98.68   79 100.00 100.00 3.97e-45 . . . . 18583 1
+      198 no PDB  3TBL          . "Structure Of Mono-ubiquitinated Pcna: Implications For Dna Polymerase Switching And Okazaki Fragment Maturation"                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      199 no PDB  3TMP          . "The Catalytic Domain Of Human Deubiquitinase Duba In Complex With Ubiquitin Aldehyde"                                            . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      200 no PDB  3U30          . "Crystal Structure Of A Linear-Specific Ubiquitin Fab Bound To Linear Ubiquitin"                                                  . . . . . 100.00  172 100.00 100.00 6.89e-45 . . . . 18583 1
+      201 no PDB  3UGB          . "Ubch5c~ubiquitin Conjugate"                                                                                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      202 no PDB  3VDZ          . "Tailoring Encodable Lanthanide-Binding Tags As Mri Contrast Agents: Xq-Dse3-Ubiquitin At 2.4 Angstroms"                          . . . . . 100.00  111 100.00 100.00 1.47e-45 . . . . 18583 1
+      203 no PDB  3VFK          . "The Structure Of Monodechloro-teicoplanin In Complex With Its Ligand, Using Ubiquitin As A Ligand Carrier"                       . . . . .  98.68   79 100.00 100.00 3.97e-45 . . . . 18583 1
+      204 no PDB  3VHT          . "Crystal Structure Of Gfp-Wrnip1 Ubz Domain Fusion Protein In Complex With Ubiquitin"                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      205 no PDB  3VUW          . "Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form I"                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      206 no PDB  3VUX          . "Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form Ii"                                                          . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      207 no PDB  3VUY          . "Crystal Structure Of A20 Zf7 In Complex With Linear Tetraubiquitin"                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      208 no PDB  3WWQ          . "Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin"                                                 . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      209 no PDB  3WXE          . "Crystal Structure Of Cyld Usp Domain (c596s) In Complex With Met1- Linked Diubiquitin"                                           . . . . .  94.74  148 100.00 100.00 9.19e-42 . . . . 18583 1
+      210 no PDB  3WXF          . "Crystal Structure Of Cyld Usp Domain (c596s E674q) In Complex With Met1-linked Diubiquitin"                                      . . . . .  94.74  148 100.00 100.00 9.19e-42 . . . . 18583 1
+      211 no PDB  3WXG          . "Crystal Structure Of Cyld Usp Domain (c596a) In Complex With Lys63- Linked Diubiquitin"                                          . . . . .  94.74   72 100.00 100.00 8.52e-43 . . . . 18583 1
+      212 no PDB  3ZLZ          . "Lys6-linked Tri-ubiquitin"                                                                                                       . . . . . 100.00   76  98.68 100.00 1.56e-45 . . . . 18583 1
+      213 no PDB  3ZNH          . "Crimean Congo Hemorrhagic Fever Virus Otu Domain In Complex With Ubiquitin-propargyl."                                           . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      214 no PDB  3ZNI          . "Structure Of Phosphotyr363-cbl-b - Ubch5b-ub - Zap-70 Peptide Complex"                                                           . . . . . 100.00   81 100.00 100.00 7.68e-46 . . . . 18583 1
+      215 no PDB  3ZNZ          . "Crystal Structure Of Otulin Otu Domain (c129a) In Complex With Met1-di Ubiquitin"                                                . . . . . 100.00  152 100.00 100.00 6.43e-45 . . . . 18583 1
+      216 no PDB  4A18          . "T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 1" . . . . . 100.00  129  97.37  98.68 2.69e-44 . . . . 18583 1
+      217 no PDB  4A19          . "T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 2" . . . . . 100.00  129  97.37  98.68 2.69e-44 . . . . 18583 1
+      218 no PDB  4A1B          . "T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 3" . . . . . 100.00  129  97.37  98.68 2.69e-44 . . . . 18583 1
+      219 no PDB  4A1D          . "T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 4" . . . . . 100.00  129  97.37  98.68 2.69e-44 . . . . 18583 1
+      220 no PDB  4ADX          . "The Cryo-em Structure Of The Archaeal 50s Ribosomal Subunit In Complex With Initiation Factor 6"                                 . . . . . 100.00  129  97.37  98.68 2.69e-44 . . . . 18583 1
+      221 no PDB  4AP4          . "Rnf4 - Ubch5a - Ubiquitin Heterotrimeric Complex"                                                                                . . . . . 100.00   80 100.00 100.00 6.85e-46 . . . . 18583 1
+      222 no PDB  4AUQ          . "Structure Of Birc7-Ubch5b-Ub Complex."                                                                                           . . . . . 100.00   81 100.00 100.00 7.68e-46 . . . . 18583 1
+      223 no PDB  4BBN          . "Nedd4 Hect-ub:ub Complex"                                                                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      224 no PDB  4BOS          . "Structure Of Otud2 Otu Domain In Complex With Ubiquitin K11- Linked Peptide"                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      225 no PDB  4BOZ          . "Structure Of Otud2 Otu Domain In Complex With K11-linked Di Ubiquitin"                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      226 no PDB  4BVU          . "Structure Of Shigella Effector Ospg In Complex With Host Ubch5c-ubiquitin Conjugate"                                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      227 no PDB  4CXC          . "Regulation Of The Mammalian Elongation Cycle By 40s Subunit Rolling: A Eukaryotic-specific Ribosome Rearrangement"               . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      228 no PDB  4CXD          . "Regulation Of The Mammalian Elongation Cycle By 40s Subunit Rolling: A Eukaryotic-specific Ribosome Rearrangement"               . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      229 no PDB  4D5L          . "Cryo-em Structures Of Ribosomal 80s Complexes With Termination Factors And Cricket Paralysis Virus Ires Reveal The Ires In The " . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      230 no PDB  4D61          . "Cryo-em Structures Of Ribosomal 80s Complexes With Termination Factors And Cricket Paralysis Virus Ires Reveal The Ires In The " . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      231 no PDB  4DDG          . "Crystal Structure Of Human Otub1UBCH5B~UBUB"                                                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      232 no PDB  4DDI          . "Crystal Structure Of Human Otub1UBCH5B~UBUB"                                                                                     . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      233 no PDB  4DHJ          . "The Structure Of A Ceotub1 Ubiquitin Aldehyde Ubc13~ub Complex"                                                                  . . . . .  98.68   76 100.00 100.00 3.99e-45 . . . . 18583 1
+      234 no PDB  4DHZ          . "The Structure Of HCEOTUB1-Ubiquitin Aldehyde-Ubc13~ub"                                                                           . . . . .  98.68   76 100.00 100.00 3.99e-45 . . . . 18583 1
+      235 no PDB  4FJV          . "Crystal Structure Of Human Otubain2 And Ubiquitin Complex"                                                                       . . . . . 100.00   86 100.00 100.00 9.86e-46 . . . . 18583 1
+      236 no PDB  4HXD          . "Diversity Of Ubiquitin And Isg15 Specificity Amongst Nairoviruses Viral Ovarian Tumor Domain Proteases"                          . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      237 no PDB  4I6N          . "Crystal Structure Of Trichinella Spiralis Uch37 Catalytic Domain Bound To Ubiquitin Vinyl Methyl Ester"                          . . . . .  97.37   75 100.00 100.00 4.54e-44 . . . . 18583 1
+      238 no PDB  4IG7          . "Crystal Structure Of Trichinella Spiralis Uch37 Bound To Ubiquitin Vinyl Methyl Ester"                                           . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      239 no PDB  4IUM          . "Equine Arteritis Virus Papain-like Protease 2 (plp2) Covalently Bound To Ubiquitin"                                              . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      240 no PDB  4JIO          . "Bro1 V Domain And Ubiquitin"                                                                                                     . . . . . 100.00   76  98.68  98.68 4.85e-45 . . . . 18583 1
+      241 no PDB  4JQW          . "Crystal Structure Of A Complex Of Nod1 Card And Ubiquitin"                                                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      242 no PDB  4K1R          . "Crystal Structure Of Schizosaccharomyces Pombe Sst2 Catalytic Domain And Ubiquitin"                                              . . . . . 100.00   81 100.00 100.00 1.15e-45 . . . . 18583 1
+      243 no PDB  4K7S          . "Crystal Structure Of Zn2-hub (human Ubiquitin) Adduct From A Solution 35 Mm Zinc Acetate/1.3 Mm Hub"                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      244 no PDB  4K7U          . "Crystal Structure Of Zn2.3-hub (human Ubiquitin) Adduct From A Solution 70 Mm Zinc Acetate/1.3 Mm Hub"                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      245 no PDB  4K7W          . "Crystal Structure Of Zn3-hub(human Ubiquitin) Adduct From A Solution 100 Mm Zinc Acetate/1.3 Mm Hub"                             . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      246 no PDB  4KSK          . "Gumby/fam105b In Complex With Ubiquitin"                                                                                         . . . . . 100.00   80 100.00 100.00 6.85e-46 . . . . 18583 1
+      247 no PDB  4KSL          . "Gumby/fam105b In Complex With Linear Di-ubiquitin"                                                                               . . . . . 100.00  156 100.00 100.00 6.34e-45 . . . . 18583 1
+      248 no PDB  4KZX          . "Rabbit 40s Ribosomal Subunit In Complex With Eif1."                                                                              . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      249 no PDB  4KZY          . "Rabbit 40s Ribosomal Subunit In Complex With Eif1 And Eif1a."                                                                    . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      250 no PDB  4KZZ          . "Rabbit 40s Ribosomal Subunit In Complex With Mrna, Initiator Trna And Eif1a"                                                     . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      251 no PDB  4LCD          . "Structure Of An Rsp5xubxsna3 Complex: Mechanism Of Ubiquitin Ligation And Lysine Prioritization By A Hect E3"                    . . . . .  97.37   83 100.00 100.00 1.79e-44 . . . . 18583 1
+      252 no PDB  4LDT          . "The Structure Of H/ceotub1-ubiquitin Aldehyde-ubch5b~ub"                                                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      253 no PDB  4LJO          . "Structure Of An Active Ligase (hoip)/ubiquitin Transfer Complex"                                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      254 no PDB  4LJP          . "Structure Of An Active Ligase (hoip-h889a)/ubiquitin Transfer Complex"                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      255 no PDB  4M0W          . "Crystal Structure Of Sars-cov Papain-like Protease C112s Mutant In Complex With Ubiquitin"                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      256 no PDB  4MDK          . "Cdc34-ubiquitin-cc0651 Complex"                                                                                                  . . . . . 100.00   80 100.00 100.00 6.85e-46 . . . . 18583 1
+      257 no PDB  4MM3          . "Crystal Structure Of Sars-cov Papain-like Protease Plpro In Complex With Ubiquitin Aldehyde"                                     . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      258 no PDB  4MSM          . "Crystal Structure Of Schizosaccharomyces Pombe Amsh-like Protease Sst2 E286a Mutant Bound To Ubiquitin"                          . . . . . 100.00   81 100.00 100.00 1.15e-45 . . . . 18583 1
+      259 no PDB  4MSQ          . "Crystal Structure Of Schizosaccharomyces Pombe Amsh-like Protease Sst2 Catalytic Domain Bound To Ubiquitin"                      . . . . . 100.00   81 100.00 100.00 1.15e-45 . . . . 18583 1
+      260 no PDB  4NQK          . "Structure Of An Ubiquitin Complex"                                                                                               . . . . . 100.00   79 100.00 100.00 1.20e-45 . . . . 18583 1
+      261 no PDB  4NQL          . "The Crystal Structure Of The Dub Domain Of Amsh Orthologue, Sst2 From S. Pombe, In Complex With Lysine 63-linked Diubiquitin"    . . . . . 100.00   77 100.00 100.00 7.42e-46 . . . . 18583 1
+      262 no PDB  4P4H          . "Caught-in-action Signaling Complex Of Rig-i 2card Domain And Mavs Card Domain"                                                   . . . . . 100.00   79 100.00 100.00 1.20e-45 . . . . 18583 1
+      263 no PDB  4PIG          . "Crystal Structure Of The Ubiquitin K11s Mutant"                                                                                  . . . . . 100.00   76  98.68  98.68 2.81e-45 . . . . 18583 1
+      264 no PDB  4PIH          . "X-ray Crystal Structure Of The K33s Mutant Of Ubiquitin"                                                                         . . . . . 100.00   76  98.68  98.68 2.81e-45 . . . . 18583 1
+      265 no PDB  4PIJ          . "X-ray Crystal Structure Of The K11s/k63s Double Mutant Of Ubiquitin"                                                             . . . . .  98.68   75  97.33  97.33 7.90e-44 . . . . 18583 1
+      266 no PDB  4PQT          . "Insights Into The Mechanism Of Deubiquitination By Jamm Deubiquitinases From Co-crystal Structures Of Enzyme With Substrate And" . . . . . 100.00   81 100.00 100.00 1.15e-45 . . . . 18583 1
+      267 no PDB  4R62          . "Structure Of Rad6~ub"                                                                                                            . . . . . 100.00   78 100.00 100.00 6.20e-46 . . . . 18583 1
+      268 no PDB  4RF0          . "Crystal Structure Of The Middle-east Respiratory Syndrome Coronavirus Papain-like Protease In Complex With Ubiquitin (space Gro" . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      269 no PDB  4RF1          . "Crystal Structure Of The Middle-east Respiratory Syndrome Coronavirus Papain-like Protease In Complex With Ubiquitin (space Gro" . . . . .  98.68   75 100.00 100.00 4.28e-45 . . . . 18583 1
+      270 no PDB  4S1Z          . "Crystal Structure Of Trabid Nzf1 In Complex With K29 Linked Di- Ubiquitin"                                                       . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      271 no PDB  4S22          . "Crystal Structure Of K29 Linked Di-ubiquitin"                                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      272 no PDB  4UEL          . "Uch-l5 In Complex With Ubiquitin-propargyl Bound To The Rpn13 Deubad Domain"                                                     . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      273 no PDB  4UF6          . "Uch-l5 In Complex With Ubiquitin-propargyl Bound To An Activating Fragment Of Ino80g"                                            . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      274 no PDB  4UN2          . "Crystal Structure Of The Uba Domain Of Dsk2 In Complex With Ubiquitin"                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      275 no PDB  4UPX          . "Mammalian 80s Hcv-ires Initiation Complex With Eif5b Pre-like State"                                                             . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      276 no PDB  4UQ1          . "Mammalian 80s Hcv-ires Initiation Complex With Eif5b Post-like State"                                                            . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      277 no PDB  4UQ4          . "Mammalian 80s Hcv-ires Initiation Complex With Eif5b Post-like State"                                                            . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      278 no PDB  4UQ5          . "Mammalian 80s Hcv-ires Initiation Complex With Eif5b Pre-like State"                                                             . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      279 no PDB  4V3K          . "Rnf38-ubch5b-ub Complex"                                                                                                         . . . . . 100.00   81 100.00 100.00 7.68e-46 . . . . 18583 1
+      280 no PDB  4V3L          . "Rnf38-ub-ubch5b-ub Complex"                                                                                                      . . . . . 100.00   81 100.00 100.00 7.68e-46 . . . . 18583 1
+      281 no PDB  4W20          . "Structure Of The Mammalian 60s Ribosomal Subunit (this Entry Contains The Large Ribosomal Proteins)"                             . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      282 no PDB  4W22          . "Structure Of The 80s Mammalian Ribosome Bound To Eef2 (this Entry Contains The Large Ribosomal Subunit Proteins)"                . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      283 no PDB  4W23          . "Structure Of The 80s Mammalian Ribosome Bound To Eef2 (this Entry Contains The Small Ribosomal Subunit)"                         . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      284 no PDB  4W25          . "Structure Of The Idle Mammalian Ribosome-sec61 Complex (this Entry Contains The Large Ribosomal Subunit Proteins)"               . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      285 no PDB  4W27          . "Structure Of The Translating Mammalian Ribosome-sec61 Complex (this Entry Contains The Large Ribosomal Subunit Proteins)"        . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      286 no PDB  4W28          . "Structure Of The Translating Mammalian Ribosome-sec61 Complex (this Entry Contains The Small Ribosomal Subunit)"                 . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      287 no PDB  4WHV          .  Rnf8/ubc13c87k~ub                                                                                                                . . . . . 100.00   83 100.00 100.00 1.61e-45 . . . . 18583 1
+      288 no PDB  4WLR          . "Crystal Structure Of Much37-hrpn13 Ctd-hub Complex"                                                                              . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      289 no PDB  4WUR          . "The Crystal Structure Of The Mers-cov Papain-like Protease (c111s) With Human Ubiquitin"                                         . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      290 no PDB  4WZP          . "Ser65 Phosphorylated Ubiquitin, Major Conformation"                                                                              . . . . . 100.00   76  98.68  98.68 4.64e-45 . . . . 18583 1
+      291 no PDB  4XKL          . "Crystal Structure Of Ndp52 Zf2 In Complex With Mono-ubiquitin"                                                                   . . . . . 100.00   80 100.00 100.00 1.02e-45 . . . . 18583 1
+      292 no PDB  4XOF          . "Observing The Overall Rocking Motion Of A Protein In A Crystal - Orthorhombic Ubiquitin Crystals Without Zinc."                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      293 no PDB  4XOK          . "Observing The Overall Rocking Motion Of A Protein In A Crystal."                                                                 . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      294 no PDB  4XOL          . "Observing The Overall Rocking Motion Of A Protein In A Crystal - Cubic Ubiquitin Crystals."                                      . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      295 no PDB  4XYZ          . "Crystal Structure Of K33 Linked Di-ubiquitin"                                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      296 no PDB  4Y1H          . "Crystal Structure Of K33 Linked Tri-ubiquitin"                                                                                   . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      297 no PDB  4Z9S          . "Non-covalent Assembly Of Monoubiquitin That Mimics K11 Poly-ubiquitin"                                                           . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      298 no PDB  4ZFR          . "Catalytic Domain Of Sst2 F403a Mutant Bound To Ubiquitin"                                                                        . . . . . 100.00   81 100.00 100.00 1.15e-45 . . . . 18583 1
+      299 no PDB  4ZFT          . "Catalytic Domain Of Sst2 F403w Mutant Bound To Ubiquitin"                                                                        . . . . . 100.00   81 100.00 100.00 1.15e-45 . . . . 18583 1
+      300 no PDB  4ZPZ          . "Crystal Structure Of Semi-synthetic Ubiquitin With Phospho-ser65 And Ala46cys"                                                   . . . . . 100.00   76  97.37  97.37 1.81e-44 . . . . 18583 1
+      301 no PDB  5A5B          . "Structure Of The 26s Proteasome-ubp6 Complex"                                                                                    . . . . .  98.68   76 100.00 100.00 4.40e-45 . . . . 18583 1
+      302 no PDB  5AF4          . "Structure Of Lys33-linked Diub"                                                                                                  . . . . . 100.00   76  98.68 100.00 1.56e-45 . . . . 18583 1
+      303 no PDB  5AF5          . "Structure Of Lys33-linked Triub S.g. P 212121"                                                                                   . . . . .  96.05   73  98.63 100.00 5.42e-43 . . . . 18583 1
+      304 no PDB  5AF6          . "Structure Of Lys33-linked Diub Bound To Trabid Nzf1"                                                                             . . . . . 100.00   76  98.68 100.00 1.56e-45 . . . . 18583 1
+      305 no PDB  5AIT          . "A Complex Of Of Rnf4-ring Domain, Ubev2, Ubc13-ub (isopeptide Crosslink)"                                                        . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      306 no PDB  5AIU          . "A Complex Of Rnf4-ring Domain, Ubc13-ub (isopeptide Crosslink)"                                                                  . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      307 no PDB  5CAW          . "Structure Of Pediculus Humanus Parkin Bound To Phospho-ubiquitin"                                                                . . . . .  98.68   76  98.67  98.67 2.77e-44 . . . . 18583 1
+      308 no DBJ  BAA03983      . "polyubiquitin [Rattus norvegicus]"                                                                                               . . . . . 100.00  305 100.00 100.00 3.25e-43 . . . . 18583 1
+      309 no DBJ  BAA09860      . "polyubiquitin [Homo sapiens]"                                                                                                    . . . . . 100.00  611  98.68  98.68 1.53e-40 . . . . 18583 1
+      310 no DBJ  BAA11842      . "ubiquitin [Cavia porcellus]"                                                                                                     . . . . . 100.00  311 100.00 100.00 3.52e-43 . . . . 18583 1
+      311 no DBJ  BAA11843      . "ubiquitin extention protein [Cavia porcellus]"                                                                                   . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      312 no DBJ  BAA23486      . "polyubiquitin [Homo sapiens]"                                                                                                    . . . . . 100.00  609  98.68  98.68 8.23e-41 . . . . 18583 1
+      313 no EMBL CAA25706      . "unnamed protein product [Saccharomyces cerevisiae]"                                                                              . . . . .  50.00  191 100.00 100.00 4.38e-16 . . . . 18583 1
+      314 no EMBL CAA26488      . "unnamed protein product [Gallus gallus]"                                                                                         . . . . . 100.00  157  98.68  98.68 3.90e-44 . . . . 18583 1
+      315 no EMBL CAA28495      . "ubiquitin [Homo sapiens]"                                                                                                        . . . . . 100.00  229 100.00 100.00 5.18e-44 . . . . 18583 1
+      316 no EMBL CAA30183      . "unnamed protein product [Dictyostelium discoideum]"                                                                              . . . . . 100.00  128  97.37  97.37 7.90e-44 . . . . 18583 1
+      317 no EMBL CAA30815      . "unnamed protein product [Cricetulus sp.]"                                                                                        . . . . .  93.42  223 100.00 100.00 5.43e-40 . . . . 18583 1
+      318 no GB   AAA02769      . "polyprotein [Bovine viral diarrhea virus 1-Osloss]"                                                                              . . . . .  98.68 3975  97.33 100.00 2.69e-39 . . . . 18583 1
+      319 no GB   AAA28154      . "polyubiquitin [Caenorhabditis elegans]"                                                                                          . . . . . 100.00  838  97.37  98.68 1.06e-39 . . . . 18583 1
+      320 no GB   AAA28997      . "ubiquitin [Drosophila melanogaster]"                                                                                             . . . . . 100.00  231 100.00 100.00 4.85e-44 . . . . 18583 1
+      321 no GB   AAA28998      . "ubiquitin-hybrid protein precursor [Drosophila melanogaster]"                                                                    . . . . . 100.00  156 100.00 100.00 1.42e-45 . . . . 18583 1
+      322 no GB   AAA28999      . "ubiquitin, partial [Drosophila melanogaster]"                                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      323 no PIR  I50437        . "polyubiquitin 4 - chicken [Gallus gallus]"                                                                                       . . . . . 100.00  305 100.00 100.00 3.25e-43 . . . . 18583 1
+      324 no PIR  I51568        . "polyubiquitin - African clawed frog (fragment)"                                                                                  . . . . . 100.00  167 100.00 100.00 1.00e-44 . . . . 18583 1
+      325 no PIR  I65237        . "ubiquitin / ribosomal protein L40, cytosolic [validated] - rat"                                                                  . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      326 no PIR  JN0790        . "ubiquitin/ribosomal protein CEP52 fusion protein - Leishmania major"                                                             . . . . . 100.00  128  97.37  98.68 3.43e-45 . . . . 18583 1
+      327 no PIR  S13928        . "ubiquitin precursor - chicken [Gallus gallus]"                                                                                   . . . . . 100.00  229 100.00 100.00 5.35e-44 . . . . 18583 1
+      328 no PRF  0412265A      .  ubiquitin                                                                                                                        . . . . .  98.68   75  98.67  98.67 1.80e-44 . . . . 18583 1
+      329 no PRF  1101405A      . "ubiquitin precursor"                                                                                                             . . . . .  50.00  191 100.00 100.00 4.33e-16 . . . . 18583 1
+      330 no PRF  1212243A      . "ubiquitin S1"                                                                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      331 no PRF  1212243B      . "ubiquitin S5"                                                                                                                    . . . . .  92.11   77  98.57  98.57 1.12e-40 . . . . 18583 1
+      332 no PRF  1212243C      . "ubiquitin S3"                                                                                                                    . . . . . 100.00   76 100.00 100.00 6.54e-46 . . . . 18583 1
+      333 no REF  NP_001005123  . "ubiquitin-60S ribosomal protein L40 [Xenopus (Silurana) tropicalis]"                                                             . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      334 no REF  NP_001006688  . "ubiquitin C [Xenopus (Silurana) tropicalis]"                                                                                     . . . . . 100.00  609 100.00 100.00 1.45e-41 . . . . 18583 1
+      335 no REF  NP_001009117  . "polyubiquitin-B [Pan troglodytes]"                                                                                               . . . . . 100.00  229 100.00 100.00 5.18e-44 . . . . 18583 1
+      336 no REF  NP_001009202  . "polyubiquitin-B [Ovis aries]"                                                                                                    . . . . . 100.00  305  98.68 100.00 5.72e-43 . . . . 18583 1
+      337 no REF  NP_001009286  . "ubiquitin-60S ribosomal protein L40 [Ovis aries]"                                                                                . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      338 no SP   P0C273        . "RecName: Full=Ubiquitin-60S ribosomal protein L40; AltName: Full=Ubiquitin A-52 residue ribosomal protein fusion product 1; Con" . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      339 no SP   P0C275        . "RecName: Full=Ubiquitin-60S ribosomal protein L40; AltName: Full=Ubiquitin A-52 residue ribosomal protein fusion product 1; Con" . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      340 no SP   P0C276        . "RecName: Full=Ubiquitin-60S ribosomal protein L40; AltName: Full=Ubiquitin A-52 residue ribosomal protein fusion product 1; Con" . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+      341 no SP   P0CG47        . "RecName: Full=Polyubiquitin-B; Contains: RecName: Full=Ubiquitin; Flags: Precursor"                                              . . . . . 100.00  229 100.00 100.00 5.18e-44 . . . . 18583 1
+      342 no SP   P0CG48        . "RecName: Full=Polyubiquitin-C; Contains: RecName: Full=Ubiquitin; Flags: Precursor"                                              . . . . . 100.00  685 100.00 100.00 2.13e-41 . . . . 18583 1
+      343 no TPD  FAA00319      . "TPA: polyubiquitin [Cryptococcus neoformans var. neoformans B-3501A]"                                                            . . . . . 100.00  456  97.37  98.68 1.11e-40 . . . . 18583 1
+      344 no TPE  CEL68433      . "TPA: ubiquitin / ribosomal protein CEP52 fusion protein, putative [Neospora caninum Liverpool]"                                  . . . . . 100.00  129  98.68 100.00 1.60e-45 . . . . 18583 1
+      345 no TPE  CEL70397      . "TPA: Ubiquitin, related [Neospora caninum Liverpool]"                                                                            . . . . . 100.00  535  98.68 100.00 3.17e-41 . . . . 18583 1
+      346 no TPE  CEL75964      . "TPA: ubiquitin / ribosomal protein CEP52 fusion protein, putative [Toxoplasma gondii VEG]"                                       . . . . . 100.00  129  98.68 100.00 1.60e-45 . . . . 18583 1
+      347 no TPE  CEL78064      . "TPA: polyubiquitin, putative [Toxoplasma gondii VEG]"                                                                            . . . . . 100.00  307  98.68 100.00 1.16e-42 . . . . 18583 1
+      348 no TPG  DAA18802      . "TPA: polyubiquitin [Bos taurus]"                                                                                                 . . . . . 100.00  305 100.00 100.00 3.43e-43 . . . . 18583 1
+      349 no TPG  DAA20663      . "TPA: ubiquitin C [Bos taurus]"                                                                                                   . . . . .  98.68  314  98.67 100.00 1.30e-41 . . . . 18583 1
+      350 no TPG  DAA20672      . "TPA: ubiquitin B-like [Bos taurus]"                                                                                              . . . . . 100.00   77  98.68  98.68 4.88e-45 . . . . 18583 1
+      351 no TPG  DAA24675      . "TPA: 40S ribosomal protein S27a [Bos taurus]"                                                                                    . . . . . 100.00  156 100.00 100.00 7.65e-46 . . . . 18583 1
+      352 no TPG  DAA28295      . "TPA: ubiquitin and ribosomal protein L40 [Bos taurus]"                                                                           . . . . . 100.00  128 100.00 100.00 4.55e-46 . . . . 18583 1
+
+   stop_
+
+   loop_
+      _Entity_comp_index.ID
+      _Entity_comp_index.Auth_seq_ID
+      _Entity_comp_index.Comp_ID
+      _Entity_comp_index.Comp_label
+      _Entity_comp_index.Entry_ID
+      _Entity_comp_index.Entity_ID
+
+       1 . MET . 18583 1
+       2 . GLN . 18583 1
+       3 . ILE . 18583 1
+       4 . PHE . 18583 1
+       5 . VAL . 18583 1
+       6 . LYS . 18583 1
+       7 . THR . 18583 1
+       8 . LEU . 18583 1
+       9 . THR . 18583 1
+      10 . GLY . 18583 1
+      11 . LYS . 18583 1
+      12 . THR . 18583 1
+      13 . ILE . 18583 1
+      14 . THR . 18583 1
+      15 . LEU . 18583 1
+      16 . GLU . 18583 1
+      17 . VAL . 18583 1
+      18 . GLU . 18583 1
+      19 . PRO . 18583 1
+      20 . SER . 18583 1
+      21 . ASP . 18583 1
+      22 . THR . 18583 1
+      23 . ILE . 18583 1
+      24 . GLU . 18583 1
+      25 . ASN . 18583 1
+      26 . VAL . 18583 1
+      27 . LYS . 18583 1
+      28 . ALA . 18583 1
+      29 . LYS . 18583 1
+      30 . ILE . 18583 1
+      31 . GLN . 18583 1
+      32 . ASP . 18583 1
+      33 . LYS . 18583 1
+      34 . GLU . 18583 1
+      35 . GLY . 18583 1
+      36 . ILE . 18583 1
+      37 . PRO . 18583 1
+      38 . PRO . 18583 1
+      39 . ASP . 18583 1
+      40 . GLN . 18583 1
+      41 . GLN . 18583 1
+      42 . ARG . 18583 1
+      43 . LEU . 18583 1
+      44 . ILE . 18583 1
+      45 . PHE . 18583 1
+      46 . ALA . 18583 1
+      47 . GLY . 18583 1
+      48 . LYS . 18583 1
+      49 . GLN . 18583 1
+      50 . LEU . 18583 1
+      51 . GLU . 18583 1
+      52 . ASP . 18583 1
+      53 . GLY . 18583 1
+      54 . ARG . 18583 1
+      55 . THR . 18583 1
+      56 . LEU . 18583 1
+      57 . SER . 18583 1
+      58 . ASP . 18583 1
+      59 . TYR . 18583 1
+      60 . ASN . 18583 1
+      61 . ILE . 18583 1
+      62 . GLN . 18583 1
+      63 . LYS . 18583 1
+      64 . GLU . 18583 1
+      65 . SER . 18583 1
+      66 . THR . 18583 1
+      67 . LEU . 18583 1
+      68 . HIS . 18583 1
+      69 . LEU . 18583 1
+      70 . VAL . 18583 1
+      71 . LEU . 18583 1
+      72 . ARG . 18583 1
+      73 . LEU . 18583 1
+      74 . ARG . 18583 1
+      75 . GLY . 18583 1
+      76 . GLY . 18583 1
+
+   stop_
+
+   loop_
+      _Entity_poly_seq.Hetero
+      _Entity_poly_seq.Mon_ID
+      _Entity_poly_seq.Num
+      _Entity_poly_seq.Comp_index_ID
+      _Entity_poly_seq.Entry_ID
+      _Entity_poly_seq.Entity_ID
+
+      . MET  1  1 18583 1
+      . GLN  2  2 18583 1
+      . ILE  3  3 18583 1
+      . PHE  4  4 18583 1
+      . VAL  5  5 18583 1
+      . LYS  6  6 18583 1
+      . THR  7  7 18583 1
+      . LEU  8  8 18583 1
+      . THR  9  9 18583 1
+      . GLY 10 10 18583 1
+      . LYS 11 11 18583 1
+      . THR 12 12 18583 1
+      . ILE 13 13 18583 1
+      . THR 14 14 18583 1
+      . LEU 15 15 18583 1
+      . GLU 16 16 18583 1
+      . VAL 17 17 18583 1
+      . GLU 18 18 18583 1
+      . PRO 19 19 18583 1
+      . SER 20 20 18583 1
+      . ASP 21 21 18583 1
+      . THR 22 22 18583 1
+      . ILE 23 23 18583 1
+      . GLU 24 24 18583 1
+      . ASN 25 25 18583 1
+      . VAL 26 26 18583 1
+      . LYS 27 27 18583 1
+      . ALA 28 28 18583 1
+      . LYS 29 29 18583 1
+      . ILE 30 30 18583 1
+      . GLN 31 31 18583 1
+      . ASP 32 32 18583 1
+      . LYS 33 33 18583 1
+      . GLU 34 34 18583 1
+      . GLY 35 35 18583 1
+      . ILE 36 36 18583 1
+      . PRO 37 37 18583 1
+      . PRO 38 38 18583 1
+      . ASP 39 39 18583 1
+      . GLN 40 40 18583 1
+      . GLN 41 41 18583 1
+      . ARG 42 42 18583 1
+      . LEU 43 43 18583 1
+      . ILE 44 44 18583 1
+      . PHE 45 45 18583 1
+      . ALA 46 46 18583 1
+      . GLY 47 47 18583 1
+      . LYS 48 48 18583 1
+      . GLN 49 49 18583 1
+      . LEU 50 50 18583 1
+      . GLU 51 51 18583 1
+      . ASP 52 52 18583 1
+      . GLY 53 53 18583 1
+      . ARG 54 54 18583 1
+      . THR 55 55 18583 1
+      . LEU 56 56 18583 1
+      . SER 57 57 18583 1
+      . ASP 58 58 18583 1
+      . TYR 59 59 18583 1
+      . ASN 60 60 18583 1
+      . ILE 61 61 18583 1
+      . GLN 62 62 18583 1
+      . LYS 63 63 18583 1
+      . GLU 64 64 18583 1
+      . SER 65 65 18583 1
+      . THR 66 66 18583 1
+      . LEU 67 67 18583 1
+      . HIS 68 68 18583 1
+      . LEU 69 69 18583 1
+      . VAL 70 70 18583 1
+      . LEU 71 71 18583 1
+      . ARG 72 72 18583 1
+      . LEU 73 73 18583 1
+      . ARG 74 74 18583 1
+      . GLY 75 75 18583 1
+      . GLY 76 76 18583 1
+
+   stop_
+
+save_
+
+
+save_entity_2
+   _Entity.Sf_category                       entity
+   _Entity.Sf_framecode                      entity_2
+   _Entity.Entry_ID                          18583
+   _Entity.ID                                2
+   _Entity.BMRB_code                         .
+   _Entity.Name                              gp78CUE
+   _Entity.Type                              polymer
+   _Entity.Polymer_common_type               .
+   _Entity.Polymer_type                      polypeptide(L)
+   _Entity.Polymer_type_details              .
+   _Entity.Polymer_strand_ID                 C
+   _Entity.Polymer_seq_one_letter_code_can   .
+   _Entity.Polymer_seq_one_letter_code
+;
+SNSQLNAMAHQIQEMFPQVP
+YHLVLQDLQLTRSVEITTDN
+ILEGRIQVPFPT
+;
+   _Entity.Target_identifier                 .
+   _Entity.Polymer_author_defined_seq        .
+   _Entity.Polymer_author_seq_details        .
+   _Entity.Ambiguous_conformational_states   no
+   _Entity.Ambiguous_chem_comp_sites         no
+   _Entity.Nstd_monomer                      no
+   _Entity.Nstd_chirality                    no
+   _Entity.Nstd_linkage                      no
+   _Entity.Nonpolymer_comp_ID                .
+   _Entity.Nonpolymer_comp_label             .
+   _Entity.Number_of_monomers                52
+   _Entity.Number_of_nonpolymer_components   .
+   _Entity.Paramagnetic                      no
+   _Entity.Thiol_state                      'not present'
+   _Entity.Src_method                        man
+   _Entity.Parent_entity_ID                  .
+   _Entity.Fragment                          .
+   _Entity.Mutation                          .
+   _Entity.EC_number                         .
+   _Entity.Calc_isoelectric_point            .
+   _Entity.Formula_weight                    5966.808
+   _Entity.Formula_weight_exptl              .
+   _Entity.Formula_weight_exptl_meth         .
+   _Entity.Details                           .
+   _Entity.DB_query_date                     .
+   _Entity.DB_query_revised_last_date        2015-01-30
+
+   loop_
+      _Entity_db_link.Ordinal
+      _Entity_db_link.Author_supplied
+      _Entity_db_link.Database_code
+      _Entity_db_link.Accession_code
+      _Entity_db_link.Entry_mol_code
+      _Entity_db_link.Entry_mol_name
+      _Entity_db_link.Entry_experimental_method
+      _Entity_db_link.Entry_structure_resolution
+      _Entity_db_link.Entry_relation_type
+      _Entity_db_link.Entry_details
+      _Entity_db_link.Chimera_segment_ID
+      _Entity_db_link.Seq_query_to_submitted_percent
+      _Entity_db_link.Seq_subject_length
+      _Entity_db_link.Seq_identity
+      _Entity_db_link.Seq_positive
+      _Entity_db_link.Seq_homology_expectation_val
+      _Entity_db_link.Seq_align_begin
+      _Entity_db_link.Seq_align_end
+      _Entity_db_link.Seq_difference_details
+      _Entity_db_link.Seq_alignment_details
+      _Entity_db_link.Entry_ID
+      _Entity_db_link.Entity_ID
+
+       1 no BMRB        18581 .  entity                                                                                                                           . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       2 no BMRB        18582 .  gp78CUE                                                                                                                          . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       3 no BMRB        18584 .  gp78CUE                                                                                                                          . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       4 no PDB  2EJS          . "Solution Structure Of Ruh-076, A Human Cue Domain"                                                                               . . . . .  96.15  58 100.00 100.00 2.71e-27 . . . . 18583 2
+       5 no PDB  2LVN          . "Structure Of The Gp78 Cue Domain"                                                                                                . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       6 no PDB  2LVO          . "Structure Of The Gp78cue Domain Bound To Monubiquitin"                                                                           . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       7 no PDB  2LVP          . "Gp78cue Domain Bound To The Distal Ubiquitin Of K48-Linked Diubiquitin"                                                          . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       8 no PDB  2LVQ          . "Gp78cue Domain Bound To The Proximal Ubiquitin Of K48-Linked Diubiquitin"                                                        . . . . . 100.00  52 100.00 100.00 1.65e-28 . . . . 18583 2
+       9 no PDB  4G3O          . "Crystal Structure Of The Cue Domain Of The E3 Ubiquitin Ligase Amfr (Gp78)"                                                      . . . . .  84.62  58  97.73  97.73 9.44e-22 . . . . 18583 2
+      10 no DBJ  BAE01277      . "unnamed protein product [Macaca fascicularis]"                                                                                   . . . . . 100.00 552 100.00 100.00 3.33e-26 . . . . 18583 2
+      11 no DBJ  BAE34049      . "unnamed protein product [Mus musculus]"                                                                                          . . . . . 100.00 643  98.08 100.00 1.44e-25 . . . . 18583 2
+      12 no DBJ  BAE41974      . "unnamed protein product [Mus musculus]"                                                                                          . . . . . 100.00 639  98.08 100.00 1.43e-25 . . . . 18583 2
+      13 no DBJ  BAK63135      . "autocrine motility factor receptor, isoform 2 [Pan troglodytes]"                                                                 . . . . . 100.00 548 100.00 100.00 3.46e-26 . . . . 18583 2
+      14 no GB   AAD56721      . "autocrine motility factor receptor [Mus musculus]"                                                                               . . . . . 100.00 643  98.08 100.00 1.32e-25 . . . . 18583 2
+      15 no GB   AAD56722      . "autocrine motility factor receptor [Homo sapiens]"                                                                               . . . . . 100.00 643 100.00 100.00 8.27e-26 . . . . 18583 2
+      16 no GB   AAH03256      . "Amfr protein, partial [Mus musculus]"                                                                                            . . . . . 100.00 244  98.08 100.00 4.16e-27 . . . . 18583 2
+      17 no GB   AAH17043      . "AMFR protein, partial [Homo sapiens]"                                                                                            . . . . . 100.00 292 100.00 100.00 4.77e-27 . . . . 18583 2
+      18 no GB   AAH34538      . "Autocrine motility factor receptor [Mus musculus]"                                                                               . . . . . 100.00 639  98.08 100.00 1.43e-25 . . . . 18583 2
+      19 no REF  NP_001039439  . "E3 ubiquitin-protein ligase AMFR [Bos taurus]"                                                                                   . . . . . 100.00 645 100.00 100.00 7.86e-26 . . . . 18583 2
+      20 no REF  NP_001135     . "E3 ubiquitin-protein ligase AMFR [Homo sapiens]"                                                                                 . . . . . 100.00 643 100.00 100.00 7.72e-26 . . . . 18583 2
+      21 no REF  NP_001267243  . "E3 ubiquitin-protein ligase AMFR [Pan troglodytes]"                                                                              . . . . . 100.00 548 100.00 100.00 3.46e-26 . . . . 18583 2
+      22 no REF  NP_035917     . "E3 ubiquitin-protein ligase AMFR [Mus musculus]"                                                                                 . . . . . 100.00 639  98.08 100.00 1.43e-25 . . . . 18583 2
+      23 no REF  XP_001091030  . "PREDICTED: autocrine motility factor receptor, isoform 2 [Macaca mulatta]"                                                       . . . . . 100.00 552 100.00 100.00 3.20e-26 . . . . 18583 2
+      24 no SP   Q9R049        . "RecName: Full=E3 ubiquitin-protein ligase AMFR; AltName: Full=Autocrine motility factor receptor; Short=AMF receptor [Mus muscu" . . . . . 100.00 643  98.08 100.00 1.44e-25 . . . . 18583 2
+      25 no SP   Q9UKV5        . "RecName: Full=E3 ubiquitin-protein ligase AMFR; AltName: Full=Autocrine motility factor receptor; Short=AMF receptor; AltName: " . . . . . 100.00 643 100.00 100.00 7.72e-26 . . . . 18583 2
+      26 no TPG  DAA20037      . "TPA: autocrine motility factor receptor [Bos taurus]"                                                                            . . . . . 100.00 590 100.00 100.00 7.80e-26 . . . . 18583 2
+
+   stop_
+
+   loop_
+      _Entity_comp_index.ID
+      _Entity_comp_index.Auth_seq_ID
+      _Entity_comp_index.Comp_ID
+      _Entity_comp_index.Comp_label
+      _Entity_comp_index.Entry_ID
+      _Entity_comp_index.Entity_ID
+
+       1 453 SER . 18583 2
+       2 454 ASN . 18583 2
+       3 455 SER . 18583 2
+       4 456 GLN . 18583 2
+       5 457 LEU . 18583 2
+       6 458 ASN . 18583 2
+       7 459 ALA . 18583 2
+       8 460 MET . 18583 2
+       9 461 ALA . 18583 2
+      10 462 HIS . 18583 2
+      11 463 GLN . 18583 2
+      12 464 ILE . 18583 2
+      13 465 GLN . 18583 2
+      14 466 GLU . 18583 2
+      15 467 MET . 18583 2
+      16 468 PHE . 18583 2
+      17 469 PRO . 18583 2
+      18 470 GLN . 18583 2
+      19 471 VAL . 18583 2
+      20 472 PRO . 18583 2
+      21 473 TYR . 18583 2
+      22 474 HIS . 18583 2
+      23 475 LEU . 18583 2
+      24 476 VAL . 18583 2
+      25 477 LEU . 18583 2
+      26 478 GLN . 18583 2
+      27 479 ASP . 18583 2
+      28 480 LEU . 18583 2
+      29 481 GLN . 18583 2
+      30 482 LEU . 18583 2
+      31 483 THR . 18583 2
+      32 484 ARG . 18583 2
+      33 485 SER . 18583 2
+      34 486 VAL . 18583 2
+      35 487 GLU . 18583 2
+      36 488 ILE . 18583 2
+      37 489 THR . 18583 2
+      38 490 THR . 18583 2
+      39 491 ASP . 18583 2
+      40 492 ASN . 18583 2
+      41 493 ILE . 18583 2
+      42 494 LEU . 18583 2
+      43 495 GLU . 18583 2
+      44 496 GLY . 18583 2
+      45 497 ARG . 18583 2
+      46 498 ILE . 18583 2
+      47 499 GLN . 18583 2
+      48 500 VAL . 18583 2
+      49 501 PRO . 18583 2
+      50 502 PHE . 18583 2
+      51 503 PRO . 18583 2
+      52 504 THR . 18583 2
+
+   stop_
+
+   loop_
+      _Entity_poly_seq.Hetero
+      _Entity_poly_seq.Mon_ID
+      _Entity_poly_seq.Num
+      _Entity_poly_seq.Comp_index_ID
+      _Entity_poly_seq.Entry_ID
+      _Entity_poly_seq.Entity_ID
+
+      . SER  1  1 18583 2
+      . ASN  2  2 18583 2
+      . SER  3  3 18583 2
+      . GLN  4  4 18583 2
+      . LEU  5  5 18583 2
+      . ASN  6  6 18583 2
+      . ALA  7  7 18583 2
+      . MET  8  8 18583 2
+      . ALA  9  9 18583 2
+      . HIS 10 10 18583 2
+      . GLN 11 11 18583 2
+      . ILE 12 12 18583 2
+      . GLN 13 13 18583 2
+      . GLU 14 14 18583 2
+      . MET 15 15 18583 2
+      . PHE 16 16 18583 2
+      . PRO 17 17 18583 2
+      . GLN 18 18 18583 2
+      . VAL 19 19 18583 2
+      . PRO 20 20 18583 2
+      . TYR 21 21 18583 2
+      . HIS 22 22 18583 2
+      . LEU 23 23 18583 2
+      . VAL 24 24 18583 2
+      . LEU 25 25 18583 2
+      . GLN 26 26 18583 2
+      . ASP 27 27 18583 2
+      . LEU 28 28 18583 2
+      . GLN 29 29 18583 2
+      . LEU 30 30 18583 2
+      . THR 31 31 18583 2
+      . ARG 32 32 18583 2
+      . SER 33 33 18583 2
+      . VAL 34 34 18583 2
+      . GLU 35 35 18583 2
+      . ILE 36 36 18583 2
+      . THR 37 37 18583 2
+      . THR 38 38 18583 2
+      . ASP 39 39 18583 2
+      . ASN 40 40 18583 2
+      . ILE 41 41 18583 2
+      . LEU 42 42 18583 2
+      . GLU 43 43 18583 2
+      . GLY 44 44 18583 2
+      . ARG 45 45 18583 2
+      . ILE 46 46 18583 2
+      . GLN 47 47 18583 2
+      . VAL 48 48 18583 2
+      . PRO 49 49 18583 2
+      . PHE 50 50 18583 2
+      . PRO 51 51 18583 2
+      . THR 52 52 18583 2
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Entity_natural_src_list.Sf_category    natural_source
+   _Entity_natural_src_list.Sf_framecode   natural_source
+   _Entity_natural_src_list.Entry_ID       18583
+   _Entity_natural_src_list.ID             1
+
+   loop_
+      _Entity_natural_src.ID
+      _Entity_natural_src.Entity_ID
+      _Entity_natural_src.Entity_label
+      _Entity_natural_src.Entity_chimera_segment_ID
+      _Entity_natural_src.NCBI_taxonomy_ID
+      _Entity_natural_src.Type
+      _Entity_natural_src.Common
+      _Entity_natural_src.Organism_name_scientific
+      _Entity_natural_src.Organism_name_common
+      _Entity_natural_src.Organism_acronym
+      _Entity_natural_src.ICTVdb_decimal_code
+      _Entity_natural_src.Superkingdom
+      _Entity_natural_src.Kingdom
+      _Entity_natural_src.Genus
+      _Entity_natural_src.Species
+      _Entity_natural_src.Strain
+      _Entity_natural_src.Variant
+      _Entity_natural_src.Subvariant
+      _Entity_natural_src.Organ
+      _Entity_natural_src.Tissue
+      _Entity_natural_src.Tissue_fraction
+      _Entity_natural_src.Cell_line
+      _Entity_natural_src.Cell_type
+      _Entity_natural_src.ATCC_number
+      _Entity_natural_src.Organelle
+      _Entity_natural_src.Cellular_location
+      _Entity_natural_src.Fragment
+      _Entity_natural_src.Fraction
+      _Entity_natural_src.Secretion
+      _Entity_natural_src.Plasmid
+      _Entity_natural_src.Plasmid_details
+      _Entity_natural_src.Gene_mnemonic
+      _Entity_natural_src.Dev_stage
+      _Entity_natural_src.Details
+      _Entity_natural_src.Citation_ID
+      _Entity_natural_src.Citation_label
+      _Entity_natural_src.Entry_ID
+      _Entity_natural_src.Entity_natural_src_list_ID
+
+      1 1 $entity_1 . 9606 organism . 'Homo sapiens' Human . . Eukaryota Metazoa Homo sapiens . . . . . . . . . . . . . . . . . . . . . 18583 1
+      2 2 $entity_2 . 9606 organism . 'Homo sapiens' Human . . Eukaryota Metazoa Homo sapiens . . . . . . . . . . . . . . . . . . . . . 18583 1
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Entity_experimental_src_list.Sf_category    experimental_source
+   _Entity_experimental_src_list.Sf_framecode   experimental_source
+   _Entity_experimental_src_list.Entry_ID       18583
+   _Entity_experimental_src_list.ID             1
+
+   loop_
+      _Entity_experimental_src.ID
+      _Entity_experimental_src.Entity_ID
+      _Entity_experimental_src.Entity_label
+      _Entity_experimental_src.Entity_chimera_segment_ID
+      _Entity_experimental_src.Production_method
+      _Entity_experimental_src.Host_org_scientific_name
+      _Entity_experimental_src.Host_org_name_common
+      _Entity_experimental_src.Host_org_details
+      _Entity_experimental_src.Host_org_NCBI_taxonomy_ID
+      _Entity_experimental_src.Host_org_genus
+      _Entity_experimental_src.Host_org_species
+      _Entity_experimental_src.Host_org_strain
+      _Entity_experimental_src.Host_org_variant
+      _Entity_experimental_src.Host_org_subvariant
+      _Entity_experimental_src.Host_org_organ
+      _Entity_experimental_src.Host_org_tissue
+      _Entity_experimental_src.Host_org_tissue_fraction
+      _Entity_experimental_src.Host_org_cell_line
+      _Entity_experimental_src.Host_org_cell_type
+      _Entity_experimental_src.Host_org_cellular_location
+      _Entity_experimental_src.Host_org_organelle
+      _Entity_experimental_src.Host_org_gene
+      _Entity_experimental_src.Host_org_culture_collection
+      _Entity_experimental_src.Host_org_ATCC_number
+      _Entity_experimental_src.Vector_type
+      _Entity_experimental_src.PDBview_host_org_vector_name
+      _Entity_experimental_src.PDBview_plasmid_name
+      _Entity_experimental_src.Vector_name
+      _Entity_experimental_src.Vector_details
+      _Entity_experimental_src.Vendor_name
+      _Entity_experimental_src.Host_org_dev_stage
+      _Entity_experimental_src.Details
+      _Entity_experimental_src.Citation_ID
+      _Entity_experimental_src.Citation_label
+      _Entity_experimental_src.Entry_ID
+      _Entity_experimental_src.Entity_experimental_src_list_ID
+
+      1 1 $entity_1 . 'recombinant technology' 'Escherichia coli' . . . Escherichia coli . . . . . . . . . . . . . . . . pET3a . . . . . . 18583 1
+      2 2 $entity_2 . 'recombinant technology' 'Escherichia coli' . . . Escherichia coli . . . . . . . . . . . . . . . . pET3a . . . . . . 18583 1
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Sample.Sf_category                      sample
+   _Sample.Sf_framecode                     sample_1
+   _Sample.Entry_ID                         18583
+   _Sample.ID                               1
+   _Sample.Type                             solution
+   _Sample.Sub_type                         .
+   _Sample.Details
+;
+50 mM Tris pH 7.2
+50mM NaCl
+;
+   _Sample.Aggregate_sample_number          .
+   _Sample.Solvent_system                  '90% H2O/10% D2O'
+   _Sample.Preparation_date                 .
+   _Sample.Preparation_expiration_date      .
+   _Sample.Polycrystallization_protocol     .
+   _Sample.Single_crystal_protocol          .
+   _Sample.Crystal_grow_apparatus           .
+   _Sample.Crystal_grow_atmosphere          .
+   _Sample.Crystal_grow_details             .
+   _Sample.Crystal_grow_method              .
+   _Sample.Crystal_grow_method_cit_ID       .
+   _Sample.Crystal_grow_pH                  .
+   _Sample.Crystal_grow_pH_range            .
+   _Sample.Crystal_grow_pressure            .
+   _Sample.Crystal_grow_pressure_esd        .
+   _Sample.Crystal_grow_seeding             .
+   _Sample.Crystal_grow_seeding_cit_ID      .
+   _Sample.Crystal_grow_temp                .
+   _Sample.Crystal_grow_temp_details        .
+   _Sample.Crystal_grow_temp_esd            .
+   _Sample.Crystal_grow_time                .
+   _Sample.Oriented_sample_prep_protocol    .
+   _Sample.Lyophilization_cryo_protectant   .
+   _Sample.Storage_protocol                 .
+
+   loop_
+      _Sample_component.ID
+      _Sample_component.Mol_common_name
+      _Sample_component.Isotopic_labeling
+      _Sample_component.Assembly_ID
+      _Sample_component.Assembly_label
+      _Sample_component.Entity_ID
+      _Sample_component.Entity_label
+      _Sample_component.Product_ID
+      _Sample_component.Type
+      _Sample_component.Concentration_val
+      _Sample_component.Concentration_val_min
+      _Sample_component.Concentration_val_max
+      _Sample_component.Concentration_val_units
+      _Sample_component.Concentration_val_err
+      _Sample_component.Vendor
+      _Sample_component.Vendor_product_name
+      _Sample_component.Vendor_product_code
+      _Sample_component.Entry_ID
+      _Sample_component.Sample_ID
+
+      1  TRIS             'natural abundance' . . . . . . 50 . . mM . . . . 18583 1
+      2 'sodium chloride' 'natural abundance' . . . . . . 50 . . mM . . . . 18583 1
+      3  H2O              'natural abundance' . . . . . . 90 . . %  . . . . 18583 1
+      4  D2O              'natural abundance' . . . . . . 10 . . %  . . . . 18583 1
+
+   stop_
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_sample_conditions_1
+   _Sample_condition_list.Sf_category    sample_conditions
+   _Sample_condition_list.Sf_framecode   sample_conditions_1
+   _Sample_condition_list.Entry_ID       18583
+   _Sample_condition_list.ID             1
+   _Sample_condition_list.Details        .
+
+   loop_
+      _Sample_condition_variable.Type
+      _Sample_condition_variable.Val
+      _Sample_condition_variable.Val_err
+      _Sample_condition_variable.Val_units
+      _Sample_condition_variable.Entry_ID
+      _Sample_condition_variable.Sample_condition_list_ID
+
+      pH            7.2 . pH  18583 1
+      pressure      1   . atm 18583 1
+      temperature 298   . K   18583 1
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_SPARKY
+   _Software.Sf_category    software
+   _Software.Sf_framecode   SPARKY
+   _Software.Entry_ID       18583
+   _Software.ID             1
+   _Software.Name           SPARKY
+   _Software.Version        .
+   _Software.Details        .
+
+   loop_
+      _Vendor.Name
+      _Vendor.Address
+      _Vendor.Electronic_address
+      _Vendor.Entry_ID
+      _Vendor.Software_ID
+
+      Goddard . . 18583 1
+
+   stop_
+
+   loop_
+      _Task.Task
+      _Task.Entry_ID
+      _Task.Software_ID
+
+      'chemical shift assignment' 18583 1
+      'peak picking'              18583 1
+
+   stop_
+
+save_
+
+
+save_NMRPipe
+   _Software.Sf_category    software
+   _Software.Sf_framecode   NMRPipe
+   _Software.Entry_ID       18583
+   _Software.ID             2
+   _Software.Name           NMRPipe
+   _Software.Version        .
+   _Software.Details        .
+
+   loop_
+      _Vendor.Name
+      _Vendor.Address
+      _Vendor.Electronic_address
+      _Vendor.Entry_ID
+      _Vendor.Software_ID
+
+      'Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax' . . 18583 2
+
+   stop_
+
+   loop_
+      _Task.Task
+      _Task.Entry_ID
+      _Task.Software_ID
+
+      processing 18583 2
+
+   stop_
+
+save_
+
+
+save_CNS
+   _Software.Sf_category    software
+   _Software.Sf_framecode   CNS
+   _Software.Entry_ID       18583
+   _Software.ID             3
+   _Software.Name           CNS
+   _Software.Version        .
+   _Software.Details        .
+
+   loop_
+      _Vendor.Name
+      _Vendor.Address
+      _Vendor.Electronic_address
+      _Vendor.Entry_ID
+      _Vendor.Software_ID
+
+      'Alexandre Bonvin' . . 18583 3
+
+   stop_
+
+   loop_
+      _Task.Task
+      _Task.Entry_ID
+      _Task.Software_ID
+
+      'structure solution' 18583 3
+
+   stop_
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_spectrometer_1
+   _NMR_spectrometer.Sf_category      NMR_spectrometer
+   _NMR_spectrometer.Sf_framecode     spectrometer_1
+   _NMR_spectrometer.Entry_ID         18583
+   _NMR_spectrometer.ID               1
+   _NMR_spectrometer.Details          .
+   _NMR_spectrometer.Manufacturer     Bruker
+   _NMR_spectrometer.Model            INOVA
+   _NMR_spectrometer.Serial_number    .
+   _NMR_spectrometer.Field_strength   600
+
+save_
+
+
+save_spectrometer_2
+   _NMR_spectrometer.Sf_category      NMR_spectrometer
+   _NMR_spectrometer.Sf_framecode     spectrometer_2
+   _NMR_spectrometer.Entry_ID         18583
+   _NMR_spectrometer.ID               2
+   _NMR_spectrometer.Details          .
+   _NMR_spectrometer.Manufacturer     Bruker
+   _NMR_spectrometer.Model            INOVA
+   _NMR_spectrometer.Serial_number    .
+   _NMR_spectrometer.Field_strength   700
+
+save_
+
+
+save_spectrometer_3
+   _NMR_spectrometer.Sf_category      NMR_spectrometer
+   _NMR_spectrometer.Sf_framecode     spectrometer_3
+   _NMR_spectrometer.Entry_ID         18583
+   _NMR_spectrometer.ID               3
+   _NMR_spectrometer.Details          .
+   _NMR_spectrometer.Manufacturer     Varian
+   _NMR_spectrometer.Model            INOVA
+   _NMR_spectrometer.Serial_number    .
+   _NMR_spectrometer.Field_strength   600
+
+save_
+
+
+save_spectrometer_4
+   _NMR_spectrometer.Sf_category      NMR_spectrometer
+   _NMR_spectrometer.Sf_framecode     spectrometer_4
+   _NMR_spectrometer.Entry_ID         18583
+   _NMR_spectrometer.ID               4
+   _NMR_spectrometer.Details          .
+   _NMR_spectrometer.Manufacturer     Varian
+   _NMR_spectrometer.Model            INOVA
+   _NMR_spectrometer.Serial_number    .
+   _NMR_spectrometer.Field_strength   800
+
+save_
+
+
+save_NMR_spectrometer_list
+   _NMR_spectrometer_list.Sf_category    NMR_spectrometer_list
+   _NMR_spectrometer_list.Sf_framecode   NMR_spectrometer_list
+   _NMR_spectrometer_list.Entry_ID       18583
+   _NMR_spectrometer_list.ID             1
+
+   loop_
+      _NMR_spectrometer_view.ID
+      _NMR_spectrometer_view.Name
+      _NMR_spectrometer_view.Manufacturer
+      _NMR_spectrometer_view.Model
+      _NMR_spectrometer_view.Serial_number
+      _NMR_spectrometer_view.Field_strength
+      _NMR_spectrometer_view.Details
+      _NMR_spectrometer_view.Citation_ID
+      _NMR_spectrometer_view.Citation_label
+      _NMR_spectrometer_view.Entry_ID
+      _NMR_spectrometer_view.NMR_spectrometer_list_ID
+
+      1 spectrometer_1 Bruker INOVA . 600 . . . 18583 1
+      2 spectrometer_2 Bruker INOVA . 700 . . . 18583 1
+      3 spectrometer_3 Varian INOVA . 600 . . . 18583 1
+      4 spectrometer_4 Varian INOVA . 800 . . . 18583 1
+
+   stop_
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_experiment_list
+   _Experiment_list.Sf_category    experiment_list
+   _Experiment_list.Sf_framecode   experiment_list
+   _Experiment_list.Entry_ID       18583
+   _Experiment_list.ID             1
+   _Experiment_list.Details        .
+
+   loop_
+      _Experiment.ID
+      _Experiment.Name
+      _Experiment.Raw_data_flag
+      _Experiment.NMR_spec_expt_ID
+      _Experiment.NMR_spec_expt_label
+      _Experiment.MS_expt_ID
+      _Experiment.MS_expt_label
+      _Experiment.SAXS_expt_ID
+      _Experiment.SAXS_expt_label
+      _Experiment.FRET_expt_ID
+      _Experiment.FRET_expt_label
+      _Experiment.EMR_expt_ID
+      _Experiment.EMR_expt_label
+      _Experiment.Sample_ID
+      _Experiment.Sample_label
+      _Experiment.Sample_state
+      _Experiment.Sample_volume
+      _Experiment.Sample_volume_units
+      _Experiment.Sample_condition_list_ID
+      _Experiment.Sample_condition_list_label
+      _Experiment.Sample_spinning_rate
+      _Experiment.Sample_angle
+      _Experiment.NMR_tube_type
+      _Experiment.NMR_spectrometer_ID
+      _Experiment.NMR_spectrometer_label
+      _Experiment.NMR_spectrometer_probe_ID
+      _Experiment.NMR_spectrometer_probe_label
+      _Experiment.NMR_spectral_processing_ID
+      _Experiment.NMR_spectral_processing_label
+      _Experiment.Mass_spectrometer_ID
+      _Experiment.Mass_spectrometer_label
+      _Experiment.Xray_instrument_ID
+      _Experiment.Xray_instrument_label
+      _Experiment.Fluorescence_instrument_ID
+      _Experiment.Fluorescence_instrument_label
+      _Experiment.EMR_instrument_ID
+      _Experiment.EMR_instrument_label
+      _Experiment.Chromatographic_system_ID
+      _Experiment.Chromatographic_system_label
+      _Experiment.Chromatographic_column_ID
+      _Experiment.Chromatographic_column_label
+      _Experiment.Entry_ID
+      _Experiment.Experiment_list_ID
+
+      1 '2D 1H-15N HSQC'          no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      2 '2D 1H-13C HSQC'          no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      3 '3D HNCO'                 no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      4 '3D CBCA(CO)NH'           no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      5 '3D C(CO)NH'              no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      6 '3D H(CCO)NH'             no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      7 '3D HNCACB'               no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      8 '2D 1H-13C HSQC aromatic' no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+      9 '3D 1H-15N NOESY'         no . . . . . . . . . . 1 $sample_1 isotropic . . 1 $sample_conditions_1 . . . . . . . . . . . . . . . . . . . . . 18583 1
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference_1
+   _Chem_shift_reference.Sf_category    chem_shift_reference
+   _Chem_shift_reference.Sf_framecode   chemical_shift_reference_1
+   _Chem_shift_reference.Entry_ID       18583
+   _Chem_shift_reference.ID             1
+   _Chem_shift_reference.Details        .
+
+   loop_
+      _Chem_shift_ref.Atom_type
+      _Chem_shift_ref.Atom_isotope_number
+      _Chem_shift_ref.Mol_common_name
+      _Chem_shift_ref.Atom_group
+      _Chem_shift_ref.Concentration_val
+      _Chem_shift_ref.Concentration_units
+      _Chem_shift_ref.Solvent
+      _Chem_shift_ref.Rank
+      _Chem_shift_ref.Chem_shift_units
+      _Chem_shift_ref.Chem_shift_val
+      _Chem_shift_ref.Ref_method
+      _Chem_shift_ref.Ref_type
+      _Chem_shift_ref.Indirect_shift_ratio
+      _Chem_shift_ref.External_ref_loc
+      _Chem_shift_ref.External_ref_sample_geometry
+      _Chem_shift_ref.External_ref_axis
+      _Chem_shift_ref.Indirect_shift_ratio_cit_ID
+      _Chem_shift_ref.Indirect_shift_ratio_cit_label
+      _Chem_shift_ref.Ref_correction_type
+      _Chem_shift_ref.Correction_val
+      _Chem_shift_ref.Correction_val_cit_ID
+      _Chem_shift_ref.Correction_val_cit_label
+      _Chem_shift_ref.Entry_ID
+      _Chem_shift_ref.Chem_shift_reference_ID
+
+      C 13 DSS 'methyl protons' . . . . ppm 0.00 na       indirect 0.251449530 . . . . . . . . . 18583 1
+      H  1 DSS 'methyl protons' . . . . ppm 0.00 internal direct   1.000000000 . . . . . . . . . 18583 1
+      N 15 DSS 'methyl protons' . . . . ppm 0.00 na       indirect 0.101329118 . . . . . . . . . 18583 1
+      P 31 DSS 'methyl protons' . . . . ppm 0.00 na       indirect 0.404808636 . . . . . . . . . 18583 1
+
+   stop_
+
+save_
+
+
+     ###################################
+     #  Assigned chemical shift lists  #
+     ###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+# The values other than 1 are used for those atoms with different #
+# chemical shifts that cannot be assigned to stereospecific atoms #
+# or to specific residues or chains.                              #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique (including isolated methyl protons,   #
+#                         geminal atoms, and geminal methyl       #
+#                         groups with identical chemical shifts)  #
+#                         (e.g. ILE HD11, HD12, HD13 protons)     #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups (e.g. ASP HB2 and HB3     #
+#                         protons, LEU CD1 and CD2 carbons, or    #
+#                         LEU HD11, HD12, HD13 and HD21, HD22,    #
+#                         HD23 methyl protons)                    #
+#      3             Aromatic atoms on opposite sides of          #
+#                         symmetrical rings (e.g. TYR HE1 and HE2 #
+#                         protons)                                #
+#      4             Intraresidue ambiguities (e.g. LYS HG and    #
+#                         HD protons or TRP HZ2 and HZ3 protons)  #
+#      5             Interresidue ambiguities (LYS 12 vs. LYS 27) #
+#      6             Intermolecular ambiguities (e.g. ASP 31 CA   #
+#                         in monomer 1 and ASP 31 CA in monomer 2 #
+#                         of an asymmetrical homodimer, duplex    #
+#                         DNA assignments, or other assignments   #
+#                         that may apply to atoms in one or more  #
+#                         molecule in the molecular assembly)     #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+save_gp78CUE_amides_in_gp78-K48Ub2
+   _Assigned_chem_shift_list.Sf_category                   assigned_chemical_shifts
+   _Assigned_chem_shift_list.Sf_framecode                  gp78CUE_amides_in_gp78-K48Ub2
+   _Assigned_chem_shift_list.Entry_ID                      18583
+   _Assigned_chem_shift_list.ID                            1
+   _Assigned_chem_shift_list.Sample_condition_list_ID      1
+   _Assigned_chem_shift_list.Sample_condition_list_label  $sample_conditions_1
+   _Assigned_chem_shift_list.Chem_shift_reference_ID       1
+   _Assigned_chem_shift_list.Chem_shift_reference_label   $chemical_shift_reference_1
+   _Assigned_chem_shift_list.Chem_shift_1H_err             0.05
+   _Assigned_chem_shift_list.Chem_shift_13C_err            0.5
+   _Assigned_chem_shift_list.Chem_shift_15N_err            0.2
+   _Assigned_chem_shift_list.Chem_shift_31P_err            .
+   _Assigned_chem_shift_list.Chem_shift_2H_err             .
+   _Assigned_chem_shift_list.Chem_shift_19F_err            .
+   _Assigned_chem_shift_list.Error_derivation_method       .
+   _Assigned_chem_shift_list.Details                       .
+   _Assigned_chem_shift_list.Text_data_format              .
+   _Assigned_chem_shift_list.Text_data                     .
+
+   loop_
+      _Chem_shift_experiment.Experiment_ID
+      _Chem_shift_experiment.Experiment_name
+      _Chem_shift_experiment.Sample_ID
+      _Chem_shift_experiment.Sample_label
+      _Chem_shift_experiment.Sample_state
+      _Chem_shift_experiment.Entry_ID
+      _Chem_shift_experiment.Assigned_chem_shift_list_ID
+
+      1 '2D 1H-15N HSQC' . . . 18583 1
+      4 '3D CBCA(CO)NH'  . . . 18583 1
+      7 '3D HNCACB'      . . . 18583 1
+
+   stop_
+
+   loop_
+      _Atom_chem_shift.ID
+      _Atom_chem_shift.Assembly_atom_ID
+      _Atom_chem_shift.Entity_assembly_ID
+      _Atom_chem_shift.Entity_ID
+      _Atom_chem_shift.Comp_index_ID
+      _Atom_chem_shift.Seq_ID
+      _Atom_chem_shift.Comp_ID
+      _Atom_chem_shift.Atom_ID
+      _Atom_chem_shift.Atom_type
+      _Atom_chem_shift.Atom_isotope_number
+      _Atom_chem_shift.Val
+      _Atom_chem_shift.Val_err
+      _Atom_chem_shift.Assign_fig_of_merit
+      _Atom_chem_shift.Ambiguity_code
+      _Atom_chem_shift.Occupancy
+      _Atom_chem_shift.Resonance_ID
+      _Atom_chem_shift.Auth_entity_assembly_ID
+      _Atom_chem_shift.Auth_asym_ID
+      _Atom_chem_shift.Auth_seq_ID
+      _Atom_chem_shift.Auth_comp_ID
+      _Atom_chem_shift.Auth_atom_ID
+      _Atom_chem_shift.Details
+      _Atom_chem_shift.Entry_ID
+      _Atom_chem_shift.Assigned_chem_shift_list_ID
+
+        1 . 1 1  2  2 GLN H H  1   8.98   0.05 . 1 . . . A   2 GLN H . 18583 1
+        2 . 1 1  2  2 GLN N N 15 122.96   0.20 . 1 . . . A   2 GLN N . 18583 1
+        3 . 1 1  3  3 ILE H H  1   8.27   0.05 . 1 . . . A   3 ILE H . 18583 1
+        4 . 1 1  3  3 ILE N N 15 114.84   0.20 . 1 . . . A   3 ILE N . 18583 1
+        5 . 1 1  4  4 PHE H H  1   8.56   0.05 . 1 . . . A   4 PHE H . 18583 1
+        6 . 1 1  4  4 PHE N N 15 118.78   0.20 . 1 . . . A   4 PHE N . 18583 1
+        7 . 1 1  5  5 VAL H H  1   9.35   0.05 . 1 . . . A   5 VAL H . 18583 1
+        8 . 1 1  5  5 VAL N N 15 120.88   0.20 . 1 . . . A   5 VAL N . 18583 1
+        9 . 1 1  6  6 LYS H H  1   9.05   0.05 . 1 . . . A   6 LYS H . 18583 1
+       10 . 1 1  6  6 LYS N N 15 128.64   0.20 . 1 . . . A   6 LYS N . 18583 1
+       11 . 1 1  7  7 THR H H  1   8.72   0.05 . 1 . . . A   7 THR H . 18583 1
+       12 . 1 1  7  7 THR N N 15 115.08   0.20 . 1 . . . A   7 THR N . 18583 1
+       13 . 1 1  8  8 LEU H H  1   9.34   0.05 . 1 . . . A   8 LEU H . 18583 1
+       14 . 1 1  8  8 LEU N N 15 121.97   0.20 . 1 . . . A   8 LEU N . 18583 1
+       15 . 1 1  9  9 THR H H  1   7.65   0.05 . 1 . . . A   9 THR H . 18583 1
+       16 . 1 1  9  9 THR N N 15 105.77   0.20 . 1 . . . A   9 THR N . 18583 1
+       17 . 1 1 10 10 GLY H H  1   7.82   0.05 . 1 . . . A  10 GLY H . 18583 1
+       18 . 1 1 10 10 GLY N N 15 109.42   0.20 . 1 . . . A  10 GLY N . 18583 1
+       19 . 1 1 11 11 LYS H H  1   7.33   0.05 . 1 . . . A  11 LYS H . 18583 1
+       20 . 1 1 11 11 LYS N N 15 122.48   0.20 . 1 . . . A  11 LYS N . 18583 1
+       21 . 1 1 12 12 THR H H  1   8.66   0.05 . 1 . . . A  12 THR H . 18583 1
+       22 . 1 1 12 12 THR N N 15 120.93   0.20 . 1 . . . A  12 THR N . 18583 1
+       23 . 1 1 13 13 ILE H H  1   9.72   0.05 . 1 . . . A  13 ILE H . 18583 1
+       24 . 1 1 13 13 ILE N N 15 129.80   0.20 . 1 . . . A  13 ILE N . 18583 1
+       25 . 1 1 14 14 THR H H  1   8.81   0.05 . 1 . . . A  14 THR H . 18583 1
+       26 . 1 1 14 14 THR N N 15 123.06   0.20 . 1 . . . A  14 THR N . 18583 1
+       27 . 1 1 15 15 LEU H H  1   8.68   0.05 . 1 . . . A  15 LEU H . 18583 1
+       28 . 1 1 15 15 LEU N N 15 125.43   0.20 . 1 . . . A  15 LEU N . 18583 1
+       29 . 1 1 16 16 GLU H H  1   8.13   0.05 . 1 . . . A  16 GLU H . 18583 1
+       30 . 1 1 16 16 GLU N N 15 122.68   0.20 . 1 . . . A  16 GLU N . 18583 1
+       31 . 1 1 17 17 VAL H H  1   8.96   0.05 . 1 . . . A  17 VAL H . 18583 1
+       32 . 1 1 17 17 VAL N N 15 117.75   0.20 . 1 . . . A  17 VAL N . 18583 1
+       33 . 1 1 18 18 GLU H H  1   8.65   0.05 . 1 . . . A  18 GLU H . 18583 1
+       34 . 1 1 18 18 GLU N N 15 119.32   0.20 . 1 . . . A  18 GLU N . 18583 1
+       35 . 1 1 20 20 SER H H  1   7.03   0.05 . 1 . . . A  20 SER H . 18583 1
+       36 . 1 1 20 20 SER N N 15 103.43   0.20 . 1 . . . A  20 SER N . 18583 1
+       37 . 1 1 21 21 ASP H H  1   8.08   0.05 . 1 . . . A  21 ASP H . 18583 1
+       38 . 1 1 21 21 ASP N N 15 124.19   0.20 . 1 . . . A  21 ASP N . 18583 1
+       39 . 1 1 22 22 THR H H  1   7.89   0.05 . 1 . . . A  22 THR H . 18583 1
+       40 . 1 1 22 22 THR N N 15 109.14   0.20 . 1 . . . A  22 THR N . 18583 1
+       41 . 1 1 23 23 ILE H H  1   8.56   0.05 . 1 . . . A  23 ILE H . 18583 1
+       42 . 1 1 23 23 ILE N N 15 121.79   0.20 . 1 . . . A  23 ILE N . 18583 1
+       43 . 1 1 24 24 GLU H H  1   8.48   0.05 . 1 . . . A  24 GLU H . 18583 1
+       44 . 1 1 24 24 GLU N N 15 121.73   0.20 . 1 . . . A  24 GLU N . 18583 1
+       45 . 1 1 25 25 ASN H H  1   7.95   0.05 . 1 . . . A  25 ASN H . 18583 1
+       46 . 1 1 25 25 ASN N N 15 121.25   0.20 . 1 . . . A  25 ASN N . 18583 1
+       47 . 1 1 26 26 VAL H H  1   8.16   0.05 . 1 . . . A  26 VAL H . 18583 1
+       48 . 1 1 26 26 VAL N N 15 122.46   0.20 . 1 . . . A  26 VAL N . 18583 1
+       49 . 1 1 27 27 LYS H H  1   8.53   0.05 . 1 . . . A  27 LYS H . 18583 1
+       50 . 1 1 27 27 LYS N N 15 119.23   0.20 . 1 . . . A  27 LYS N . 18583 1
+       51 . 1 1 28 28 ALA H H  1   7.99   0.05 . 1 . . . A  28 ALA H . 18583 1
+       52 . 1 1 28 28 ALA N N 15 123.09   0.20 . 1 . . . A  28 ALA N . 18583 1
+       53 . 1 1 29 29 LYS H H  1   7.93   0.05 . 1 . . . A  29 LYS H . 18583 1
+       54 . 1 1 29 29 LYS N N 15 120.64   0.20 . 1 . . . A  29 LYS N . 18583 1
+       55 . 1 1 30 30 ILE H H  1   8.29   0.05 . 1 . . . A  30 ILE H . 18583 1
+       56 . 1 1 30 30 ILE N N 15 121.76   0.20 . 1 . . . A  30 ILE N . 18583 1
+       57 . 1 1 31 31 GLN H H  1   8.53   0.05 . 1 . . . A  31 GLN H . 18583 1
+       58 . 1 1 31 31 GLN N N 15 123.81   0.20 . 1 . . . A  31 GLN N . 18583 1
+       59 . 1 1 32 32 ASP H H  1   8.12   0.05 . 1 . . . A  32 ASP H . 18583 1
+       60 . 1 1 32 32 ASP N N 15 120.19   0.20 . 1 . . . A  32 ASP N . 18583 1
+       61 . 1 1 33 33 LYS H H  1   7.48   0.05 . 1 . . . A  33 LYS H . 18583 1
+       62 . 1 1 33 33 LYS N N 15 115.87   0.20 . 1 . . . A  33 LYS N . 18583 1
+       63 . 1 1 34 34 GLU H H  1   8.71   0.05 . 1 . . . A  34 GLU H . 18583 1
+       64 . 1 1 34 34 GLU N N 15 114.03   0.20 . 1 . . . A  34 GLU N . 18583 1
+       65 . 1 1 36 36 ILE H H  1   6.12   0.05 . 1 . . . A  36 ILE H . 18583 1
+       66 . 1 1 36 36 ILE N N 15 120.80   0.20 . 1 . . . A  36 ILE N . 18583 1
+       67 . 1 1 39 39 ASP H H  1   8.57   0.05 . 1 . . . A  39 ASP H . 18583 1
+       68 . 1 1 39 39 ASP N N 15 113.90   0.20 . 1 . . . A  39 ASP N . 18583 1
+       69 . 1 1 40 40 GLN H H  1   7.80   0.05 . 1 . . . A  40 GLN H . 18583 1
+       70 . 1 1 40 40 GLN N N 15 116.92   0.20 . 1 . . . A  40 GLN N . 18583 1
+       71 . 1 1 41 41 GLN H H  1   7.52   0.05 . 1 . . . A  41 GLN H . 18583 1
+       72 . 1 1 41 41 GLN N N 15 117.92   0.20 . 1 . . . A  41 GLN N . 18583 1
+       73 . 1 1 43 43 LEU H H  1   8.81   0.05 . 1 . . . A  43 LEU H . 18583 1
+       74 . 1 1 43 43 LEU N N 15 123.75   0.20 . 1 . . . A  43 LEU N . 18583 1
+       75 . 1 1 44 44 ILE H H  1   9.27   0.05 . 1 . . . A  44 ILE H . 18583 1
+       76 . 1 1 44 44 ILE N N 15 123.21   0.20 . 1 . . . A  44 ILE N . 18583 1
+       77 . 1 1 45 45 PHE H H  1   8.82   0.05 . 1 . . . A  45 PHE H . 18583 1
+       78 . 1 1 45 45 PHE N N 15 124.80   0.20 . 1 . . . A  45 PHE N . 18583 1
+       79 . 1 1 46 46 ALA H H  1   8.72   0.05 . 1 . . . A  46 ALA H . 18583 1
+       80 . 1 1 46 46 ALA N N 15 133.01   0.20 . 1 . . . A  46 ALA N . 18583 1
+       81 . 1 1 48 48 LYS H H  1   8.56   0.05 . 1 . . . A  48 LYS H . 18583 1
+       82 . 1 1 48 48 LYS N N 15 124.90   0.20 . 1 . . . A  48 LYS N . 18583 1
+       83 . 1 1 50 50 LEU H H  1   8.74   0.05 . 1 . . . A  50 LEU H . 18583 1
+       84 . 1 1 50 50 LEU N N 15 126.43   0.20 . 1 . . . A  50 LEU N . 18583 1
+       85 . 1 1 51 51 GLU H H  1   8.49   0.05 . 1 . . . A  51 GLU H . 18583 1
+       86 . 1 1 51 51 GLU N N 15 123.28   0.20 . 1 . . . A  51 GLU N . 18583 1
+       87 . 1 1 52 52 ASP H H  1   8.20   0.05 . 1 . . . A  52 ASP H . 18583 1
+       88 . 1 1 52 52 ASP N N 15 120.85   0.20 . 1 . . . A  52 ASP N . 18583 1
+       89 . 1 1 54 54 ARG H H  1   7.46   0.05 . 1 . . . A  54 ARG H . 18583 1
+       90 . 1 1 54 54 ARG N N 15 119.64   0.20 . 1 . . . A  54 ARG N . 18583 1
+       91 . 1 1 55 55 THR H H  1   8.81   0.05 . 1 . . . A  55 THR H . 18583 1
+       92 . 1 1 55 55 THR N N 15 108.82   0.20 . 1 . . . A  55 THR N . 18583 1
+       93 . 1 1 56 56 LEU H H  1   8.14   0.05 . 1 . . . A  56 LEU H . 18583 1
+       94 . 1 1 56 56 LEU N N 15 118.15   0.20 . 1 . . . A  56 LEU N . 18583 1
+       95 . 1 1 57 57 SER H H  1   8.48   0.05 . 1 . . . A  57 SER H . 18583 1
+       96 . 1 1 57 57 SER N N 15 113.52   0.20 . 1 . . . A  57 SER N . 18583 1
+       97 . 1 1 58 58 ASP H H  1   7.97   0.05 . 1 . . . A  58 ASP H . 18583 1
+       98 . 1 1 58 58 ASP N N 15 124.93   0.20 . 1 . . . A  58 ASP N . 18583 1
+       99 . 1 1 59 59 TYR H H  1   7.21   0.05 . 1 . . . A  59 TYR H . 18583 1
+      100 . 1 1 59 59 TYR N N 15 115.77   0.20 . 1 . . . A  59 TYR N . 18583 1
+      101 . 1 1 60 60 ASN H H  1   8.16   0.05 . 1 . . . A  60 ASN H . 18583 1
+      102 . 1 1 60 60 ASN N N 15 115.93   0.20 . 1 . . . A  60 ASN N . 18583 1
+      103 . 1 1 61 61 ILE H H  1   7.34   0.05 . 1 . . . A  61 ILE H . 18583 1
+      104 . 1 1 61 61 ILE N N 15 119.34   0.20 . 1 . . . A  61 ILE N . 18583 1
+      105 . 1 1 62 62 GLN H H  1   7.65   0.05 . 1 . . . A  62 GLN H . 18583 1
+      106 . 1 1 62 62 GLN N N 15 125.07   0.20 . 1 . . . A  62 GLN N . 18583 1
+      107 . 1 1 63 63 LYS H H  1   8.49   0.05 . 1 . . . A  63 LYS H . 18583 1
+      108 . 1 1 63 63 LYS N N 15 120.68   0.20 . 1 . . . A  63 LYS N . 18583 1
+      109 . 1 1 64 64 GLU H H  1   9.32   0.05 . 1 . . . A  64 GLU H . 18583 1
+      110 . 1 1 64 64 GLU N N 15 115.09   0.20 . 1 . . . A  64 GLU N . 18583 1
+      111 . 1 1 65 65 SER H H  1   7.70   0.05 . 1 . . . A  65 SER H . 18583 1
+      112 . 1 1 65 65 SER N N 15 115.14   0.20 . 1 . . . A  65 SER N . 18583 1
+      113 . 1 1 66 66 THR H H  1   8.71   0.05 . 1 . . . A  66 THR H . 18583 1
+      114 . 1 1 66 66 THR N N 15 117.81   0.20 . 1 . . . A  66 THR N . 18583 1
+      115 . 1 1 67 67 LEU H H  1   9.34   0.05 . 1 . . . A  67 LEU H . 18583 1
+      116 . 1 1 67 67 LEU N N 15 127.88   0.20 . 1 . . . A  67 LEU N . 18583 1
+      117 . 1 1 68 68 HIS H H  1   8.94   0.05 . 1 . . . A  68 HIS H . 18583 1
+      118 . 1 1 68 68 HIS N N 15 118.71   0.20 . 1 . . . A  68 HIS N . 18583 1
+      119 . 1 1 69 69 LEU H H  1   8.70   0.05 . 1 . . . A  69 LEU H . 18583 1
+      120 . 1 1 69 69 LEU N N 15 124.84   0.20 . 1 . . . A  69 LEU N . 18583 1
+      121 . 1 1 70 70 VAL H H  1   8.70   0.05 . 1 . . . A  70 VAL H . 18583 1
+      122 . 1 1 70 70 VAL N N 15 128.09   0.20 . 1 . . . A  70 VAL N . 18583 1
+      123 . 1 1 71 71 LEU H H  1   8.16   0.05 . 1 . . . A  71 LEU H . 18583 1
+      124 . 1 1 71 71 LEU N N 15 123.45   0.20 . 1 . . . A  71 LEU N . 18583 1
+      125 . 1 1 72 72 ARG H H  1   8.53   0.05 . 1 . . . A  72 ARG H . 18583 1
+      126 . 1 1 72 72 ARG N N 15 122.16   0.20 . 1 . . . A  72 ARG N . 18583 1
+      127 . 1 1 73 73 LEU H H  1   8.53   0.05 . 1 . . . A  73 LEU H . 18583 1
+      128 . 1 1 73 73 LEU N N 15 123.81   0.20 . 1 . . . A  73 LEU N . 18583 1
+      129 . 1 1 74 74 ARG H H  1   8.47   0.05 . 1 . . . A  74 ARG H . 18583 1
+      130 . 1 1 74 74 ARG N N 15 122.07   0.20 . 1 . . . A  74 ARG N . 18583 1
+      131 . 1 1 76 76 GLY H H  1   7.99   0.05 . 1 . . . A  76 GLY H . 18583 1
+      132 . 1 1 76 76 GLY N N 15 115.39   0.20 . 1 . . . A  76 GLY N . 18583 1
+      133 . 2 2  4  4 GLN H H  1   8.260  0.05 .  . . . . C 456 GLN H . 18583 1
+      134 . 2 2  4  4 GLN N N 15 123.150  0.3  .  . . . . C 456 GLN N . 18583 1
+      135 . 2 2  5  5 LEU H H  1   8.110  0.05 .  . . . . C 457 LEU H . 18583 1
+      136 . 2 2  5  5 LEU N N 15 120.050  0.3  .  . . . . C 457 LEU N . 18583 1
+      137 . 2 2  6  6 ASN H H  1   8.090  0.05 .  . . . . C 458 ASN H . 18583 1
+      138 . 2 2  6  6 ASN N N 15 115.900  0.3  .  . . . . C 458 ASN N . 18583 1
+      139 . 2 2  7  7 ALA H H  1   7.840  0.05 .  . . . . C 459 ALA H . 18583 1
+      140 . 2 2  7  7 ALA N N 15 122.890  0.3  .  . . . . C 459 ALA N . 18583 1
+      141 . 2 2  8  8 MET H H  1   7.990  0.05 .  . . . . C 460 MET H . 18583 1
+      142 . 2 2  8  8 MET N N 15 119.210  0.3  .  . . . . C 460 MET N . 18583 1
+      143 . 2 2  9  9 ALA H H  1   8.360  0.05 .  . . . . C 461 ALA H . 18583 1
+      144 . 2 2  9  9 ALA N N 15 121.420  0.3  .  . . . . C 461 ALA N . 18583 1
+      145 . 2 2 10 10 HIS H H  1   8.200  0.05 .  . . . . C 462 HIS H . 18583 1
+      146 . 2 2 10 10 HIS N N 15 117.430  0.3  .  . . . . C 462 HIS N . 18583 1
+      147 . 2 2 11 11 GLN H H  1   7.840  0.05 .  . . . . C 463 GLN H . 18583 1
+      148 . 2 2 11 11 GLN N N 15 118.610  0.3  .  . . . . C 463 GLN N . 18583 1
+      149 . 2 2 12 12 ILE H H  1   7.850  0.05 .  . . . . C 464 ILE H . 18583 1
+      150 . 2 2 12 12 ILE N N 15 118.710  0.3  .  . . . . C 464 ILE N . 18583 1
+      151 . 2 2 13 13 GLN H H  1   8.600  0.05 .  . . . . C 465 GLN H . 18583 1
+      152 . 2 2 13 13 GLN N N 15 120.500  0.3  .  . . . . C 465 GLN N . 18583 1
+      153 . 2 2 14 14 GLU H H  1   7.450  0.05 .  . . . . C 466 GLU H . 18583 1
+      154 . 2 2 14 14 GLU N N 15 115.72   0.3  .  . . . . C 466 GLU N . 18583 1
+      155 . 2 2 15 15 MET H H  1   6.800  0.05 .  . . . . C 467 MET H . 18583 1
+      156 . 2 2 15 15 MET N N 15 115.080  0.3  .  . . . . C 467 MET N . 18583 1
+      157 . 2 2 16 16 PHE H H  1   7.870  0.05 .  . . . . C 468 PHE H . 18583 1
+      158 . 2 2 16 16 PHE N N 15 113.750  0.3  .  . . . . C 468 PHE N . 18583 1
+      159 . 2 2 18 18 GLN H H  1   9.500  0.05 .  . . . . C 470 GLN H . 18583 1
+      160 . 2 2 18 18 GLN N N 15 116.900  0.3  .  . . . . C 470 GLN N . 18583 1
+      161 . 2 2 19 19 VAL H H  1   7.7660 0.05 .  . . . . C 471 VAL H . 18583 1
+      162 . 2 2 19 19 VAL N N 15 124.44   0.3  .  . . . . C 471 VAL N . 18583 1
+      163 . 2 2 21 21 TYR H H  1   8.830  0.05 .  . . . . C 473 TYR H . 18583 1
+      164 . 2 2 21 21 TYR N N 15 126.320  0.3  .  . . . . C 473 TYR N . 18583 1
+      165 . 2 2 22 22 HIS H H  1   8.680  0.05 .  . . . . C 474 HIS H . 18583 1
+      166 . 2 2 22 22 HIS N N 15 113.220  0.3  .  . . . . C 474 HIS N . 18583 1
+      167 . 2 2 23 23 LEU H H  1   6.600  0.05 .  . . . . C 475 LEU H . 18583 1
+      168 . 2 2 23 23 LEU N N 15 119.450  0.3  .  . . . . C 475 LEU N . 18583 1
+      169 . 2 2 24 24 VAL H H  1   7.180  0.05 .  . . . . C 476 VAL H . 18583 1
+      170 . 2 2 24 24 VAL N N 15 120.890  0.3  .  . . . . C 476 VAL N . 18583 1
+      171 . 2 2 25 25 LEU H H  1   8.100  0.05 .  . . . . C 477 LEU H . 18583 1
+      172 . 2 2 25 25 LEU N N 15 118.710  0.3  .  . . . . C 477 LEU N . 18583 1
+      173 . 2 2 26 26 GLN H H  1   7.550  0.05 .  . . . . C 478 GLN H . 18583 1
+      174 . 2 2 26 26 GLN N N 15 115.520  0.3  .  . . . . C 478 GLN N . 18583 1
+      175 . 2 2 27 27 ASP H H  1   7.390  0.05 .  . . . . C 479 ASP H . 18583 1
+      176 . 2 2 27 27 ASP N N 15 119.110  0.3  .  . . . . C 479 ASP N . 18583 1
+      177 . 2 2 28 28 LEU H H  1   8.400  0.05 .  . . . . C 480 LEU H . 18583 1
+      178 . 2 2 28 28 LEU N N 15 118.990  0.3  .  . . . . C 480 LEU N . 18583 1
+      179 . 2 2 29 29 GLN H H  1   8.030  0.05 .  . . . . C 481 GLN H . 18583 1
+      180 . 2 2 29 29 GLN N N 15 116.850  0.3  .  . . . . C 481 GLN N . 18583 1
+      181 . 2 2 30 30 LEU H H  1   7.230  0.05 .  . . . . C 482 LEU H . 18583 1
+      182 . 2 2 30 30 LEU N N 15 117.030  0.3  .  . . . . C 482 LEU N . 18583 1
+      183 . 2 2 31 31 THR H H  1   8.870  0.05 .  . . . . C 483 THR H . 18583 1
+      184 . 2 2 31 31 THR N N 15 110.740  0.3  .  . . . . C 483 THR N . 18583 1
+      185 . 2 2 32 32 ARG H H  1   9.030  0.05 .  . . . . C 484 ARG H . 18583 1
+      186 . 2 2 32 32 ARG N N 15 117.784  0.3  .  . . . . C 484 ARG N . 18583 1
+      187 . 2 2 33 33 SER H H  1   7.971  0.05 .  . . . . C 485 SER H . 18583 1
+      188 . 2 2 33 33 SER N N 15 110.880  0.3  .  . . . . C 485 SER N . 18583 1
+      189 . 2 2 34 34 VAL H H  1   9.060  0.05 .  . . . . C 486 VAL H . 18583 1
+      190 . 2 2 34 34 VAL N N 15 129.980  0.3  .  . . . . C 486 VAL N . 18583 1
+      191 . 2 2 35 35 GLU H H  1   9.270  0.05 .  . . . . C 487 GLU H . 18583 1
+      192 . 2 2 35 35 GLU N N 15 123.360  0.3  .  . . . . C 487 GLU N . 18583 1
+      193 . 2 2 36 36 ILE H H  1   7.980  0.05 .  . . . . C 488 ILE H . 18583 1
+      194 . 2 2 36 36 ILE N N 15 119.880  0.3  .  . . . . C 488 ILE N . 18583 1
+      195 . 2 2 37 37 THR H H  1   8.250  0.05 .  . . . . C 489 THR H . 18583 1
+      196 . 2 2 37 37 THR N N 15 118.020  0.3  .  . . . . C 489 THR N . 18583 1
+      197 . 2 2 38 38 THR H H  1   8.350  0.05 .  . . . . C 490 THR H . 18583 1
+      198 . 2 2 38 38 THR N N 15 117.400  0.3  .  . . . . C 490 THR N . 18583 1
+      199 . 2 2 39 39 ASP H H  1   7.490  0.05 .  . . . . C 491 ASP H . 18583 1
+      200 . 2 2 39 39 ASP N N 15 122.260  0.3  .  . . . . C 491 ASP N . 18583 1
+      201 . 2 2 40 40 ASN H H  1   8.490  0.05 .  . . . . C 492 ASN H . 18583 1
+      202 . 2 2 40 40 ASN N N 15 116.340  0.3  .  . . . . C 492 ASN N . 18583 1
+      203 . 2 2 41 41 ILE H H  1   8.000  0.05 .  . . . . C 493 ILE H . 18583 1
+      204 . 2 2 41 41 ILE N N 15 121.110  0.3  .  . . . . C 493 ILE N . 18583 1
+      205 . 2 2 42 42 LEU H H  1   8.410  0.05 .  . . . . C 494 LEU H . 18583 1
+      206 . 2 2 42 42 LEU N N 15 121.930  0.3  .  . . . . C 494 LEU N . 18583 1
+      207 . 2 2 43 43 GLU H H  1   8.370  0.05 .  . . . . C 495 GLU H . 18583 1
+      208 . 2 2 43 43 GLU N N 15 114.530  0.3  .  . . . . C 495 GLU N . 18583 1
+      209 . 2 2 44 44 GLY H H  1   7.630  0.05 .  . . . . C 496 GLY H . 18583 1
+      210 . 2 2 44 44 GLY N N 15 107.200  0.3  .  . . . . C 496 GLY N . 18583 1
+      211 . 2 2 45 45 ARG H H  1   8.300  0.05 .  . . . . C 497 ARG H . 18583 1
+      212 . 2 2 45 45 ARG N N 15 116.830  0.3  .  . . . . C 497 ARG N . 18583 1
+      213 . 2 2 46 46 ILE H H  1   7.130  0.05 .  . . . . C 498 ILE H . 18583 1
+      214 . 2 2 46 46 ILE N N 15 117.930  0.3  .  . . . . C 498 ILE N . 18583 1
+      215 . 2 2 47 47 GLN H H  1   8.340  0.05 .  . . . . C 499 GLN H . 18583 1
+      216 . 2 2 47 47 GLN N N 15 125.410  0.3  .  . . . . C 499 GLN N . 18583 1
+      217 . 2 2 48 48 VAL H H  1   8.180  0.05 .  . . . . C 500 VAL H . 18583 1
+      218 . 2 2 48 48 VAL N N 15 122.810  0.3  .  . . . . C 500 VAL N . 18583 1
+      219 . 2 2 50 50 PHE H H  1   8.115  0.05 .  . . . . C 502 PHE H . 18583 1
+      220 . 2 2 50 50 PHE N N 15 121.190  0.3  .  . . . . C 502 PHE N . 18583 1
+      221 . 2 2 52 52 THR H H  1   7.790  0.05 .  . . . . C 504 THR H . 18583 1
+      222 . 2 2 52 52 THR N N 15 119.528  0.3  .  . . . . C 504 THR N . 18583 1
+
+   stop_
+
+save_
+

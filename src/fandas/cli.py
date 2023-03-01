@@ -2,6 +2,7 @@ import argparse
 import logging
 import sys
 
+# from fandas.modules.bmrb import BMRB
 from fandas.modules.chemical_shift import ChemShift
 from fandas.modules.experiment import Experiment
 from fandas.modules.input import InputFile
@@ -15,6 +16,7 @@ formatter = logging.Formatter(
 )
 ch.setFormatter(formatter)
 log.addHandler(ch)
+log.propagate = False
 
 __author__ = ["Siddarth Narasimhan", "Rodrigo Honorato"]
 
@@ -57,7 +59,7 @@ def maincli():
 # Main code
 def main(
     input_file,
-    log_level="DEBUG",
+    log_level="INFO",
 ):
 
     # Start #=========================================================================#
@@ -66,7 +68,12 @@ def main(
     log.info(f"     Welcome to FANDAS {VERSION}")
     log.info("########################################")
 
-    inp = InputFile(input_file)
+    try:
+        inp = InputFile(input_file)
+    except Exception as e:
+        log.error("Error loading input file")
+        log.error(e)
+        sys.exit()
 
     # Read input sequence # ==========================================================#
     sequence = inp.data["general"]["sequence"]
@@ -89,27 +96,13 @@ def main(
         secondary_structure = secondary_structure[: len(sequence)]
 
     # Assign chemical shifts #========================================================#
-    log.info("Assigning average shifts")
+    log.info("Assigning chemical shifts")
 
-    chem_shifts = ChemShift(sequence, secondary_structure)
-    chem_shifts.assign()
+    # Read BMRB table
+    bmrb_table = inp.data["BMRB"]["bmrb_table_fname"]
+    bmrb_entity_id = inp.data["BMRB"]["target_entity"]
 
-    # Replace the average shifts with provided shifts in the form of BMRB table ======#
-    bmrb_table_fname = inp.data["BMRB"]["bmrb_table_fname"]
-    if bmrb_table_fname:
-
-        resnum_col = inp.data["BMRB"]["resnum_column"]
-        atom_col = inp.data["BMRB"]["atom_column"]
-        shift_col = inp.data["BMRB"]["chemical_shift_column"]
-        bt_seq_start = inp.data["BMRB"]["sequence_start"]
-
-        log.info(
-            "Replacing the average shifts with provided "
-            "shifts in the form of BMRB table"
-        )
-        chem_shifts.replace_with_bmrb(
-            bmrb_table_fname, resnum_col, atom_col, shift_col, bt_seq_start
-        )
+    chem_shifts = ChemShift(sequence, secondary_structure, bmrb_table, bmrb_entity_id)
 
     # Incorporate forward, reverse & glycerol labeling schemes #=====================#
     labeling_params = inp.data["labeling"]

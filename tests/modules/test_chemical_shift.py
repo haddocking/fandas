@@ -2,9 +2,10 @@
 import copy
 
 import pytest
+
 from fandas.modules.chemical_shift import ChemShift
 
-from .. import TEST_BMRB_TABLE
+# from .. import TEST_BMRB_TABLE
 
 
 @pytest.fixture
@@ -12,8 +13,10 @@ def chemshift_class():
     """Chemical shift class."""
     sequence = "MQIFV"
     secondary_structure = "naabc"
+    bmrb_table = ""
+    bmrb_entity_id = ""
 
-    yield ChemShift(sequence, secondary_structure)
+    yield ChemShift(sequence, secondary_structure, bmrb_table, bmrb_entity_id)
 
 
 def test_assign(chemshift_class):
@@ -37,17 +40,6 @@ def test_assign(chemshift_class):
     assert chemshift_class.residues[1].shifts["H"] == 8.37
     assert chemshift_class.residues[1].shifts["CE"] == 17.25
     assert chemshift_class.residues[1].shifts["C"] == 175.93
-
-
-def test_replace_with_bmrb(chemshift_class):
-    """Test the replace_with_bmrb method."""
-    chemshift_class.replace_with_bmrb(
-        table_fname=TEST_BMRB_TABLE, resnum_col=1, atom_col=3, shift_col=4, seq_offset=1
-    )
-
-    assert chemshift_class.residues[1].shifts["C"] == 170.52
-    assert chemshift_class.residues[1].shifts["CA"] == 54.4
-    assert chemshift_class.residues[5].shifts["N"] == 128.38
 
 
 @pytest.mark.skip(reason="No way of currently testing this")

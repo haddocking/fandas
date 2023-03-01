@@ -3,7 +3,6 @@ from pathlib import Path
 
 import toml
 
-
 STANDARD_DATA = Path(Path(__file__).parents[1], "data/standard.csv")
 
 
@@ -552,4 +551,50 @@ DEUTERATION = {
     "W": ["HA"],
     "Y": ["HA"],
     "V": ["HA", "HB"],
+}
+
+THREE_TO_ONE = {
+    "CYS": "C",
+    "ASP": "D",
+    "SER": "S",
+    "GLN": "Q",
+    "LYS": "K",
+    "ILE": "I",
+    "PRO": "P",
+    "THR": "T",
+    "PHE": "F",
+    "ASN": "N",
+    "GLY": "G",
+    "HIS": "H",
+    "LEU": "L",
+    "ARG": "R",
+    "TRP": "W",
+    "ALA": "A",
+    "VAL": "V",
+    "GLU": "E",
+    "TYR": "Y",
+    "MET": "M",
+}
+
+ONE_TO_THREE = {
+    "C": "CYS",
+    "D": "ASP",
+    "S": "SER",
+    "Q": "GLN",
+    "K": "LYS",
+    "I": "ILE",
+    "P": "PRO",
+    "T": "THR",
+    "F": "PHE",
+    "N": "ASN",
+    "G": "GLY",
+    "H": "HIS",
+    "L": "LEU",
+    "R": "ARG",
+    "W": "TRP",
+    "A": "ALA",
+    "V": "VAL",
+    "E": "GLU",
+    "Y": "TYR",
+    "M": "MET",
 }
