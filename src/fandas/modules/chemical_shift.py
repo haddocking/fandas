@@ -32,7 +32,8 @@ class ChemShift:
 
         # atom_list = list(df.columns[2:])
         for resnum, (resname, ss) in enumerate(
-            zip(self.sequence, self.secondary_structure, strict=True), start=1,
+            # trunk-ignore(ruff/B905)
+            zip(self.sequence, self.secondary_structure), start=1,
         ):
 
             # make the res one-letter
@@ -46,7 +47,8 @@ class ChemShift:
                 & (df["SECONDARY_STRUCTURE"] == ss)
             ]
             atom_shift_dic = dict(
-                (e, v) for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:], strict=True)
+                # trunk-ignore(ruff/B905)
+                (e, v) for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
             )
 
             self.residues[resnum] = Residue(resnum, resname, ss, atom_shift_dic)

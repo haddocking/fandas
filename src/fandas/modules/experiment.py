@@ -99,7 +99,8 @@ class Experiment:
         """Generate the line to be written to the output file."""
         notes = ""
         values = []
-        for i, atom_name in zip(data_t[0], data_t[1], strict=True):
+        # trunk-ignore(ruff/B905)
+        for i, atom_name in zip(data_t[0], data_t[1]):
             if self.seq_start is not None:
                 notes += f"{i.resname}{self.seq_start + i.resnum - 1}{atom_name}-"
             else:
