@@ -18,6 +18,10 @@ class Experiment:
         filtered_shift = None
         distance_file = input_data_dic["distance"]["distance_fname"]
         cutoff = input_data_dic["distance"]["distance_cutoff"]
+        self.seq_start = None
+        if "BMRB" in input_data_dic.keys():
+            if "sequence_start" in input_data_dic["BMRB"].keys():
+                self.seq_start = input_data_dic["BMRB"]["sequence_start"]
 
         if input_data_dic["distance"]["distance_fname"]:
             filtered_shift = self.filter_by_distance(
@@ -46,7 +50,6 @@ class Experiment:
     def run_experiments(self):
         """Run all the experiments."""
         for i, nmr_exp_notation in enumerate(self.experiment_list, start=1):
-
             atoms, direction = self.retrieve_exp_info(nmr_exp_notation)
 
             log.info(f"Running experiment {i} {nmr_exp_notation}")
@@ -95,8 +98,12 @@ class Experiment:
         """Generate the line to be written to the output file."""
         notes = ""
         values = []
+        # trunk-ignore(ruff/B905)
         for i, atom_name in zip(data_t[0], data_t[1]):
-            notes += f"{i.resname}{i.resnum}{atom_name}-"
+            if self.seq_start is not None:
+                notes += f"{i.resname}{self.seq_start + i.resnum - 1}{atom_name}-"
+            else:
+                notes += f"{i.resname}{i.resnum}{atom_name}-"
             value = self.get_value(i.shifts, atom_name)
             if value:
                 values.append(value)
@@ -165,6 +172,8 @@ class Experiment:
     @staticmethod
     def retrieve_exp_info(nmr_notation, catalog=EXPERIMENT_CATALOG):
         """Retrieve the atoms and direction from the experiment catalog."""
+        atoms = None
+        direction = None
         for experiment in catalog:
             if catalog[experiment]["nmr_notation"] == nmr_notation:
                 direction = catalog[experiment]["direction"]

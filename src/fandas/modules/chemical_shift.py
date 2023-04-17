@@ -32,9 +32,10 @@ class ChemShift:
 
         # atom_list = list(df.columns[2:])
         for resnum, (resname, ss) in enumerate(
-            zip(self.sequence, self.secondary_structure), start=1
+            # trunk-ignore(ruff/B905)
+            zip(self.sequence, self.secondary_structure),
+            start=1,
         ):
-
             # make the res one-letter
             three_letter_resname = AA_REF[resname]
 
@@ -46,7 +47,9 @@ class ChemShift:
                 & (df["SECONDARY_STRUCTURE"] == ss)
             ]
             atom_shift_dic = dict(
-                (e, v) for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
+                # trunk-ignore(ruff/B905)
+                (e, v)
+                for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
             )
 
             self.residues[resnum] = Residue(resnum, resname, ss, atom_shift_dic)
@@ -88,7 +91,8 @@ class ChemShift:
     def label(self, params):
         """Apply a labeling scheme."""
         labeling_func = self._get_label_func(**params)
-        labeling_func()
+        if labeling_func:
+            labeling_func()
 
     def _get_label_func(self, scheme, **kwargs):
         """Find out which labelling function should be used."""
@@ -186,6 +190,7 @@ class ChemShift:
             else:
                 res_check = True
 
+            atom_del_list = []
             if isinstance(atoms_to_be_set_to_zero, dict):
                 try:
                     atom_del_list = atoms_to_be_set_to_zero[resname]

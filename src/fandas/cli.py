@@ -36,7 +36,7 @@ ap.add_argument(
 
 
 def load_args(ap):
-    """Load argument parser"""
+    """Load argument parser."""
     return ap.parse_args()
 
 
@@ -59,7 +59,6 @@ def main(
     input_file,
     log_level="DEBUG",
 ):
-
     # Start #=========================================================================#
     log.setLevel(log_level)
     log.info("########################################")
@@ -81,7 +80,7 @@ def main(
     # FIXME: this does not account for GAPS
     if len(secondary_structure) < len(sequence):
         difference = len(sequence) - len(secondary_structure)
-        for i in range(difference):
+        for _ in range(difference):
             secondary_structure += "n"
 
     # If the user defined secondary structure is longer than sequence, chop it
@@ -97,7 +96,6 @@ def main(
     # Replace the average shifts with provided shifts in the form of BMRB table ======#
     bmrb_table_fname = inp.data["BMRB"]["bmrb_table_fname"]
     if bmrb_table_fname:
-
         resnum_col = inp.data["BMRB"]["resnum_column"]
         atom_col = inp.data["BMRB"]["atom_column"]
         shift_col = inp.data["BMRB"]["chemical_shift_column"]

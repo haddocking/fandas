@@ -81,6 +81,12 @@ def test__make_line(experiment_class, chemical_shifts):
 
     assert observed_line == expected_line
 
+    experiment_class.seq_start = 10
+    observed_line = experiment_class._make_line(data_t=((res_a, res_b), ("N", "H")))
+    expected_line = "M10N-M10H\t120.19\t8.37" + os.linesep
+
+    assert observed_line == expected_line
+
 
 def test__make_iter(experiment_class, chemical_shifts):
     """Test the _make_iter method."""
