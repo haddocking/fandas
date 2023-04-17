@@ -36,7 +36,7 @@ ap.add_argument(
 
 
 def load_args(ap):
-    """Load argument parser"""
+    """Load argument parser."""
     return ap.parse_args()
 
 
@@ -81,7 +81,7 @@ def main(
     # FIXME: this does not account for GAPS
     if len(secondary_structure) < len(sequence):
         difference = len(sequence) - len(secondary_structure)
-        for i in range(difference):
+        for _ in range(difference):
             secondary_structure += "n"
 
     # If the user defined secondary structure is longer than sequence, chop it
