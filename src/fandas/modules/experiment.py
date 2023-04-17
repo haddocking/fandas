@@ -50,7 +50,6 @@ class Experiment:
     def run_experiments(self):
         """Run all the experiments."""
         for i, nmr_exp_notation in enumerate(self.experiment_list, start=1):
-
             atoms, direction = self.retrieve_exp_info(nmr_exp_notation)
 
             log.info(f"Running experiment {i} {nmr_exp_notation}")

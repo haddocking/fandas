@@ -33,9 +33,9 @@ class ChemShift:
         # atom_list = list(df.columns[2:])
         for resnum, (resname, ss) in enumerate(
             # trunk-ignore(ruff/B905)
-            zip(self.sequence, self.secondary_structure), start=1,
+            zip(self.sequence, self.secondary_structure),
+            start=1,
         ):
-
             # make the res one-letter
             three_letter_resname = AA_REF[resname]
 
@@ -48,7 +48,8 @@ class ChemShift:
             ]
             atom_shift_dic = dict(
                 # trunk-ignore(ruff/B905)
-                (e, v) for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
+                (e, v)
+                for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
             )
 
             self.residues[resnum] = Residue(resnum, resname, ss, atom_shift_dic)

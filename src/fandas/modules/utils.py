@@ -8,7 +8,6 @@ def load_bmrbm(table_fname, resname_col, atom_col, shift_col):
     bmrb_dic = {}
     with open(table_fname, "r") as bmrb_file:
         for line in bmrb_file.readlines():
-
             # Split so that the whitespaces don't matter
             c_shift = line.split()
 

@@ -59,7 +59,6 @@ def main(
     input_file,
     log_level="DEBUG",
 ):
-
     # Start #=========================================================================#
     log.setLevel(log_level)
     log.info("########################################")
@@ -97,7 +96,6 @@ def main(
     # Replace the average shifts with provided shifts in the form of BMRB table ======#
     bmrb_table_fname = inp.data["BMRB"]["bmrb_table_fname"]
     if bmrb_table_fname:
-
         resnum_col = inp.data["BMRB"]["resnum_column"]
         atom_col = inp.data["BMRB"]["atom_column"]
         shift_col = inp.data["BMRB"]["chemical_shift_column"]
