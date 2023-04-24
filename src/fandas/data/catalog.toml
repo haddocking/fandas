@@ -28,7 +28,80 @@ example = ""
 [exp_2d_ch]
 nmr_notation = "C-H"
 ref = ""
-atoms = ["CX", "HX"]
+# This relationship is too complex to be represented by a single list,
+#  instead treat it as a relation (nested list)
+atom_relation = [
+  [
+    "C",
+    "H",
+  ],
+  [
+    "CA",
+    "HA",
+  ],
+  [
+    "CB",
+    "HB",
+  ],
+  [
+    "CG",
+    "HG",
+  ],
+  [
+    "CG1",
+    "HG1",
+  ],
+  [
+    "CG2",
+    "HG2",
+  ],
+  [
+    "CD",
+    "HD",
+  ],
+  [
+    "CD1",
+    "HD1",
+  ],
+  [
+    "CD2",
+    "HD2",
+  ],
+  [
+    "CD3",
+    "HD3",
+  ],
+  [
+    "CE",
+    "HE",
+  ],
+  [
+    "CE1",
+    "HE1",
+  ],
+  [
+    "CE2",
+    "HE2",
+  ],
+  [
+    "CH2",
+    "HH2",
+  ],
+  [
+    "CZ",
+    "HZ",
+  ],
+  [
+    "CZ2",
+    "HZ2",
+  ],
+  [
+    "CZ3",
+    "HZ3",
+  ],
+]
+
+
 direction = [[0], [0]]
 example = """
 M1CA-M1HA	55.12	4.55
