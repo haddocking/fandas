@@ -1,12 +1,19 @@
-#============================
+#==============================================================================
 # Glossary #
-# all carbons = "CX"
-# all hydrogens = "HX"
-# all carbons except CA = "CX|CA"
-# All carbons except CA and CB = "CX|CA|CB"
-# Ca and Cb = "CA_CB"
-# sum the peaks of CA and CB = "CA+CB"
-#============================
+#==============================================================================
+# The following will trigger an automatic generation
+#   of the atom relationships
+# - all carbons = "CX"
+# - all hydrogens = "HX"
+# - all carbons except CA = "CX|CA"
+# - All carbons except CA and CB = "CX|CA|CB"
+# - Ca and Cb = "CA_CB"
+# - sum the peaks of CA and CB = "CA+CB"
+#
+# Alternatively, you can specify the atom relationships manually
+#  by using the `atom_relation` list and adding the `nmr_notation`
+#  to `SPECIAL_CASES` in `modules/chemical.py`
+#==============================================================================
 
 [exp_2d_nh]
 nmr_notation = "N-H"
