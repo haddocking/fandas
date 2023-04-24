@@ -4,7 +4,12 @@ import logging
 import os
 import sys
 
-from fandas.modules.chemical import ATOM_LIST, ATOM_REF, EXPERIMENT_CATALOG
+from fandas.modules.chemical import (
+    ATOM_LIST,
+    ATOM_REF,
+    EXPERIMENT_CATALOG,
+    SPECIAL_CASES,
+)
 
 log = logging.getLogger("fandaslog")
 
@@ -53,21 +58,27 @@ class Experiment:
             atoms, direction = self.retrieve_exp_info(nmr_exp_notation)
 
             log.info(f"Running experiment {i} {nmr_exp_notation}")
-            if "DQ" in nmr_exp_notation or "SQ" in nmr_exp_notation:
-                quantum = True
+            if nmr_exp_notation in SPECIAL_CASES:
+                skip_iteration = True
             else:
-                quantum = False
+                skip_iteration = False
 
-            self.execute(atoms, direction, exp_id=nmr_exp_notation, quantum=quantum)
+            self.execute(
+                atoms, direction, exp_id=nmr_exp_notation, skip_iteration=skip_iteration
+            )
 
             if self.filtered_chemical_shift:
                 exp_id = f"{nmr_exp_notation}_dist"
                 log.info(f"Running experiment {i} {exp_id}")
                 self.execute(
-                    atoms, direction, exp_id=exp_id, filtered=True, quantum=quantum
+                    atoms,
+                    direction,
+                    exp_id=exp_id,
+                    filtered=True,
+                    skip_iteration=skip_iteration,
                 )
 
-    def execute(self, atoms, direction, exp_id, quantum=False, filtered=False):
+    def execute(self, atoms, direction, exp_id, skip_iteration=False, filtered=False):
         """Execute the experiment based on an atom list."""
         results = []
         if filtered:
@@ -75,9 +86,11 @@ class Experiment:
         else:
             shifts = self.chemical_shift
 
-        if quantum:
+        if skip_iteration:
+            # Use the pre-defined atom relationships
             atom_iterable = atoms
         else:
+            # Generate the atom relationships
             atom_list = self.translate_atoms(atoms)
             atom_iterable = list(itertools.product(*atom_list))
 
@@ -142,7 +155,7 @@ class Experiment:
 
         return list(itertools.product(combinations, atom_list))
 
-    def translate_atoms(self, atoms):
+    def translate_atoms(self, atoms: list):
         """Translate the NMR terminology to Python-friendly."""
         translated_atom_l = []
         for raw_atom in atoms:
@@ -177,7 +190,7 @@ class Experiment:
         for experiment in catalog:
             if catalog[experiment]["nmr_notation"] == nmr_notation:
                 direction = catalog[experiment]["direction"]
-                if "DQ" in nmr_notation or "SQ" in nmr_notation:
+                if nmr_notation in SPECIAL_CASES:
                     atoms = catalog[experiment]["atom_relation"]
                 else:
                     atoms = catalog[experiment]["atoms"]

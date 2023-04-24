@@ -3,9 +3,7 @@ from pathlib import Path
 
 import toml
 
-
 STANDARD_DATA = Path(Path(__file__).parents[1], "data/standard.csv")
-
 
 ATOM_LIST = open(STANDARD_DATA).readlines()[0].split(os.linesep)[0].split(",")[2:]
 
@@ -553,3 +551,12 @@ DEUTERATION = {
     "Y": ["HA"],
     "V": ["HA", "HB"],
 }
+
+
+SPECIAL_CASES = [
+    "C-C DQ-SQ Correlation",
+    "SQSQSQ (residues i, i+1 & i-1)",
+    "DQSQSQ intra residue",
+    "DQSQSQ (residues i, i+1 & i-1)",
+    "C-H",
+]
