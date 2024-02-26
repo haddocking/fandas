@@ -1,14 +1,16 @@
 """Test the experiment module."""
 
-import pytest
-import tempfile
 import os
+import tempfile
 from pathlib import Path
-from fandas.modules.experiment import Experiment
+
+import pytest
+
 from fandas.modules.chemical_shift import ChemShift
+from fandas.modules.experiment import Experiment
 from fandas.modules.input import InputFile
 
-from .. import TEST_INPUT_FILE, TEST_DISTANCE_FILE
+from .. import TEST_DISTANCE_FILE, TEST_INPUT_FILE
 
 
 @pytest.fixture

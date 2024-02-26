@@ -144,7 +144,6 @@ class Experiment:
         combinations = []
         for resnum in range(first_resnum, last_resnum + 1):
             for e in itertools.product(*direction):
-
                 # Fetch residues based on adjusted indices
                 residues = [
                     shifts.residues[resnum + offset]
