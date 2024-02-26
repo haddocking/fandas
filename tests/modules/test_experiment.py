@@ -1,4 +1,5 @@
 """Test the experiment module."""
+
 import pytest
 import tempfile
 import os
@@ -90,6 +91,19 @@ def test__make_line(experiment_class, chemical_shifts):
 
 def test__make_iter(experiment_class, chemical_shifts):
     """Test the _make_iter method."""
+
+    observed_iter = experiment_class._make_iter(
+        shifts=chemical_shifts, atom_list=[("H", "H")], direction=[[0], [-1]]
+    )
+    expected_iter = [
+        ((chemical_shifts.residues[2], chemical_shifts.residues[1]), ("H", "H")),
+        ((chemical_shifts.residues[3], chemical_shifts.residues[2]), ("H", "H")),
+        ((chemical_shifts.residues[4], chemical_shifts.residues[3]), ("H", "H")),
+        ((chemical_shifts.residues[5], chemical_shifts.residues[4]), ("H", "H")),
+    ]
+
+    assert observed_iter == expected_iter
+
     observed_iter = experiment_class._make_iter(
         shifts=chemical_shifts, atom_list=[("H", "H")], direction=[[0], [0]]
     )
@@ -119,160 +133,40 @@ def test__make_iter(experiment_class, chemical_shifts):
         ((chemical_shifts.residues[5], chemical_shifts.residues[5]), ("H", "N")),
     ]
 
+    assert observed_iter == expected_iter
+
     observed_iter = experiment_class._make_iter(
         shifts=chemical_shifts,
-        atom_list=[("H", "H", "H"), ("H", "N", "H")],
-        direction=[[0], [0], [+1, 0]],
+        atom_list=[("H", "H", "H")],
+        direction=[[0], [0], [-1, 0, 1]],
     )
 
-    expected_iter = [
+    assert observed_iter[2] == (
         (
-            (
-                chemical_shifts.residues[1],
-                chemical_shifts.residues[1],
-                chemical_shifts.residues[1],
-            ),
-            ("H", "H", "H"),
+            chemical_shifts.residues[2],
+            chemical_shifts.residues[2],
+            chemical_shifts.residues[1],
         ),
-        (
-            (
-                chemical_shifts.residues[1],
-                chemical_shifts.residues[1],
-                chemical_shifts.residues[1],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[1],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[1],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[2],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[2],
-                chemical_shifts.residues[2],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[2],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[2],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[3],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[3],
-                chemical_shifts.residues[3],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[3],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[3],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[4],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[4],
-                chemical_shifts.residues[4],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[4],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[4],
-            ),
-            ("H", "N", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[5],
-            ),
-            ("H", "H", "H"),
-        ),
-        (
-            (
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[5],
-                chemical_shifts.residues[5],
-            ),
-            ("H", "N", "H"),
-        ),
-    ]
+        ("H", "H", "H"),
+    )
 
-    assert observed_iter == expected_iter
+    assert observed_iter[3] == (
+        (
+            chemical_shifts.residues[2],
+            chemical_shifts.residues[2],
+            chemical_shifts.residues[2],
+        ),
+        ("H", "H", "H"),
+    )
+
+    assert observed_iter[4] == (
+        (
+            chemical_shifts.residues[2],
+            chemical_shifts.residues[2],
+            chemical_shifts.residues[3],
+        ),
+        ("H", "H", "H"),
+    )
 
 
 def test_translate_atoms(experiment_class):
