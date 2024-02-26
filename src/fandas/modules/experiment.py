@@ -3,6 +3,7 @@ import itertools
 import logging
 import os
 import sys
+from typing import List, Tuple
 
 from fandas.modules.chemical import (
     ATOM_LIST,
@@ -10,6 +11,7 @@ from fandas.modules.chemical import (
     EXPERIMENT_CATALOG,
     SPECIAL_CASES,
 )
+from fandas.modules.chemical_shift import ChemShift
 
 log = logging.getLogger("fandaslog")
 
@@ -94,6 +96,7 @@ class Experiment:
             atom_list = self.translate_atoms(atoms)
             atom_iterable = list(itertools.product(*atom_list))
 
+        assert shifts
         shift_iterable = self._make_iter(shifts, atom_iterable, direction)
 
         results = []
@@ -127,31 +130,32 @@ class Experiment:
 
             return line
 
-    def _make_iter(self, shifts, atom_list, direction):
+    def _make_iter(
+        self,
+        shifts: ChemShift,
+        atom_list: List[Tuple[str, str]],
+        direction: List[List[int]],
+    ) -> List[Tuple[Tuple[ChemShift, ChemShift], str]]:
         """Make an iterable to be used by the experiment executor."""
         resnum_list = list(shifts.residues.items())
-        first_resum = resnum_list[0][0]
+        first_resnum = resnum_list[0][0]
         last_resnum = resnum_list[-1][0]
 
-        dimension = len(direction)
-
         combinations = []
-        for resnum in range(first_resum, last_resnum + 1):
+        for resnum in range(first_resnum, last_resnum + 1):
             for e in itertools.product(*direction):
-                try:
-                    if dimension == 3:
-                        residue_1 = shifts.residues[resnum - e[0]]
-                        residue_2 = shifts.residues[resnum - e[1]]
-                        residue_3 = shifts.residues[resnum - e[2]]
-                        combinations.append((residue_1, residue_2, residue_3))
-                    elif dimension == 2:
-                        residue_1 = shifts.residues[resnum - e[0]]
-                        residue_2 = shifts.residues[resnum - e[1]]
-                        combinations.append((residue_1, residue_2))
 
-                except KeyError:
-                    # there was no shift found in a given index, skip it
-                    pass
+                # Fetch residues based on adjusted indices
+                residues = [
+                    shifts.residues[resnum + offset]
+                    for offset in e
+                    if (resnum + offset) in shifts.residues
+                ]
+
+                # Ensure we have the correct number of residues before appending
+                if len(residues) == len(e):
+                    combinations.append(tuple(residues))
+                    # print(e, residues)
 
         return list(itertools.product(combinations, atom_list))
 
