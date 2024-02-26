@@ -1,6 +1,10 @@
-name: python lint
+name: lint
+
 on:
-  ['push', 'pull_request']
+  'pull_request':
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ${{ matrix.platform }}
