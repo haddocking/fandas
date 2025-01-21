@@ -30,7 +30,7 @@ jobs:
 
       - name: run tests
         run: >-
-          run pytest --cov
+          pytest --cov
           --cov-report xml:coverage.xml
           --cov-append
           -vv
