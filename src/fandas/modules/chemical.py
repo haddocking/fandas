@@ -16,32 +16,6 @@ ATOM_REF = {
     "HX": [atom for atom in ATOM_LIST if "H" in atom],
 }
 
-QUANTUM_RELATIONSHIP = [
-    ("C+CA", "C"),
-    ("CA+C", "CA"),
-    ("CA+CB", "CA"),
-    ("CB+CA", "CB"),
-    ("CB+CG", "CB"),
-    # FIXME: should be CG*, CE*, CD*, etc.
-    ("CG+CB", "CG"),
-    ("CG+CD1", "CG"),
-    ("CG+CD2", "CG"),
-    ("CD1+CG", "CD1"),
-    ("CD1+CE1", "CD1"),
-    ("CD1+CE2", "CD1"),
-    ("CD2+CG", "CD2"),
-    ("CD2+CE1", "CD2"),
-    ("CD2+CE2", "CD2"),
-    ("CE1+CD1", "CE1"),
-    ("CE1+CD2", "CE1"),
-    ("CE1+CZ", "CE1"),
-    ("CE2+CD1", "CE2"),
-    ("CE2+CD2", "CE2"),
-    ("CE2+CZ", "CE2"),
-    ("CZ+CE1", "CZ"),
-    ("CZ+CE2", "CZ"),
-]
-
 EXPERIMENT_CATALOG = toml.load(Path(Path(__file__).parents[1], "data/catalog.toml"))
 
 # This tells the position of each atom in the chemical shift:
