@@ -52,6 +52,13 @@ class ChemShift:
                 for e, v in zip(df.columns[2:], sub_values.iloc[0].values[2:])
             )
 
+            # remove values that are equal to 0.0
+            #  this will make sure the `Residue` only contains the correct atoms
+            #  for example it will remove CD1 from Met
+            atom_shift_dic = {
+                e: atom_shift_dic[e] for e in atom_shift_dic if atom_shift_dic[e] != 0.0
+            }
+
             self.residues[resnum] = Residue(resnum, resname, ss, atom_shift_dic)
 
     def replace_with_bmrb(
