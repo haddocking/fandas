@@ -152,7 +152,6 @@ ref = ""
 # atoms = []
 # This relationship is too complex to be represented by a single list,
 #  instead treat it as a relation (nested list)
-# FIXME: Do not put the ones that are 0
 atom_relation = [
   [
     "C+CA",
