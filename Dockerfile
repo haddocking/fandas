@@ -1,8 +1,8 @@
 #==============================================================================================
-FROM python:3.11
+FROM python:3.13
 WORKDIR /opt/software
 COPY . .
-RUN pip install .
+RUN pip install . --no-cache-dir
 WORKDIR /data
 ENTRYPOINT [ "fandas" ]
 #==============================================================================================
