@@ -8,28 +8,17 @@ version = "2.2.8"
 description = "Fast Analysis of multidimensional NMR DAta Sets"
 readme = "README.md"
 license = "Apache-2.0"
-authors = [
-  {name= "Siddarth Narasimhan", email= ""}
-]
+authors = [{ name = "Siddarth Narasimhan" }]
 maintainers = [
-  {name= "Rodrigo V. Honorato", email= "bonvinlab.support@uu.nl"}
+  { name = "Rodrigo V. Honorato", email = "bonvinlab.support@uu.nl" },
 ]
 keywords = []
 classifiers = []
-dependencies = [
-  "numpy==2.2.3",
-  "pandas==2.2.2",
-  "toml==0.10"
-]
-
+requires-python = ">3.9, <3.14"
+dependencies = ["numpy==2.2.3", "pandas==2.2.2", "toml==0.10"]
 
 [project.optional-dependencies]
-dev = [
-  "coverage",
-  "pytest",
-  "pytest-cov",
-  "hypothesis",
-]
+dev = ["coverage", "pytest", "pytest-cov", "hypothesis"]
 
 [project.scripts]
-fandas = "fandas.cli:maincli" 
+fandas = "fandas.cli:maincli"
