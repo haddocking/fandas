@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "FANDAS"
-version = "2.2.8"
+version = "2.3.0"
 description = "Fast Analysis of multidimensional NMR DAta Sets"
 readme = "README.md"
 license = "Apache-2.0"
