@@ -1,9 +1,0 @@
-name: fandas
-channels:
-  - defaults
-  - conda-forge
-dependencies:
-  - pip=21.2.4
-  - python=3.9.7
-  - pip:
-    - numpy==1.22.1
