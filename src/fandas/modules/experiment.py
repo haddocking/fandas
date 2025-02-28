@@ -121,7 +121,7 @@ class Experiment:
             else:
                 notes += f"{i.resname}{i.resnum}{atom_name}-"
             value = self.get_value(i.shifts, atom_name)
-            if value:
+            if value != 0.0:
                 values.append(value)
 
         if all(values) and len(values) == len(data_t[0]):

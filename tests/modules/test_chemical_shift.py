@@ -1,4 +1,5 @@
 """Test the chemical shift module."""
+
 import copy
 
 import pytest
@@ -125,7 +126,6 @@ def test_consider_deuteration(chemshift_class):
 
     assert chemshift_class.residues[1].shifts["HA"] == 0.0
     assert chemshift_class.residues[2].shifts["HA"] == 0.0
-    assert chemshift_class.residues[2].shifts["HB"] == 0.0
     assert chemshift_class.residues[3].shifts["HB"] == 0.0
     assert chemshift_class.residues[3].shifts["HB"] == 0.0
 

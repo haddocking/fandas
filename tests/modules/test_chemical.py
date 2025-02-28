@@ -1,8 +1,8 @@
 """Test the chemical module."""
+
 from fandas.modules.chemical import (
     STANDARD_DATA,
     ATOM_LIST,
-    QUANTUM_RELATIONSHIP,
     EXPERIMENT_CATALOG,
     ATOM_INDEX_DIC,
     N_ATOMS,
@@ -23,11 +23,6 @@ def test_standard_data():
 def test_atom_list():
     """Test if the atom list is defined."""
     assert ATOM_LIST is not None
-
-
-def test_quantum_relationship():
-    """Test if the quantum relationship is defined."""
-    assert QUANTUM_RELATIONSHIP is not None
 
 
 def test_experiment_catalog():

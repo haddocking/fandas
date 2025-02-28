@@ -38,24 +38,78 @@ ref = ""
 # This relationship is too complex to be represented by a single list,
 #  instead treat it as a relation (nested list)
 atom_relation = [
-["CA", "HA"],
-["CA", "HA2"],
-["CA", "HA3"],
-["CB", "HB"],
-["CB", "HB2"],
-["CB", "HB3"],
-["CG", "HG"],
-["CG", "HG1"],
-["CG", "HG2"],
-["CG", "HG3"],
-["CD", "HD"],
-["CD", "HD1"],
-["CD", "HD2"],
-["CD", "HD3"],
-["CE", "HE"],
-["CE", "HE1"],
-["CE", "HE2"],
-["CE", "HE3"]
+  [
+    "CA",
+    "HA",
+  ],
+  [
+    "CA",
+    "HA2",
+  ],
+  [
+    "CA",
+    "HA3",
+  ],
+  [
+    "CB",
+    "HB",
+  ],
+  [
+    "CB",
+    "HB2",
+  ],
+  [
+    "CB",
+    "HB3",
+  ],
+  [
+    "CG",
+    "HG",
+  ],
+  [
+    "CG",
+    "HG1",
+  ],
+  [
+    "CG",
+    "HG2",
+  ],
+  [
+    "CG",
+    "HG3",
+  ],
+  [
+    "CD",
+    "HD",
+  ],
+  [
+    "CD",
+    "HD1",
+  ],
+  [
+    "CD",
+    "HD2",
+  ],
+  [
+    "CD",
+    "HD3",
+  ],
+  [
+    "CE",
+    "HE",
+  ],
+  [
+    "CE",
+    "HE1",
+  ],
+  [
+    "CE",
+    "HE2",
+  ],
+  [
+    "CE",
+    "HE3",
+  ],
 ]
 
 
@@ -120,7 +174,19 @@ atom_relation = [
     "CB",
   ],
   [
+    "CB+CG1",
+    "CB",
+  ],
+  [
+    "CB+CG2",
+    "CB",
+  ],
+  [
     "CG+CB",
+    "CG",
+  ],
+  [
+    "CG+CD",
     "CG",
   ],
   [
@@ -132,21 +198,67 @@ atom_relation = [
     "CG",
   ],
   [
+    "CG1+CB",
+    "CG1",
+  ],
+  [
+    "CG1+CD",
+    "CG1",
+  ],
+  [
+    "CG1+CD1",
+    "CG1",
+  ],
+  [
+    "CG1+CD2",
+    "CG1",
+  ],
+  [
+    "CG2+CB",
+    "CG2",
+  ],
+  [
+    "CG2+CD",
+    "CG2",
+  ],
+  [
+    "CG2+CD1",
+    "CG2",
+  ],
+  [
+    "CG2+CD2",
+    "CG2",
+  ],
+  [
+    "CD+CG",
+    "CD",
+  ],
+  [
+    "CD+CE",
+    "CD",
+  ],
+  [
     "CD1+CG",
     "CD1",
   ],
   [
-    "CD1+CE1",
+    "CD1+CG1",
     "CD1",
   ],
   [
-    "CD1+CE2",
+    "CD1+CG2",
+    "CD1",
+  ],
+
+  [
+    "CD1+CE1",
     "CD1",
   ],
   [
     "CD2+CG",
     "CD2",
   ],
+
   [
     "CD2+CE1",
     "CD2",
@@ -155,6 +267,16 @@ atom_relation = [
     "CD2+CE2",
     "CD2",
   ],
+  [
+    "CD2+CE3",
+    "CD2",
+  ],
+  [
+    "CE+CD",
+    "CE",
+  ],
+
+
   [
     "CE1+CD1",
     "CE1",
@@ -168,10 +290,6 @@ atom_relation = [
     "CE1",
   ],
   [
-    "CE2+CD1",
-    "CE2",
-  ],
-  [
     "CE2+CD2",
     "CE2",
   ],
@@ -180,12 +298,51 @@ atom_relation = [
     "CE2",
   ],
   [
+    "CE2+CZ2",
+    "CE2",
+  ],
+  [
+    "CE3+CD2",
+    "CE3",
+  ],
+  [
+    "CE3+CZ3",
+    "CE3",
+  ],
+  [
     "CZ+CE1",
     "CZ",
   ],
   [
     "CZ+CE2",
     "CZ",
+  ],
+
+  [
+    "CZ2+CE2",
+    "CZ2",
+  ],
+  [
+    "CZ2+CH2",
+    "CZ2",
+  ],
+
+  [
+    "CZ3+CE3",
+    "CZ3",
+  ],
+  [
+    "CZ3+CH2",
+    "CZ3",
+  ],
+  [
+    "CH2+CZ2",
+    "CH2",
+  ],
+
+  [
+    "CH2+CZ3",
+    "CH2",
   ],
 ]
 direction = [[0], [0]]
