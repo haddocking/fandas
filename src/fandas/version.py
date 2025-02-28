@@ -1,2 +1,5 @@
-VERSION = "2.2.8"
+from importlib.metadata import version as package_version
+
+VERSION = package_version("fandas")
+
 v_major, v_minor, v_patch = VERSION.split(".")
