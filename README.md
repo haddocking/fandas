@@ -1,6 +1,10 @@
 # FANDAS
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![PyPI - License](https://img.shields.io/pypi/l/fandas)
+![PyPI - Version](https://img.shields.io/pypi/v/fandas)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/fandas)
+
+
 [![unittests](https://github.com/haddocking/fandas/actions/workflows/unittests.yml/badge.svg)](https://github.com/haddocking/fandas/actions/workflows/unittests.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/20d8aa34d5fa4922be588b5800d2e097)](https://app.codacy.com/gh/haddocking/fandas/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/20d8aa34d5fa4922be588b5800d2e097)](https://www.codacy.com/gh/haddocking/fandas/dashboard?utm_source=github.com&utm_medium=referral&utm_content=haddocking/fandas&utm_campaign=Badge_Grade)
