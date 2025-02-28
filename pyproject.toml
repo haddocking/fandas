@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "FANDAS"
+version = "2.2.8"
+description = "Fast Analysis of multidimensional NMR DAta Sets"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+  {name= "Siddarth Narasimhan", email= ""}
+]
+maintainers = [
+  {name= "Rodrigo V. Honorato", email= "bonvinlab.support@uu.nl"}
+]
+keywords = []
+classifiers = []
+dependencies = [
+  "numpy==2.2.3",
+  "pandas==2.2.2",
+  "toml==0.10"
+]
+
+
+[project.optional-dependencies]
+dev = [
+  "coverage",
+  "pytest",
+  "pytest-cov",
+  "hypothesis",
+]
+
+[project.scripts]
+fandas = "fandas.cli:maincli" 
